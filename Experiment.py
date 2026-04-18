@@ -1,45 +1,51 @@
-from langchain_openai import ChatOpenAI
+from MistralAiChat import MistralAiChat
+from ModelUsageData import ModelUsageData
+from pprint import pprint
+import json 
 
-from langchain.messages import AIMessage, HumanMessage, AnyMessage , SystemMessage
-from dotenv import load_dotenv 
-import os 
 
-test_models = ["gpt-4o-mini"]
-
-load_dotenv()
-
-api_key = os.getenv("API_KEY")
-base_url  = os.getenv("OPENAI_API_BASE")
-
-for model_name in test_models:
-    llm = ChatOpenAI(
-        model = model_name, 
-        temperature=0.5 , 
-        max_tokens = 3000, 
-        timeout= 50,
-        max_retries= 2 ,
-        api_key= api_key,
-        base_url=base_url
-        
-    )
+questions = [
+    "What factors should I consider when buying a wireless noise-cancelling headphone?",
     
-    messages = [
-        SystemMessage(content="You are expert in Agentic AI knowledge. Answer question for technical audiance."),
-        HumanMessage(content="what's agentic AI ?")
-    ]
+    "Explain the key differences between SSD and HDD storage in simple terms.",
     
-    resp : AIMessage = None 
-    try:
-        
-        resp = llm.invoke( messages)
-    except Exception as e:        
-        print(e)
-        print(type(e))
+    "Give me 5 tips for choosing a good office chair for long working hours.",
     
+    "Compare laptops vs tablets for students and suggest when to choose each.",
     
+    "Write a short promotional message for an online shopping platform highlighting fast delivery and great customer service.",
     
-    break 
+    "Explain in detail how a recommendation system works in e-commerce platforms.",
+    
+    "Provide a step-by-step guide to selecting a good smartphone based on performance, battery life, and camera quality.",
+    
+    "Summarize the benefits of cloud computing for small businesses in a structured bullet-point format.",
+    
+    "Explain how customers should evaluate different online marketplaces based on pricing, delivery, return policies, and customer support, and provide guidance for making a smart purchase decision.",
+    
+    "Create a structured comparison of three popular online shopping platforms based on user experience, pricing, delivery speed, and trust factors, and present it in a clear table format."
+]
 
 
+miChat = MistralAiChat()
 
+miData : list[ModelUsageData] 
+
+# miData = miChat.perform_cost_time(questions)
+
+# print(json.dumps(miData[0].__dict__, indent=2))
+
+from OpenAITest import OpenAITest 
+# oaiChat =  OpenAITest() 
+
+# miData = oaiChat.perform_cost_time(questions)
+
+# print(json.dumps(miData[0].__dict__, indent=2))
+
+from AnthropicChatTest import AnthropicChatTest
+
+anthChat = AnthropicChatTest()
+miData = anthChat.perform_cost_time(questions)
+
+print(json.dumps(miData[0].__dict__, indent=2))
 

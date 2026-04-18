@@ -28,10 +28,11 @@ class AnthropicChatTest:
         data : list[ModelUsageData] = []      
         
         
-        for question in questions:            
+        for i, question in enumerate(questions):            
             usageData =  ModelUsageData()
             start_time = time.perf_counter() 
             
+            print("Generating response for model {} , Question No. {}".format(self.model_name, i+1))
             
             response : AIMessage = None
             
@@ -52,10 +53,11 @@ class AnthropicChatTest:
             usageData.answer =    response.content
             usageData.prompt_token = int( response.usage_metadata["input_tokens"])
             usageData.response_token = int(response.usage_metadata["output_tokens"])
+            usageData.total_token = usageData.prompt_token + usageData.response_token
             usageData.total_response_time = latency
             
             data.append(usageData)
-            break
+             
             
         return data    
 

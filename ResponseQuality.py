@@ -1,4 +1,5 @@
 from langchain_openai import ChatOpenAI
+from typing import List
 
 from langchain.messages import AIMessage, HumanMessage, AnyMessage , SystemMessage
 from dotenv import load_dotenv 
@@ -26,72 +27,67 @@ class ResponseQuality:
             )
        
     
-    def GetResponseQuality(self,  data : ModelUsageData ) -> ModelUsageData :
-        
-        response : AIMessage = None
-        system_prompt="""
+    def GetResponseQuality(self, data_list: List[ModelUsageData]) -> List[ModelUsageData]:
+
+        system_prompt = """
         You are an expert evaluator assessing the quality of an AI-generated response.
 
-            Evaluate the response based on the following criteria (score each from 1 to 5):
+        Evaluate the response based on the following criteria (score each from 1 to 5):
 
-            1. Relevance: How well the response answers the question
-            2. Clarity: How clear and easy to understand the response is
-            3. Completeness: How thoroughly the response covers the important aspects
-            4. Usefulness: How helpful and practical the response is
+        1. Relevance
+        2. Clarity
+        3. Completeness
+        4. Usefulness
 
-            Be critical and do not give high scores unless the response is clearly strong.
-            
-            Return ONLY a valid JSON object in the following format (no explanation, no extra text):
+        Be critical and do not give high scores unless the response is clearly strong.
 
-            {
+        Return ONLY a valid JSON object in the following format:
+
+        {
             "relevance": <number>,
             "clarity": <number>,
             "completeness": <number>,
             "usefulness": <number>,
             "overall_score": <number>
-            }
-        """     
-            
-        user_prompt="""
+        }
+        """
 
-            Question:
-            {question}
+        user_prompt = """
+        Question:
+        {question}
 
-            Response:
-            {response}
+        Response:
+        {response}
+        """
 
-           """
-        
-        try:
-            
-            
-                
-            user_prompt_input= user_prompt.format(question=data.question, response=data.answer)
-            
-            messages = [
-                SystemMessage(content=system_prompt),
-                HumanMessage(content=user_prompt_input)
-                
-            ]
-            
-            response = self.llm.invoke(
-                messages
-            
-            )
-            
-            parsed = json.loads(response.content)
-            
-            data.relevance = parsed["relevance"]
-            data.clarity=  parsed["clarity"]
-            data.completeness=  parsed["completeness"]
-            data.usefulness=  parsed["usefulness"]
-            data.overall_score=  parsed["overall_score"]
-        
-        except Exception as e:
-            print(str(e))
-             
-            
-        return data      
+        for data in data_list:
+            try:
+                user_prompt_input = user_prompt.format(
+                    question=data.question,
+                    response=data.answer
+                )
+
+                messages = [
+                    SystemMessage(content=system_prompt),
+                    HumanMessage(content=user_prompt_input)
+                ]
+
+                response = self.llm.invoke(messages)
+
+                parsed = json.loads(response.content)
+
+                # Update object
+                data.relevance = parsed.get("relevance", 0)
+                data.clarity = parsed.get("clarity", 0)
+                data.completeness = parsed.get("completeness", 0)
+                data.usefulness = parsed.get("usefulness", 0)
+                data.overall_score = parsed.get("overall_score", 0)
+
+            except Exception as e:
+                print(f"Error processing item: {data.question}")
+                print(str(e))
+
+        return data_list  
         
     
     

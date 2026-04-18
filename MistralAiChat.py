@@ -26,11 +26,13 @@ class MistralAiChat:
         data : list[ModelUsageData] = []      
         
         
-        for question in questions:            
+        for i, question in enumerate(questions):            
             usageData =  ModelUsageData()
             start_time = time.perf_counter() 
             
             self.response : ChatCompletionResponse = None
+            
+            print("Generating response for model {} , Question No. {}".format(self.model_name, i+1))
             
             response = self.client.chat.complete(   
                 model = self.model_name, 
@@ -50,11 +52,13 @@ class MistralAiChat:
             usageData.question = question
             usageData.answer =    response.choices[0].message.content
             usageData.prompt_token = response.usage.prompt_tokens
-            usageData.response_token = response.usage.completion_tokens            
+            usageData.response_token = response.usage.completion_tokens   
+            usageData.total_token = usageData.prompt_token + usageData.response_token         
             usageData.total_response_time = latency
             
             data.append(usageData)
-            break
+            
+             
             
         return data            
             

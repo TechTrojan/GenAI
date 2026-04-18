@@ -1,0 +1,617 @@
+Sr.No,model_name,question,answer,prompt_token,response_token,total_token,total_response_time,relevance,clarity,completeness,usefulness,overall_score
+1,claude-sonnet-4-6,What factors should I consider when buying a wireless noise-cancelling headphone?,"# Factors to Consider When Buying Wireless Noise-Cancelling Headphones
+
+## Sound Quality
+- **Driver size** - larger drivers generally produce better bass
+- **Frequency response** - wider range typically means more detail
+- **Codec support** - aptX, AAC, LDAC affect audio quality over Bluetooth
+
+## Noise Cancellation Performance
+- **Active vs. passive** noise cancellation effectiveness
+- **ANC adjustability** - ability to control cancellation levels
+- **Transparency/ambient mode** - lets you hear surroundings when needed
+
+## Comfort & Fit
+- Ear cup size and padding material
+- Headband adjustability and weight
+- Over-ear vs. on-ear design
+- Suitable for long wearing sessions
+
+## Battery Life
+- ANC-on battery life (typically 20-40 hours)
+- Charging time and quick-charge capability
+- Battery life with ANC off
+
+## Connectivity
+- Bluetooth version (5.0+ preferred)
+- Multipoint connection (connecting to multiple devices)
+- Range stability
+
+## Build Quality
+- Durability of materials
+- Foldability for travel
+- Water/sweat resistance rating
+
+## Practical Features
+- Microphone quality for calls
+- Touch vs. physical controls
+- App support and customization
+- Voice assistant integration
+
+## Budget Considerations
+- Premium: $300+ (Sony, Bose, Apple)
+- Mid-range: $100-300
+- Budget: Under $100
+
+Would you like more detail on any specific factor?",23,352,375,9.026969699945766,5,5,5,5,5
+2,claude-sonnet-4-6,Explain the key differences between SSD and HDD storage in simple terms.,"# SSD vs HDD Storage: Simple Explanation
+
+## What They Are
+- **HDD (Hard Disk Drive)** - uses spinning magnetic disks with a moving read/write arm, like a record player
+- **SSD (Solid State Drive)** - uses flash memory chips with no moving parts, like a large USB drive
+
+---
+
+## Key Differences
+
+| Feature | HDD | SSD |
+|---------|-----|-----|
+| **Speed** | Slower | Much faster |
+| **Durability** | Fragile (moving parts) | More rugged |
+| **Noise** | Can be heard spinning | Silent |
+| **Price** | Cheaper per GB | More expensive |
+| **Storage capacity** | Often larger options | Catching up |
+| **Lifespan** | Can fail mechanically | Different wear pattern |
+| **Power use** | Uses more power | More efficient |
+
+---
+
+## Simple Analogies
+- **HDD** is like a **library** where a librarian physically walks to find your book
+- **SSD** is like having everything **memorized** - instant access
+
+---
+
+## Bottom Line: Which Should You Choose?
+
+- **Choose SSD** if you want speed, reliability, and don't mind the cost
+- **Choose HDD** if you need lots of storage on a tight budget
+- **Many computers use both** - SSD for the operating system, HDD for storing large files
+
+Most modern laptops now come with SSDs as the standard option.",23,341,364,7.3685264000087045,5,5,5,5,5
+3,claude-sonnet-4-6,Give me 5 tips for choosing a good office chair for long working hours.,"# 5 Tips for Choosing a Good Office Chair for Long Working Hours
+
+## 1. 🪑 Look for Proper Lumbar Support
+- Choose a chair with **adjustable lower back support** to maintain your spine's natural curve
+- This helps prevent back pain and poor posture during extended sitting
+
+## 2. 📐 Prioritize Adjustability
+- Look for chairs with **adjustable seat height, armrests, and tilt**
+- Your feet should rest flat on the floor with knees at roughly a **90-degree angle**
+
+## 3. 💺 Check the Seat Depth and Width
+- The seat should be **deep enough** to support your thighs without cutting off circulation
+- Leave about **2-4 inches** between the edge of the seat and the back of your knees
+
+## 4. 🧵 Consider the Material and Padding
+- **Breathable mesh** keeps you cool during long hours
+- Foam padding should be **firm but comfortable** — avoid seats that are too soft
+
+## 5. ⚙️ Test Before You Buy
+- Whenever possible, **sit in the chair for several minutes** before purchasing
+- A good chair should feel comfortable **immediately**, not require an adjustment period
+
+---
+
+**Bottom line:** Investing in a quality ergonomic chair can significantly improve your productivity and long-term health. Consider it a worthwhile investment!",24,320,344,10.432101400045212,5,5,5,5,5
+4,claude-sonnet-4-6,Compare laptops vs tablets for students and suggest when to choose each.,"# Laptops vs Tablets for Students
+
+## Quick Comparison
+
+| Feature | Laptop | Tablet |
+|---------|--------|--------|
+| **Typing** | Excellent | Poor to Fair |
+| **Portability** | Good | Excellent |
+| **Battery Life** | 6-12 hours | 8-15 hours |
+| **Processing Power** | High | Moderate |
+| **Price Range** | $300-$2000+ | $150-$1100+ |
+| **Software Access** | Full desktop apps | Mobile/web apps |
+| **Durability** | Moderate | Generally good |
+
+---
+
+## Where Laptops Win
+
+- **Writing-heavy work** — essays, reports, coding
+- **Multitasking** — multiple windows and applications
+- **Specialized software** — engineering, design, statistics programs
+- **File management** — easier organization of large projects
+- **Long study sessions** — physical keyboard reduces fatigue
+
+---
+
+## Where Tablets Win
+
+- **Note-taking with stylus** — handwriting feels natural
+- **Reading and annotating** — PDFs, textbooks, research papers
+- **Carrying between classes** — lighter and slimmer
+- **Drawing and creative work** — especially iPad with Apple Pencil
+- **Casual research** — quick lookups and browsing
+
+---
+
+## Choose a Laptop If You...
+- Study **STEM, law, business, or writing-intensive** subjects
+- Need to run **specific desktop software**
+- Do significant **coding or data analysis**
+- Prefer one device that handles everything
+- Have limited budget and need **maximum versatility**
+
+## Choose a Tablet If You...
+- Primarily **read and annotate** materials
+- Attend **lecture-heavy** programs
+- Already have a home computer
+- Value **portability above all**
+- Study **art, design, or music**
+
+---
+
+## Practical Recommendations
+
+**Best overall for most students → Laptop**
+> Handles nearly every academic task without compromise
+
+**Best combination → Tablet + keyboard case**
+> Reasonable middle ground, though still limited for heavy typing
+
+**Ideal setup if budget allows → Both**
+> Laptop for work, tablet for class and reading
+
+---
+
+## Bottom Line
+Most students are better served by a **laptop as their primary device**. Tablets shine as **secondary tools** or for students with specific, lighter academic needs. When in doubt, consider what software your program actually requires before buying.",21,564,585,12.799060399993323,5,5,5,5,5
+5,claude-sonnet-4-6,Write a short promotional message for an online shopping platform highlighting fast delivery and great customer service.,"# Shop Smarter, Get It Faster! 🛍️
+
+Why wait when you can have it **today**?
+
+At **[Platform Name]**, we bring your favorite products straight to your door — **faster than ever**. With **same-day and next-day delivery options**, you'll never have to wait long for the things you love.
+
+And we don't stop there. Our **dedicated customer service team** is available **24/7** to answer questions, resolve issues, and make sure every shopping experience is smooth, easy, and enjoyable.
+
+✅ Lightning-fast delivery
+✅ Real people ready to help, anytime
+✅ Hassle-free returns
+✅ Thousands of products, unbeatable prices
+
+**Your satisfaction is our priority — every single order, every single time.**
+
+👉 *Start shopping now and experience the difference!*
+
+---
+*Because great service shouldn't be the exception — it should be the standard.*",25,216,241,6.305628700007219,5,5,5,5,5
+6,claude-sonnet-4-6,Explain in detail how a recommendation system works in e-commerce platforms.,"# How Recommendation Systems Work in E-Commerce Platforms
+
+## Overview
+
+A recommendation system is an information filtering system that predicts and suggests products a user is likely to purchase or engage with, based on various data signals. It sits at the intersection of **data science, machine learning, and user experience design**.
+
+---
+
+## Core Data Inputs
+
+Before any algorithm runs, the system needs data:
+
+### Explicit Data
+- Star ratings and reviews
+- Wishlists and saved items
+- Direct feedback (""Not interested"")
+- Survey responses
+
+### Implicit Data
+- Purchase history
+- Browsing behavior (clicks, time spent)
+- Search queries
+- Scroll depth and hover patterns
+- Cart additions and abandonments
+- Return/refund history
+
+### Contextual Data
+- Time of day / season
+- Device type (mobile vs desktop)
+- Geographic location
+- Current session behavior
+
+---
+
+## The Main Approaches
+
+### 1. Collaborative Filtering
+
+This is the most widely used technique. The core idea is:
+> **""Users who behaved like you also liked these products""**
+
+#### User-Based Collaborative Filtering
+
+```
+Steps:
+1. Build a user-item interaction matrix
+2. Calculate similarity between users
+3. Recommend items liked by similar users
+
+Example Matrix:
+              Product A  Product B  Product C  Product D
+User 1           5          4          0          1
+User 2           4          0          4          1
+User 3           0          3          5          2
+User 4 (target)  5          3          ?          ?
+```
+
+The system finds that **User 1** is most similar to User 4 (both rated Product A highly), so it recommends **Product B** to User 4.
+
+**Similarity Metrics Used:**
+- Cosine Similarity
+- Pearson Correlation
+- Jaccard Similarity
+
+```
+Cosine Similarity Formula:
+similarity(A,B) = (A · B) / (||A|| × ||B||)
+```
+
+#### Item-Based Collaborative Filtering
+
+Rather than comparing users, it compares **items**:
+> ""Customers who bought Product X also bought Product Y""
+
+```
+Steps:
+1. Build item-item similarity matrix
+2. Find items similar to what the user already likes
+3. Recommend those similar items
+
+Advantage: More stable (items don't change behavior,
+           users do)
+```
+
+Amazon famously uses this approach at scale.
+
+---
+
+### 2. Content-Based Filtering
+
+This approach focuses on **product attributes** rather than user behavior:
+> **""You liked this product, so here are similar products""**
+
+```
+Steps:
+1. Extract features from products
+   (category, brand, price range, color, keywords)
+2. Build a user profile based on preferred features
+3. Match user profile to product features
+
+Example:
+User buys: Nike Running Shoes (Athletic, $100, Size 10)
+Profile built: {Athletic: 0.9, Nike: 0.7, $80-120: 0.8}
+Recommend: Adidas Running Shorts, Nike Socks, etc.
+```
+
+**Feature Extraction Techniques:**
+- TF-IDF for product descriptions
+- One-hot encoding for categorical attributes
+- Image embeddings using CNNs for visual similarity
+
+**Pros:**
+- No cold start problem for items
+- Explainable recommendations
+
+**Cons:**
+- Limited discovery (over-specialization)
+- Can't capture social influence
+
+---
+
+### 3. Hybrid Filtering
+
+Most modern platforms combine both approaches:
+
+```
+Final Score = α × (Collaborative Score) 
+            + β × (Content-Based Score)
+            + γ × (Contextual Score)
+
+Where α + β + γ = 1
+(weights tuned through A/B testing)
+```
+
+Netflix, Amazon, and Spotify all use hybrid systems with dozens of sub-models combined together.
+
+---
+
+### 4. Matrix Factorization
+
+A more **advanced mathematical approach** that handles sparse data well.
+
+```
+Core Concept:
+Decompose the user-item matrix into latent factors
+
+R ≈ U × Vᵀ
+
+Where:
+R = User-Item rating matrix (m × n)
+U = User latent factor matrix (m × k)
+V = Item latent factor matrix (n × k)
+k =",22,1000,1022,18.270937000052072,5,4,4,4,4
+7,claude-sonnet-4-6,"Provide a step-by-step guide to selecting a good smartphone based on performance, battery life, and camera quality.","# How to Select a Good Smartphone: A Step-by-Step Guide
+
+## Step 1: Define Your Budget Range First
+
+Before evaluating specs, set a realistic budget because it shapes every decision afterward.
+
+| Budget Tier | Price Range | What to Expect |
+|-------------|-------------|----------------|
+| Entry-level | Under $300 | Basic performance, adequate cameras |
+| Mid-range | $300–$600 | Strong value, competitive specs |
+| Flagship | $600–$1200+ | Best performance, premium cameras |
+
+---
+
+## Step 2: Evaluate Performance
+
+### What to Look For
+- **Processor (chipset)** — This is the single most important performance indicator
+  - Apple A-series chips (A16, A17) = consistently top-tier
+  - Qualcomm Snapdragon 8 series = strong Android option
+  - MediaTek Dimensity 9000+ = competitive alternative
+- **RAM** — Affects multitasking
+  - 6GB = minimum for smooth daily use
+  - 8–12GB = recommended for heavy users
+  - 16GB+ = future-proofing or power users
+
+### Practical Tests to Research
+- Benchmark scores (AnTuTu, Geekbench) give objective comparisons
+- Real-world gaming and app-switching reviews matter more than raw numbers
+- Check how the phone performs **after 1–2 years**, not just at launch
+
+### Red Flags
+- Phones using processors from 2+ generations ago
+- Less than 6GB RAM in 2024
+- Thermal throttling complaints in reviews
+
+---
+
+## Step 3: Assess Battery Life
+
+### Key Specifications
+- **Battery capacity** — measured in mAh
+  - 4,000 mAh = decent minimum
+  - 5,000 mAh = good for most users
+  - 6,000 mAh+ = excellent longevity
+- **Screen-on time (SOT)** — more reliable than mAh alone
+  - Look for 7+ hours SOT in independent reviews
+
+### Important Variables That Affect Battery Life
+1. Screen resolution and refresh rate (90Hz vs 120Hz drain differs)
+2. Processor efficiency matters as much as battery size
+3. Software optimization varies significantly by manufacturer
+4. Network conditions (5G drains faster than 4G)
+
+### Charging Considerations
+- **Wired charging speed** — 30W minimum is reasonable today, 65W+ is convenient
+- **Wireless charging** — useful quality-of-life feature
+- **Reverse wireless charging** — nice bonus for accessory users
+- **Note:** Faster charging can affect long-term battery health
+
+### How to Research Battery Life
+- Read GSMArena battery endurance ratings
+- Watch YouTube reviewers doing real-world usage tests
+- Check Reddit communities for long-term user reports
+
+---
+
+## Step 4: Evaluate Camera Quality
+
+### Understanding the Camera System
+Megapixels are **not** the most important factor. Instead focus on:
+
+#### Primary Camera
+- Sensor size (larger = better low-light performance)
+- Aperture (lower f-number = more light captured)
+- Optical Image Stabilization (OIS) = essential for video and night shots
+
+#### Supporting Cameras
+- **Ultrawide** — useful for landscapes and group photos
+- **Telephoto** — optical zoom matters more than digital zoom
+- **Macro** — often low quality; treat as a bonus
+
+#### Software Processing
+- This often separates good cameras from great ones
+- Google Pixel phones excel here despite modest hardware
+- Computational photography has become extremely important
+
+### Camera Evaluation Checklist
+
+| Condition | What to Check |
+|-----------|---------------|
+| Daylight | Sharpness, color accuracy, dynamic range |
+| Low light | Noise levels, detail retention, night mode |
+| Portrait mode | Edge detection quality, natural bokeh |
+| Video | Stabilization, 4K quality, audio capture |
+| Front camera | Skin tones, sharpness, portrait accuracy |
+
+### Reliable Camera Research Sources
+- **DxOMark** — standardized scoring with detailed breakdowns
+- **MKBHD, Dave2D** — practical YouTube camera comparisons
+- **GSMArena photo samples** — side-by-side comparisons
+- **r/Smartphone su",32,1000,1032,21.914492100011557,5,4,4,5,4.5
+8,claude-sonnet-4-6,Summarize the benefits of cloud computing for small businesses in a structured bullet-point format.,"# Benefits of Cloud Computing for Small Businesses
+
+## 💰 Cost Savings
+- Eliminates need for expensive on-site hardware and servers
+- Reduces IT maintenance and staffing costs
+- Pay-as-you-go pricing scales with actual usage
+- Lower upfront capital investment
+
+## 📈 Scalability & Flexibility
+- Easily scale storage and resources up or down as needed
+- Supports business growth without major infrastructure changes
+- Access a wide range of tools and applications on demand
+
+## 🔒 Security & Reliability
+- Professional-grade data encryption and security protocols
+- Automatic backups reduce risk of data loss
+- Disaster recovery solutions built into most services
+- Providers maintain high uptime guarantees
+
+## 🤝 Collaboration & Accessibility
+- Teams can access files and tools from anywhere, any device
+- Real-time collaboration across remote or distributed teams
+- Streamlines communication and workflow
+
+## ⚙️ Efficiency & Productivity
+- Automatic software updates eliminate manual maintenance
+- Faster deployment of new tools and applications
+- Frees staff to focus on core business activities
+
+## 🌍 Competitive Advantage
+- Access to enterprise-level technology at affordable prices
+- Enables faster innovation and adaptation
+- Levels the playing field with larger competitors
+
+---
+**Bottom Line:** Cloud computing gives small businesses **enterprise capabilities** with **startup-friendly costs**, making it a practical solution for growth and efficiency.",26,326,352,7.620899699977599,5,5,5,5,5
+9,claude-sonnet-4-6,"Explain how customers should evaluate different online marketplaces based on pricing, delivery, return policies, and customer support, and provide guidance for making a smart purchase decision.","# How to Evaluate Online Marketplaces: A Complete Buyer's Guide
+
+## Why This Matters
+
+Not all online marketplaces are created equal. The same product can vary significantly in **total cost, reliability, and post-purchase experience** depending on where you buy it. A seemingly great deal can turn into a frustrating ordeal when hidden fees, poor support, or inflexible return policies come into play.
+
+---
+
+## 1. Evaluating Pricing
+
+### Look Beyond the Sticker Price
+
+The listed price is rarely the final price. Smart shoppers calculate the **true total cost** before comparing.
+
+**What to factor in:**
+- Base product price
+- Shipping and handling fees
+- Applicable taxes and import duties
+- Membership or subscription fees (e.g., Amazon Prime)
+- Currency conversion fees for international purchases
+- Assembly or installation costs if applicable
+
+**Practical Steps:**
+- Always proceed to checkout to see the final price before buying
+- Use browser extensions like **Honey, Capital One Shopping, or CamelCamelCamel** (for Amazon price history) to verify you're getting a fair price
+- Compare the same item across at least 3 platforms before purchasing
+- Check whether price-match guarantees are available
+
+**Red Flags in Pricing:**
+- Prices dramatically lower than competitors (could indicate counterfeit goods or a scam)
+- ""Sale"" prices where the original price seems artificially inflated
+- Fees that only appear at the final checkout stage
+- Subscription fees buried in fine print
+
+**Price Comparison Example:**
+
+| Factor | Platform A | Platform B | Platform C |
+|--------|-----------|-----------|-----------|
+| Product Price | $45 | $52 | $40 |
+| Shipping | $8 | Free | $12 |
+| Tax | $4 | $5 | $3.50 |
+| **Total** | **$57** | **$57** | **$55.50** |
+
+*The ""cheapest"" listing wasn't actually cheapest once all costs were considered.*
+
+---
+
+## 2. Evaluating Delivery
+
+### Speed, Reliability, and Transparency
+
+Delivery problems are among the most common complaints in online shopping. Evaluating this area can save significant frustration.
+
+**Key Questions to Ask:**
+
+**Before purchasing:**
+- What are the estimated delivery timeframes?
+- Are these estimates or guarantees?
+- Does the marketplace offer tracking?
+- Who is the actual fulfillment party — the marketplace, a third-party seller, or a manufacturer?
+
+**Carrier and fulfillment considerations:**
+- Marketplace-fulfilled orders (e.g., ""Fulfilled by Amazon"") generally offer more consistency than individual seller shipping
+- Third-party sellers on marketplaces vary widely in reliability
+- International orders carry customs delays and higher loss/damage risk
+
+**Delivery Tiers to Compare:**
+
+| Delivery Factor | What to Look For |
+|----------------|-----------------|
+| Standard delivery time | Specific date range, not vague ""5–21 business days"" |
+| Express options | Availability and actual cost |
+| Tracking | Real-time updates from warehouse to door |
+| Packaging quality | Reviews often mention this; fragile items need proper protection |
+| Last-mile carrier | Some carriers have poor reputations in specific regions |
+
+**How to Research Delivery Reliability:**
+- Read recent customer reviews specifically mentioning shipping
+- Check the seller's feedback score and delivery-related complaints
+- Look for ""On-time delivery"" metrics where platforms publish them
+- Search ""[Marketplace name] + delivery problems"" to find systemic issues
+
+**Red Flags:**
+- No tracking information provided
+- Vague or very wide delivery windows
+- Seller based in a distant country with no local warehouse option
+- No clear communication about delays
+
+---
+
+## 3. Evaluating Return Policies
+
+### Your Protection When Things Go Wrong
+
+A good return policy is essentially **insurance on your purchase**. This area deserves careful reading — the fine print matters enormously.
+
+**Core Elements of a Strong Return Policy:**
+
+**Return Window**
+- 30 days is standard; 60–90 days is generous; less than 14 days is a warning sign
+- Some categories (electronics, software, hygiene products) often have shorter or restricted windows
+- Holiday return extensions signal a customer-friendly platform
+
+**Return Cost**
+- Does the customer or the marketplace cover return shipping?
+- Is there a restocking",41,1000,1041,23.19991329999175,5,5,4,5,4.75
+10,claude-sonnet-4-6,"Create a structured comparison of three popular online shopping platforms based on user experience, pricing, delivery speed, and trust factors, and present it in a clear table format.","# Online Shopping Platforms: Structured Comparison
+
+## Platforms Evaluated: Amazon · eBay · Walmart
+
+---
+
+## 📊 Main Comparison Table
+
+| Category | Subcategory | Amazon | eBay | Walmart |
+|----------|-------------|--------|------|---------|
+| **🖥️ User Experience** | Interface Design | ⭐⭐⭐⭐⭐ Clean, intuitive, personalized | ⭐⭐⭐ Functional but cluttered | ⭐⭐⭐⭐ Modern, steadily improving |
+| | Search & Filters | ⭐⭐⭐⭐⭐ Advanced, highly accurate | ⭐⭐⭐⭐ Good with condition filters | ⭐⭐⭐⭐ Solid, improving rapidly |
+| | Mobile App | ⭐⭐⭐⭐⭐ Industry-leading app | ⭐⭐⭐ Adequate, less polished | ⭐⭐⭐⭐ Strong, well-rated |
+| | Product Discovery | ⭐⭐⭐⭐⭐ Excellent recommendations | ⭐⭐⭐ Inconsistent browsing | ⭐⭐⭐⭐ Good curated sections |
+| | Checkout Process | ⭐⭐⭐⭐⭐ 1-click, very fast | ⭐⭐⭐ Multi-step, slower | ⭐⭐⭐⭐⭐ Fast, guest-friendly |
+| **💰 Pricing** | Base Product Prices | Mid-range | ⭐⭐⭐⭐⭐ Often lowest (used/rare) | ⭐⭐⭐⭐⭐ Competitive everyday prices |
+| | Price Transparency | ⭐⭐⭐ Dynamic pricing varies widely | ⭐⭐⭐ Auction unpredictability | ⭐⭐⭐⭐⭐ Consistent, honest pricing |
+| | Membership/Fees | Prime: **$139/year** | No membership required | Walmart+: **$98/year** |
+| | Hidden Costs | Occasional add-on seller fees | ⚠️ Shipping often extra | ⭐⭐⭐⭐⭐ Free pickup, low extras |
+| | Price Matching | ❌ No formal policy | ❌ Auction-based only | ✅ Yes, matches competitors |
+| | Deals & Sales | Prime Day, Lightning Deals | eBay Deals, Daily Offers | Rollbacks, Flash Picks |
+| **🚚 Delivery Speed** | Standard Shipping | 4–5 business days | 3–7 business days | 3–5 business days |
+| | Fast Shipping | Prime: **Same/Next Day** | 1-day (limited sellers) | Express: **Same/Next Day** |
+| | Free Shipping Threshold | Free w/ Prime or $25+ | Seller-dependent | Free on $35+ orders |
+| | Delivery Reliability | ⭐⭐⭐⭐⭐ Highly consistent | ⭐⭐⭐ Varies by seller | ⭐⭐⭐⭐ Generally reliable |
+| | Order Tracking | ⭐⭐⭐⭐⭐ Real-time, precise | ⭐⭐⭐ Basic tracking | ⭐⭐⭐⭐ Real-time updates |
+| | In-Store/Curbside Pickup | ❌ Limited locations | ❌ Not available | ⭐⭐⭐⭐⭐ 4,700+ store locations |
+| **🔒 Trust Factors** | Buyer Protection | ⭐⭐",40,1000,1040,15.245290799997747,5,4,3,4,4

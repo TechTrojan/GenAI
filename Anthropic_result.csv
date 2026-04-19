@@ -1,4 +1,4 @@
-Sr.No,model_name,question,answer,prompt_token,response_token,total_token,total_response_time,relevance,clarity,completeness,usefulness,overall_score
+Sr.No,model_name,question,answer,prompt_token,response_token,total_token,total_response_time,relevance,clarity,completeness,usefulness,overall_score,Cost
 1,claude-sonnet-4-6,What factors should I consider when buying a wireless noise-cancelling headphone?,"# Factors to Consider When Buying Wireless Noise-Cancelling Headphones
 
 ## Sound Quality
@@ -43,7 +43,7 @@ Sr.No,model_name,question,answer,prompt_token,response_token,total_token,total_r
 - Mid-range: $100-300
 - Budget: Under $100
 
-Would you like more detail on any specific factor?",23,352,375,9.026969699945766,5,5,5,5,5
+Would you like more detail on any specific factor?",23,352,375,9.0269697,5,5,5,5,5,0.00021465
 2,claude-sonnet-4-6,Explain the key differences between SSD and HDD storage in simple terms.,"# SSD vs HDD Storage: Simple Explanation
 
 ## What They Are
@@ -78,7 +78,7 @@ Would you like more detail on any specific factor?",23,352,375,9.026969699945766
 - **Choose HDD** if you need lots of storage on a tight budget
 - **Many computers use both** - SSD for the operating system, HDD for storing large files
 
-Most modern laptops now come with SSDs as the standard option.",23,341,364,7.3685264000087045,5,5,5,5,5
+Most modern laptops now come with SSDs as the standard option.",23,341,364,7.3685264,5,5,5,5,5,
 3,claude-sonnet-4-6,Give me 5 tips for choosing a good office chair for long working hours.,"# 5 Tips for Choosing a Good Office Chair for Long Working Hours
 
 ## 1. 🪑 Look for Proper Lumbar Support
@@ -103,7 +103,7 @@ Most modern laptops now come with SSDs as the standard option.",23,341,364,7.368
 
 ---
 
-**Bottom line:** Investing in a quality ergonomic chair can significantly improve your productivity and long-term health. Consider it a worthwhile investment!",24,320,344,10.432101400045212,5,5,5,5,5
+**Bottom line:** Investing in a quality ergonomic chair can significantly improve your productivity and long-term health. Consider it a worthwhile investment!",24,320,344,10.4321014,5,5,5,5,5,
 4,claude-sonnet-4-6,Compare laptops vs tablets for students and suggest when to choose each.,"# Laptops vs Tablets for Students
 
 ## Quick Comparison
@@ -170,7 +170,7 @@ Most modern laptops now come with SSDs as the standard option.",23,341,364,7.368
 ---
 
 ## Bottom Line
-Most students are better served by a **laptop as their primary device**. Tablets shine as **secondary tools** or for students with specific, lighter academic needs. When in doubt, consider what software your program actually requires before buying.",21,564,585,12.799060399993323,5,5,5,5,5
+Most students are better served by a **laptop as their primary device**. Tablets shine as **secondary tools** or for students with specific, lighter academic needs. When in doubt, consider what software your program actually requires before buying.",21,564,585,12.7990604,5,5,5,5,5,
 5,claude-sonnet-4-6,Write a short promotional message for an online shopping platform highlighting fast delivery and great customer service.,"# Shop Smarter, Get It Faster! 🛍️
 
 Why wait when you can have it **today**?
@@ -189,7 +189,7 @@ And we don't stop there. Our **dedicated customer service team** is available **
 👉 *Start shopping now and experience the difference!*
 
 ---
-*Because great service shouldn't be the exception — it should be the standard.*",25,216,241,6.305628700007219,5,5,5,5,5
+*Because great service shouldn't be the exception — it should be the standard.*",25,216,241,6.3056287,5,5,5,5,5,
 6,claude-sonnet-4-6,Explain in detail how a recommendation system works in e-commerce platforms.,"# How Recommendation Systems Work in E-Commerce Platforms
 
 ## Overview
@@ -342,7 +342,7 @@ Where:
 R = User-Item rating matrix (m × n)
 U = User latent factor matrix (m × k)
 V = Item latent factor matrix (n × k)
-k =",22,1000,1022,18.270937000052072,5,4,4,4,4
+k =",22,1000,1022,18.270937,5,4,4,4,4,
 7,claude-sonnet-4-6,"Provide a step-by-step guide to selecting a good smartphone based on performance, battery life, and camera quality.","# How to Select a Good Smartphone: A Step-by-Step Guide
 
 ## Step 1: Define Your Budget Range First
@@ -444,7 +444,7 @@ Megapixels are **not** the most important factor. Instead focus on:
 - **DxOMark** — standardized scoring with detailed breakdowns
 - **MKBHD, Dave2D** — practical YouTube camera comparisons
 - **GSMArena photo samples** — side-by-side comparisons
-- **r/Smartphone su",32,1000,1032,21.914492100011557,5,4,4,5,4.5
+- **r/Smartphone su",32,1000,1032,21.9144921,5,4,4,5,4.5,
 8,claude-sonnet-4-6,Summarize the benefits of cloud computing for small businesses in a structured bullet-point format.,"# Benefits of Cloud Computing for Small Businesses
 
 ## 💰 Cost Savings
@@ -480,7 +480,7 @@ Megapixels are **not** the most important factor. Instead focus on:
 - Levels the playing field with larger competitors
 
 ---
-**Bottom Line:** Cloud computing gives small businesses **enterprise capabilities** with **startup-friendly costs**, making it a practical solution for growth and efficiency.",26,326,352,7.620899699977599,5,5,5,5,5
+**Bottom Line:** Cloud computing gives small businesses **enterprise capabilities** with **startup-friendly costs**, making it a practical solution for growth and efficiency.",26,326,352,7.6208997,5,5,5,5,5,
 9,claude-sonnet-4-6,"Explain how customers should evaluate different online marketplaces based on pricing, delivery, return policies, and customer support, and provide guidance for making a smart purchase decision.","# How to Evaluate Online Marketplaces: A Complete Buyer's Guide
 
 ## Why This Matters
@@ -586,7 +586,7 @@ A good return policy is essentially **insurance on your purchase**. This area de
 
 **Return Cost**
 - Does the customer or the marketplace cover return shipping?
-- Is there a restocking",41,1000,1041,23.19991329999175,5,5,4,5,4.75
+- Is there a restocking",41,1000,1041,23.1999133,5,5,4,5,4.75,
 10,claude-sonnet-4-6,"Create a structured comparison of three popular online shopping platforms based on user experience, pricing, delivery speed, and trust factors, and present it in a clear table format.","# Online Shopping Platforms: Structured Comparison
 
 ## Platforms Evaluated: Amazon · eBay · Walmart
@@ -614,4 +614,5 @@ A good return policy is essentially **insurance on your purchase**. This area de
 | | Delivery Reliability | ⭐⭐⭐⭐⭐ Highly consistent | ⭐⭐⭐ Varies by seller | ⭐⭐⭐⭐ Generally reliable |
 | | Order Tracking | ⭐⭐⭐⭐⭐ Real-time, precise | ⭐⭐⭐ Basic tracking | ⭐⭐⭐⭐ Real-time updates |
 | | In-Store/Curbside Pickup | ❌ Limited locations | ❌ Not available | ⭐⭐⭐⭐⭐ 4,700+ store locations |
-| **🔒 Trust Factors** | Buyer Protection | ⭐⭐",40,1000,1040,15.245290799997747,5,4,3,4,4
+| **🔒 Trust Factors** | Buyer Protection | ⭐⭐",40,1000,1040,15.2452908,5,4,3,4,4,
+,,,,277,6119,,,,,,,,0.00371295

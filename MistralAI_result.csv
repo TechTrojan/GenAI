@@ -1,4 +1,4 @@
-Sr.No,model_name,question,answer,prompt_token,response_token,total_token,total_response_time,relevance,clarity,completeness,usefulness,overall_score
+Sr.No,model_name,question,answer,prompt_token,response_token,total_token,total_response_time,relevance,clarity,completeness,usefulness,overall_score,Cost
 1,mistral-small-latest,What factors should I consider when buying a wireless noise-cancelling headphone?,"When buying **wireless noise-cancelling headphones**, several key factors should influence your decision to ensure you get the best value and performance for your needs. Here’s a breakdown of the most important considerations:
 
 ---
@@ -66,7 +66,7 @@ Sr.No,model_name,question,answer,prompt_token,response_token,total_token,total_r
 
 ---
 ### **8. Smart Features & App Integration**
-- **Voice Assist",31,1000,1031,8.426764600037131,5,5,4,5,4.75
+- **Voice Assist",31,1000,1031,8.4267646,5,5,4,5,4.75,
 2,mistral-small-latest,Explain the key differences between SSD and HDD storage in simple terms.,"Here’s a simple breakdown of the key differences between **SSD (Solid State Drive)** and **HDD (Hard Disk Drive)** storage:
 
 ### **1. How They Store Data**
@@ -152,7 +152,7 @@ Sr.No,model_name,question,answer,prompt_token,response_token,total_token,total_r
 | **Operating System (Windows/macOS)** | SSD | Faster boot & app loading |
 | **Gaming** | SSD | Games load faster, less waiting |
 | **Video Editing / Large Files** | SSD (for speed) + HDD (for storage) | Fast editing + cheap bulk storage |
-| **Backups",30,1000,1030,8.801494500017725,5,5,5,5,5
+| **Backups",30,1000,1030,8.8014945,5,5,5,5,5,
 3,mistral-small-latest,Give me 5 tips for choosing a good office chair for long working hours.,"Choosing the right office chair for long working hours is crucial for comfort, productivity, and long-term health. Here are **five essential tips** to help you pick the best one:
 
 ### **1. Prioritize Ergonomics & Adjustability**
@@ -207,7 +207,7 @@ If you sit for **8+ hours/day**, consider:
 | **$200–$400** | Herman Miller Aeron (Classic), Steelcase Gesture |
 | **$400+** | Secretlab Titan Evo, Autonomous ErgoChair Pro |
 
-Would you like recommendations based on a specific budget or body type?",31,849,880,6.143897400004789,5,5,5,5,5
+Would you like recommendations based on a specific budget or body type?",31,849,880,6.1438974,5,5,5,5,5,
 4,mistral-small-latest,Compare laptops vs tablets for students and suggest when to choose each.,"Choosing between a **laptop** and a **tablet** for students depends on their needs, budget, and the type of tasks they’ll perform. Below is a detailed comparison to help decide when to choose each:
 
 ---
@@ -258,7 +258,7 @@ Would you like recommendations based on a specific budget or body type?",31,849,
 
 ### **📱 When to Choose a Tablet for Students**
 ✅ **Best for:**
-- **Note-taking & Digital Art**",29,1000,1029,7.167049399984535,5,4,4,4,4
+- **Note-taking & Digital Art**",29,1000,1029,7.1670494,5,4,4,4,4,
 5,mistral-small-latest,Write a short promotional message for an online shopping platform highlighting fast delivery and great customer service.,"**Shop Faster, Smile More!** ✨
 
 🚀 **Lightning-Fast Delivery** – Get your favorites in record time!
@@ -267,7 +267,7 @@ Would you like recommendations based on a specific budget or body type?",31,849,
 
 **Why wait?** Start browsing now and experience shopping like never before! 🛍️💙
 
-[**Shop Now**] [Insert Link]",33,116,149,1.2296702000312507,5,5,5,5,5
+[**Shop Now**] [Insert Link]",33,116,149,1.2296702,5,5,5,5,5,
 6,mistral-small-latest,Explain in detail how a recommendation system works in e-commerce platforms.,"Recommendation systems are a cornerstone of modern e-commerce platforms, driving **personalization, engagement, and revenue** by suggesting products tailored to individual users. These systems analyze user behavior, preferences, and contextual data to predict what a user might want to buy next. Below is a **detailed breakdown** of how they work, covering **key techniques, algorithms, data sources, challenges, and real-world implementations**.
 
 ---
@@ -348,7 +348,7 @@ Recommendation systems can be broadly categorized into **three main types**, eac
 3. **Cascade Hybrid** – Use one model to narrow down candidates, then another for ranking.
 4. **Meta-Level Hybrid** – Train one model to predict the output of another.
 
-",29,1000,1029,6.552506199979689,5,5,5,5,5
+",29,1000,1029,6.5525062,5,5,5,5,5,
 7,mistral-small-latest,"Provide a step-by-step guide to selecting a good smartphone based on performance, battery life, and camera quality.","Selecting a good smartphone involves balancing **performance, battery life, and camera quality**—three critical factors that impact daily use. Below is a **step-by-step guide** to help you make an informed decision based on your priorities.
 
 ---
@@ -424,7 +424,7 @@ Battery life depends on **battery capacity, efficiency, and software optimizatio
 - **Mid-range:** Samsung Galaxy A54, Google Pixel 7a.
 - **Flagship:** iPhone 15 Plus, Samsung Galaxy S24 Ultra.
 
-",38,1000,1038,6.439351799956057,5,4,4,4,4
+",38,1000,1038,6.4393518,5,4,4,4,4,
 8,mistral-small-latest,Summarize the benefits of cloud computing for small businesses in a structured bullet-point format.,"### **Benefits of Cloud Computing for Small Businesses**
 
 #### **1. Cost Efficiency**
@@ -473,7 +473,7 @@ Battery life depends on **battery capacity, efficiency, and software optimizatio
 ### **Key Takeaway**
 Cloud computing empowers small businesses to **compete with larger enterprises** by providing **affordable, secure, and scalable** solutions that enhance **productivity, collaboration, and growth**—all while reducing operational burdens.
 
-Would you like a deeper dive into any specific benefit?",33,774,807,5.132173999969382,5,5,5,5,5
+Would you like a deeper dive into any specific benefit?",33,774,807,5.132174,5,5,5,5,5,
 9,mistral-small-latest,"Explain how customers should evaluate different online marketplaces based on pricing, delivery, return policies, and customer support, and provide guidance for making a smart purchase decision.","When evaluating different online marketplaces, customers should consider several key factors to ensure they make a smart purchase decision. Below is a structured guide on how to assess **pricing, delivery, return policies, and customer support**, along with additional tips for a well-informed choice.
 
 ---
@@ -558,7 +558,7 @@ Would you like a deeper dive into any specific benefit?",33,774,807,5.1321739999
 
 ---
 
-",48,1000,1048,7.986384099989664,5,5,5,5,5
+",48,1000,1048,7.9863841,5,5,5,5,5,
 10,mistral-small-latest,"Create a structured comparison of three popular online shopping platforms based on user experience, pricing, delivery speed, and trust factors, and present it in a clear table format.","Here’s a structured comparison of **Amazon**, **eBay**, and **Walmart**—three of the most popular online shopping platforms—based on **user experience, pricing, delivery speed, and trust factors**:
 
 | **Category**          | **Amazon**                          | **eBay**                            | **Walmart**                         |
@@ -582,4 +582,5 @@ Would you like a deeper dive into any specific benefit?",33,774,807,5.1321739999
 ✅ **Best for Deals & Used Items:** **eBay** (auctions & collectibles)
 ✅ **Best for Budget & Groceries:** **Walmart** (low prices, in-store pickup)
 
-Would you like a deeper dive into any specific aspect (e.g., app experience, customer service, or international shipping)?",48,636,684,5.225188100012019,5,5,5,5,5
+Would you like a deeper dive into any specific aspect (e.g., app experience, customer service, or international shipping)?",48,636,684,5.2251881,5,5,5,5,5,
+,,,,350,8375,,,,,,,,0.0025475

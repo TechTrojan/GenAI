@@ -1,34 +1,28 @@
-# Cost, Latency & Response Quality Evaluation
+# 🚀 Prompt Compression Experiment (OpenAI)
 
-## Overview
+## 📌 Overview
 
-I wanted to understand how different LLMs behave when you look beyond just “it works” and start measuring what actually matters in real systems — tokens, latency, and response quality.
+This experiment evaluates the impact of **Prompt Compression** on:
 
-This small experiment compares three models:
+- 💰 Token Usage  
+- ⚡ Response Time (Latency)  
+- 🧠 Response Quality  
 
-- mistral-small-latest  
-- gpt-4o-mini  
-- claude-sonnet-4-6  
+Using **OpenAI (gpt-4o-mini)** as the model, we compare:
 
-The goal was simple: run the same set of questions across all three and observe how they differ in performance and output.
+1. **Regular Prompts (Verbose)**
+2. **Compressed Prompts (Optimized)**
+
+---
+
+## 🎯 Objective
+
+To answer a key question:
+
+> Can we reduce token usage and latency **without significantly impacting response quality?**
 
 ---
 
-## What I Built
-
-A lightweight evaluation pipeline using:
-
-- LangChain for orchestration  
-- MistralAI + other model APIs for execution  
-- Python script to run tests and collect metrics  
-
-Each model receives the same set of 10 questions, and I capture:
-
-- Token usage  
-- Latency  
-- Response output (for quality evaluation)  
-
----
 
 ## 🧠 Architecture Diagram
 
@@ -38,158 +32,226 @@ Each model receives the same set of 10 questions, and I capture:
 
 ---
 
-## Evaluation Flow
+## 🧪 Experiment Setup
 
-1. Define a fixed set of 10 questions  
-2. Send each question to all 3 models  
-3. Capture:
-   - Tokens used  
-   - Response time  
-   - Generated answer  
-4. Store results  
-5. Compare across models  
+### 🔹 Model Used
+- OpenAI: `gpt-4o-mini`
 
 ---
 
-## Metrics Considered
-
-### 1. Token Usage
-Tracks how many tokens each model consumes per request.
-
-Why it matters:
-- Direct impact on cost  
-- Efficiency of model responses  
+### 🔹 Test Dataset
+- 10 prompts (verbose format)
+- Each prompt tested in:
+  - Regular (original)
+  - Compressed version
 
 ---
 
-### 2. Latency
-Measures response time for each model.
+### 🔹 Metrics Collected
 
-Why it matters:
-- User experience  
-- Real-time system feasibility  
-
----
-
-### 3. Response Quality
-Manual / qualitative observation of:
-- Relevance  
-- Clarity  
-- Completeness  
+| Metric | Description |
+|------|-------------|
+| Prompt Tokens | Tokens used in input |
+| Completion Tokens | Tokens generated in output |
+| Total Tokens | Sum of input + output |
+| Response Time (ms) | Time taken for model response |
+| Response Quality | LLM-evaluated score (1–5) |
 
 ---
 
-## Key Observations
+## 📂 Result Files
 
-- Different models show clear trade-offs between **speed and quality**  
-- Lower latency models are not always the most concise  
-- Token usage varies more than expected for similar prompts  
-- Response style (verbose vs concise) significantly impacts token count  
+- OpenAI_result_Regular.csv
+- OpenAI_result_compressed.csv
 
 ---
 
-## 📊 Evaluation Results
+## 📊 Sample Data Format
 
-The experiment evaluated all three models using the same set of 10 questions, focusing on **token usage, cost, latency, and response quality**.
-
----
-
-### 🔹 Mistral – `mistral-small-latest`
-
-- **Token Usage:**  
-  More than 60% of responses reached the maximum output limit of 1000 tokens, indicating a tendency toward more verbose outputs.
-
-- **Cost:**  
-  Total cost for all queries was approximately **$0.00255**, making it the most cost-efficient option in this comparison.
-
-- **Latency:**  
-  Most responses were generated within **6 to 8.5 seconds**, showing relatively stable and faster performance.
-
-- **Response Quality:**  
-  Around **70% of responses achieved a quality score of 5**, reflecting strong but slightly variable output quality.
+Prompt,PromptTokens,CompletionTokens,TotalTokens,Latency(ms),QualityScore
+"Explain cloud computing...",120,180,300,850,4.5
 
 ---
 
-### 🔹 OpenAI – `gpt-4o-mini`
+## 🔬 Experiment Flow
 
-- **Token Usage:**  
-  Approximately 60% of responses were under **600 tokens**, indicating more concise and controlled responses.
-
-- **Cost:**  
-  Total cost was approximately **$0.00333**, slightly higher than Mistral.
-
-- **Latency:**  
-  Around 60% of responses took **more than 9 seconds**, with a few responses reaching up to **14 seconds**.
-
-- **Response Quality:**  
-  All responses consistently achieved a **quality score of 5**, demonstrating highly reliable performance.
-
----
-
-### 🔹 Anthropic – `claude-sonnet-4-6`
-
-- **Token Usage:**  
-  About 50% of responses were under **500 tokens**, while a few responses reached the maximum limit of 1000 tokens, showing mixed verbosity.
-
-- **Cost:**  
-  Total cost for all queries was approximately **$0.00371**, the highest among the evaluated models.
-
-- **Latency:**  
-  Around 50% of responses took between **12 to 23 seconds**, indicating higher response times.
-
-- **Response Quality:**  
-  Approximately **80% of responses achieved a quality score of 5**, showing strong overall quality.
+Input Prompt (Verbose)
+        ↓
+Prompt Compression (Manual / LLM)
+        ↓
+Send to OpenAI Model
+        ↓
+Capture Response
+        ↓
+Measure:
+   - Token Usage
+   - Latency
+   - Response
+        ↓
+Evaluate Quality (LLM Judge)
+        ↓
+Store Results (CSV)
 
 ---
 
-## 🧠 Summary Insights
+## 📈 Key Comparisons
 
-- **Mistral** stands out for **cost efficiency and lower latency**, but tends to generate longer responses.  
-- **GPT-4o-mini** provides the most **consistent response quality**, with more concise outputs.  
-- **Claude Sonnet** delivers strong quality but at the cost of **higher latency and overall expense**.  
-
-👉 Each model presents a different balance between **efficiency, speed, and quality**, making model selection highly dependent on the specific use case.
-
----
-
-## Why This Experiment Matters
-
-In real applications, choosing a model is not just about accuracy.
-
-You need to balance:
-- Cost (tokens)  
-- Performance (latency)  
-- Output usefulness (quality)  
+| Comparison | Goal |
+|----------|------|
+| Regular vs Compressed | Token reduction |
+| Latency difference | Performance gain |
+| Quality score | Impact on output |
 
 ---
 
-## Possible Extensions
+## 🧠 Expected Insights
 
-- Add automated scoring (LLM-as-judge)  
-- Track cost per request  
-- Increase dataset size  
-- Introduce domain-specific queries  
-- Visualize results (charts / dashboards)  
-
----
-
-## How to Run
-
-1. Clone the repo  
-2. Set API keys for each provider  
-3. Run the evaluation script  
-4. Review output logs / results  
+- Reduced tokens → lower cost  
+- Faster responses with shorter prompts  
+- Minimal or controlled drop in quality  
+- Optimal balance between efficiency and accuracy  
 
 ---
 
-## Repo
+## 💡 Key Takeaway
 
-https://github.com/TechTrojan/GenAI/tree/Cost_Lat_Eng
+Prompt design is one of the most powerful levers to optimize cost, latency, and performance in LLM applications.
 
 ---
 
-## Final Thought
+## 🛠️ Technologies Used
 
-This wasn’t about finding the “best” model.
+- Python  
+- OpenAI API (`gpt-4o-mini`)  
+- CSV / JSON  
 
-It was about understanding how each model behaves under the same conditions — and that’s where real insights start.
+---
+
+Nice — this is where your experiment becomes **valuable insight**, not just data.
+
+Here’s a **clean, README-ready summary section** based on your actual results 👇
+
+---
+
+## 📊 Key Insights from Experiment
+
+### 🔹 1. Token Usage Optimization
+
+* **Regular Prompts (Avg Total Tokens):** ~536
+* **Compressed Prompts (Avg Total Tokens):** ~527
+
+👉 **~1.5–2% reduction in total tokens**
+
+💡 Insight:
+
+> Prompt compression reduces token usage, but the impact depends on how aggressively prompts are compressed. In this experiment, moderate compression led to small but consistent savings.
+
+---
+
+### ⚡ 2. Response Time (Latency)
+
+* **Regular Prompts Avg Latency:** ~7.75 sec
+* **Compressed Prompts Avg Latency:** ~7.60 sec
+
+👉 Slight improvement (~2% faster)
+
+💡 Insight:
+
+> Shorter prompts slightly improve response time, but latency is influenced more by **output size and model processing** than input size alone.
+
+---
+
+### 🧠 3. Response Quality Improvement
+
+* **Regular Avg Quality Score:** 4.12
+* **Compressed Avg Quality Score:** 4.35
+
+👉 **Quality improved (~5–6%)**
+
+💡 Insight:
+
+> Prompt compression did **not degrade quality** — in fact, it improved clarity and usefulness in many cases by removing unnecessary verbosity.
+
+---
+
+### ⚖️ 4. Clarity & Completeness Tradeoff
+
+* **Clarity improved** (4.1 → 4.4)
+* **Completeness improved** (3.3 → 3.6)
+
+💡 Insight:
+
+> Structured and concise prompts help the model produce **more focused and complete answers**, avoiding noise from overly verbose instructions.
+
+---
+
+### 🔍 5. Variability Observed
+
+* Compressed prompts showed:
+
+  * **Higher variance in tokens**
+  * Some cases with **higher token usage (up to 620)**
+
+💡 Insight:
+
+> Compression is not always linear — poorly compressed prompts can **increase output verbosity**, leading to higher token usage.
+
+---
+
+## 🏆 Final Conclusion
+
+> Prompt Compression is a **high-leverage optimization technique** that can improve efficiency without sacrificing quality.
+
+### ✅ Benefits Observed:
+
+* Slight reduction in token usage
+* Slight improvement in latency
+* Noticeable improvement in response quality
+
+### ⚠️ Considerations:
+
+* Compression strategy matters
+* Over-compression can lead to inconsistent outputs
+* Best results come from **structured + intentional prompts**
+
+---
+
+## 🚀 Key Takeaway
+
+> The best prompts are not the shortest — they are the **most efficient per token**.
+
+
+---
+
+## 🚀 Future Enhancements
+
+- Multi-model comparison  
+- Automated compression pipeline  
+- Visualization dashboards  
+- Cost analysis  
+
+---
+
+## 📚 Top References
+
+1. **OpenAI Prompt Engineering Guide**
+   [https://platform.openai.com/docs/guides/prompt-engineering](https://platform.openai.com/docs/guides/prompt-engineering)
+
+2. **OpenAI Pricing (Token Cost Understanding)**
+   [https://platform.openai.com/docs/pricing](https://platform.openai.com/docs/pricing)
+
+3. **Anthropic Prompt Engineering (Excellent for Structured Prompts)**
+   [https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering)
+
+4. **Microsoft Prompt Engineering Guide (Enterprise Perspective)**
+   [https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering)
+
+5. **Prompting Techniques for Large Language Models (Research Paper)**
+   [https://arxiv.org/abs/2302.11382](https://arxiv.org/abs/2302.11382)
+
+
+---
+
+## 📬 Feedback
+
+Feel free to contribute or share feedback!

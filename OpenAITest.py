@@ -9,14 +9,15 @@ import time
 load_dotenv()
 
 class OpenAITest:
-    def __init__(self):
+    def __init__(self, system_prompt:str = ''):
         self.api_key = os.getenv("API_KEY")
         self.base_url  = os.getenv("OPENAI_API_BASE")
-        self.model_name = 'gpt-4o-mini'        
+        self.model_name = 'gpt-4o-mini'   
+        self._system_prompt     =system_prompt
         self.llm = ChatOpenAI(
                 model = self.model_name, 
                 temperature=0.5 , 
-                max_tokens = 1000, 
+                max_tokens = 500, 
                 timeout= 50,
                 max_retries= 2 ,
                 api_key= self.api_key,
@@ -39,14 +40,15 @@ class OpenAITest:
             
             
             
-            
+            messages : list[AnyMessage] = []
+            if self._system_prompt:
+                messages.append(SystemMessage( self._system_prompt))
+                
+            messages.append(HumanMessage(question))                
+                
             response : AIMessage = None
             
-            response = self.llm.invoke(
-                [
-                    HumanMessage(question)
-                ]
-            )
+            response = self.llm.invoke( messages        )
 
             end_time = time.perf_counter() 
 

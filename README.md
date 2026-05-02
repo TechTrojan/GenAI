@@ -1,257 +1,159 @@
-# 🚀 Prompt Compression Experiment (OpenAI)
+# 🧠 Self-Ask Prompting Experiment: Does Step-by-Step Reasoning Improve Response Quality?
 
 ## 📌 Overview
 
-This experiment evaluates the impact of **Prompt Compression** on:
+Prompting style can significantly influence how an LLM reasons through complex questions.
 
-- 💰 Token Usage  
-- ⚡ Response Time (Latency)  
-- 🧠 Response Quality  
+In this experiment, I explored whether **Self-Ask Prompting** — a technique where the model first breaks a question into smaller follow-up questions before answering — can improve overall response quality compared to standard prompting.
 
-Using **OpenAI (gpt-4o-mini)** as the model, we compare:
+The goal was to compare:
 
-1. **Regular Prompts (Verbose)**
-2. **Compressed Prompts (Optimized)**
+- **Regular Prompting**
+- **Self-Ask Prompting**
+
+using the same question set and evaluate results across:
+
+- Relevance  
+- Clarity  
+- Completeness  
+- Usefulness  
 
 ---
 
 ## 🎯 Objective
 
-To answer a key question:
+To understand whether structured prompt decomposition improves:
 
-> Can we reduce token usage and latency **without significantly impacting response quality?**
+- Answer depth  
+- Logical reasoning  
+- Completeness of response  
+- Overall usefulness  
 
 ---
 
+## 🧠 What is Self-Ask Prompting?
+
+Self-Ask prompting encourages the model to:
+
+1. Interpret the main question  
+2. Generate intermediate sub-questions  
+3. Solve smaller reasoning steps  
+4. Synthesize a final answer  
+
+### Example:
+
+**Question:**  
+“What are the long-term effects of EV adoption?”
+
+**Self-Ask Style:**  
+- What impacts oil demand?  
+- How does EV adoption affect battery supply chains?  
+- What are environmental implications?  
+
+👉 Final answer becomes more structured and comprehensive.
+
+---
+
+## ⚙️ Tech Stack
+
+- OpenAI  
+- LangChain  
+- Python  
+- CSV Logging / Evaluation  
+
+---
 
 ## 🧠 Architecture Diagram
 
 <p align="center">
   <img src="./assets/images/architecture.png" alt="Architecture Diagram" width="900"/>
 </p>
+---
+
+## 🧪 Experiment Design
+
+### Standard Prompting
+- Direct question → Direct answer  
+
+### Self-Ask Prompting
+- Direct question → Follow-up reasoning → Final answer  
+
+Both methods were tested using the same evaluation dataset for fair comparison.
 
 ---
 
-## 🧪 Experiment Setup
+## 📊 Key Evaluation Focus
 
-### 🔹 Model Used
-- OpenAI: `gpt-4o-mini`
+### 🔹 Relevance
+Does the answer address the actual question?
 
----
+### 🔹 Clarity
+Is the answer understandable and well-structured?
 
-### 🔹 Test Dataset
-- 10 prompts (verbose format)
-- Each prompt tested in:
-  - Regular (original)
-  - Compressed version
+### 🔹 Completeness
+Does it cover all major aspects?
 
----
-
-### 🔹 Metrics Collected
-
-| Metric | Description |
-|------|-------------|
-| Prompt Tokens | Tokens used in input |
-| Completion Tokens | Tokens generated in output |
-| Total Tokens | Sum of input + output |
-| Response Time (ms) | Time taken for model response |
-| Response Quality | LLM-evaluated score (1–5) |
+### 🔹 Usefulness
+Is it actionable or insightful?
 
 ---
 
-## 📂 Result Files
+## 🔍 Expected Insights
 
-- OpenAI_result_Regular.csv
-- OpenAI_result_compressed.csv
+This experiment is designed to reveal:
 
----
-
-## 📊 Sample Data Format
-
-Prompt,PromptTokens,CompletionTokens,TotalTokens,Latency(ms),QualityScore
-"Explain cloud computing...",120,180,300,850,4.5
+- Does Self-Ask improve reasoning depth?  
+- Does it increase completeness?  
+- Does it trade speed or token cost for quality?  
+- Which prompt style works better for complex questions?  
 
 ---
 
-## 🔬 Experiment Flow
+## 💡 Why This Matters
 
-Input Prompt (Verbose)
-        ↓
-Prompt Compression (Manual / LLM)
-        ↓
-Send to OpenAI Model
-        ↓
-Capture Response
-        ↓
-Measure:
-   - Token Usage
-   - Latency
-   - Response
-        ↓
-Evaluate Quality (LLM Judge)
-        ↓
-Store Results (CSV)
+In real-world GenAI systems, prompt design is architecture.
 
----
+The difference between:
+- A direct answer  
+vs  
+- A decomposed reasoning process  
 
-## 📈 Key Comparisons
+can significantly impact response quality.
 
-| Comparison | Goal |
-|----------|------|
-| Regular vs Compressed | Token reduction |
-| Latency difference | Performance gain |
-| Quality score | Impact on output |
+This becomes especially relevant for:
+
+- Research assistants  
+- Agentic workflows  
+- Multi-step reasoning systems  
+- Educational AI  
 
 ---
 
-## 🧠 Expected Insights
+## 🚀 Potential Trade-Offs
 
-- Reduced tokens → lower cost  
-- Faster responses with shorter prompts  
-- Minimal or controlled drop in quality  
-- Optimal balance between efficiency and accuracy  
+### Self-Ask Advantages:
+- Better structured reasoning  
+- Improved completeness  
+- More transparent logic  
 
----
-
-## 💡 Key Takeaway
-
-Prompt design is one of the most powerful levers to optimize cost, latency, and performance in LLM applications.
-
----
-
-## 🛠️ Technologies Used
-
-- Python  
-- OpenAI API (`gpt-4o-mini`)  
-- CSV / JSON  
+### Possible Costs:
+- Higher token usage  
+- Longer latency  
+- Increased API cost  
 
 ---
 
-Nice — this is where your experiment becomes **valuable insight**, not just data.
+## 📎 Repo
 
-Here’s a **clean, README-ready summary section** based on your actual results 👇
-
----
-
-## 📊 Key Insights from Experiment
-
-### 🔹 1. Token Usage Optimization
-
-* **Regular Prompts (Avg Total Tokens):** ~536
-* **Compressed Prompts (Avg Total Tokens):** ~527
-
-👉 **~1.5–2% reduction in total tokens**
-
-💡 Insight:
-
-> Prompt compression reduces token usage, but the impact depends on how aggressively prompts are compressed. In this experiment, moderate compression led to small but consistent savings.
+https://github.com/TechTrojan/GenAI/tree/Prompt_Self_Ask
 
 ---
 
-### ⚡ 2. Response Time (Latency)
+## 🎯 Final Thought
 
-* **Regular Prompts Avg Latency:** ~7.75 sec
-* **Compressed Prompts Avg Latency:** ~7.60 sec
+This experiment isn’t just about asking better questions.
 
-👉 Slight improvement (~2% faster)
+It’s about understanding whether **how we ask** can fundamentally improve **how AI thinks**.
 
-💡 Insight:
-
-> Shorter prompts slightly improve response time, but latency is influenced more by **output size and model processing** than input size alone.
-
----
-
-### 🧠 3. Response Quality Improvement
-
-* **Regular Avg Quality Score:** 4.12
-* **Compressed Avg Quality Score:** 4.35
-
-👉 **Quality improved (~5–6%)**
-
-💡 Insight:
-
-> Prompt compression did **not degrade quality** — in fact, it improved clarity and usefulness in many cases by removing unnecessary verbosity.
-
----
-
-### ⚖️ 4. Clarity & Completeness Tradeoff
-
-* **Clarity improved** (4.1 → 4.4)
-* **Completeness improved** (3.3 → 3.6)
-
-💡 Insight:
-
-> Structured and concise prompts help the model produce **more focused and complete answers**, avoiding noise from overly verbose instructions.
-
----
-
-### 🔍 5. Variability Observed
-
-* Compressed prompts showed:
-
-  * **Higher variance in tokens**
-  * Some cases with **higher token usage (up to 620)**
-
-💡 Insight:
-
-> Compression is not always linear — poorly compressed prompts can **increase output verbosity**, leading to higher token usage.
-
----
-
-## 🏆 Final Conclusion
-
-> Prompt Compression is a **high-leverage optimization technique** that can improve efficiency without sacrificing quality.
-
-### ✅ Benefits Observed:
-
-* Slight reduction in token usage
-* Slight improvement in latency
-* Noticeable improvement in response quality
-
-### ⚠️ Considerations:
-
-* Compression strategy matters
-* Over-compression can lead to inconsistent outputs
-* Best results come from **structured + intentional prompts**
-
----
-
-## 🚀 Key Takeaway
-
-> The best prompts are not the shortest — they are the **most efficient per token**.
-
-
----
-
-## 🚀 Future Enhancements
-
-- Multi-model comparison  
-- Automated compression pipeline  
-- Visualization dashboards  
-- Cost analysis  
-
----
-
-## 📚 Top References
-
-1. **OpenAI Prompt Engineering Guide**
-   [https://platform.openai.com/docs/guides/prompt-engineering](https://platform.openai.com/docs/guides/prompt-engineering)
-
-2. **OpenAI Pricing (Token Cost Understanding)**
-   [https://platform.openai.com/docs/pricing](https://platform.openai.com/docs/pricing)
-
-3. **Anthropic Prompt Engineering (Excellent for Structured Prompts)**
-   [https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering)
-
-4. **Microsoft Prompt Engineering Guide (Enterprise Perspective)**
-   [https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering)
-
-5. **Prompting Techniques for Large Language Models (Research Paper)**
-   [https://arxiv.org/abs/2302.11382](https://arxiv.org/abs/2302.11382)
-
-
----
-
-## 📬 Feedback
-
-Feel free to contribute or share feedback!
+👉 Sometimes better answers may come not from a better model…  
+but from a better reasoning process.

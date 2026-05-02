@@ -1,0 +1,236 @@
+Sr.No,model_name,question,answer,prompt_token,response_token,total_token,total_response_time,relevance,clarity,completeness,usefulness,overall_score
+1,gpt-4o-mini,"What is prompt engineering, and how can I break it down step by step to understand its main techniques, practical applications, and best practices for beginners?","Question : What is prompt engineering, and how can I break it down step by step to understand its main techniques, practical applications, and best practices for beginners?
+
+Are follow up question needed here : Yes.
+Follow up: What is the definition of prompt engineering?
+Intermediate answer : Prompt engineering is the practice of designing and refining the inputs (prompts) given to AI models, particularly language models, to elicit the most accurate and relevant responses.
+
+Follow up: What are the main techniques used in prompt engineering?
+Intermediate answer : The main techniques include specificity in prompts, using examples, iterative refinement, and experimenting with different phrasing and formats.
+
+Follow up: What are some practical applications of prompt engineering?
+Intermediate answer : Practical applications include content generation, chatbot development, data analysis, and educational tools, among others.
+
+Follow up: What are the best practices for beginners in prompt engineering?
+Intermediate answer : Best practices for beginners include starting with clear and concise prompts, testing variations, learning from model responses, and gradually increasing complexity.
+
+So the final answer is : Prompt engineering is the practice of designing inputs for AI models to get the best responses. Key techniques include specificity, examples, iterative refinement, and experimenting with phrasing. It has practical applications in content generation, chatbots, and education. Best practices for beginners include starting simple, testing variations, and learning from responses.",110,273,383,5.857982699999411,5,4,4,4,4
+2,gpt-4o-mini,"How does retrieval-augmented generation (RAG) work, and what questions should I ask myself to understand each component such as document loading, chunking, embeddings, retrieval, and response generation?","Question : How does retrieval-augmented generation (RAG) work, and what questions should I ask myself to understand each component such as document loading, chunking, embeddings, retrieval, and response generation?
+
+Are follow up questions needed here : Yes.
+Follow up: What is document loading in RAG?
+Intermediate answer : Document loading is the process of gathering and preparing the relevant documents or data that will be used for generating responses. It involves selecting the right sources and formats for the information needed.
+
+Follow up: What should I consider when loading documents?
+Intermediate answer : When loading documents, consider the relevance, format, size, and quality of the data, as well as how frequently it needs to be updated.
+
+Follow up: What is chunking in RAG?
+Intermediate answer : Chunking is the process of breaking down the loaded documents into smaller, manageable pieces or segments, which can be more easily processed and retrieved during the generation phase.
+
+Follow up: Why is chunking important?
+Intermediate answer : Chunking is important because it allows the system to efficiently search and retrieve specific pieces of information instead of having to sift through entire documents, thus improving response accuracy and speed.
+
+Follow up: What are embeddings in RAG?
+Intermediate answer : Embeddings are numerical representations of the text chunks that capture their semantic meaning, allowing for efficient comparison and retrieval based on similarity.
+
+Follow up: How do embeddings enhance retrieval?
+Intermediate answer : Embeddings enhance retrieval by enabling the system to measure the similarity between the user query and the document chunks, making it easier to find the most relevant information.
+
+Follow up: What is the retrieval component in RAG?
+Intermediate answer : The retrieval component is the mechanism that searches through the indexed document chunks using the embeddings to find the most relevant pieces of information based on the user’s query.
+
+Follow up: What factors influence effective retrieval?
+Intermediate answer : Factors influencing effective retrieval include the quality of embeddings, the indexing method used, and the relevance of the document chunks to the query.
+
+Follow up: What is response generation in RAG?
+Intermediate answer : Response generation is the final step where the system uses the retrieved document chunks and combines them with the query to formulate a coherent and contextually appropriate response.
+
+Follow up: What should I consider for effective response generation?
+Intermediate answer : For effective response generation, consider the clarity, relevance, and coherence of the response, as well as how well it integrates information from the retrieved chunks.
+
+So the final answer is : Retrieval-augmented generation",120,500,620,15.823258899999928,4,3,4,4,4
+3,gpt-4o-mini,"What is responsible AI, and how can I systematically explore fairness, bias, safety, explainability, governance, and real-world implementation through self-questioning?","Question : What is responsible AI, and how can I systematically explore fairness, bias, safety, explainability, governance, and real-world implementation through self-questioning?
+
+Are follow up question needed here  : Yes.
+Follow up: What does responsible AI mean?
+Intermediate answer : Responsible AI refers to the development and deployment of artificial intelligence systems that prioritize ethical considerations, ensuring that they are fair, transparent, accountable, and beneficial to society.
+
+Follow up: What are the key components of responsible AI?
+Intermediate answer : The key components of responsible AI include fairness, bias mitigation, safety, explainability, governance, and real-world implementation.
+
+Follow up: How can I explore fairness in AI?
+Intermediate answer : To explore fairness in AI, ask questions like: ""Who are the stakeholders affected by the AI system?"" and ""How do I measure fairness in the outcomes produced by the AI?""
+
+Follow up: How can I explore bias in AI?
+Intermediate answer : To explore bias in AI, consider questions such as: ""What data am I using, and is it representative?"" and ""How do I identify and mitigate biases in my data and algorithms?""
+
+Follow up: How can I explore safety in AI?
+Intermediate answer : To explore safety in AI, ask: ""What are the potential risks of my AI system?"" and ""How can I ensure that the AI behaves safely in all scenarios?""
+
+Follow up: How can I explore explainability in AI?
+Intermediate answer : To explore explainability in AI, consider questions like: ""Can I explain how my AI makes decisions?"" and ""How can I communicate these explanations to users effectively?""
+
+Follow up: How can I explore governance in AI?
+Intermediate answer : To explore governance in AI, ask: ""What policies and regulations apply to my AI system?"" and ""How can I ensure accountability in my AI development and deployment?""
+
+Follow up: How can I explore real-world implementation of AI?
+Intermediate answer : To explore real-world implementation, consider questions such as: ""What are the practical challenges of deploying my AI system?"" and ""How can I measure the impact of my AI in the real world?""
+
+So the final answer is : Responsible AI encompasses ethical considerations in AI development and deployment, focusing on fairness, bias, safety, explainability, governance, and real-world implementation. Systematic exploration can be achieved through self-questioning in each of these areas, addressing stakeholder impact, data representation, risk assessment, decision transparency, regulatory compliance, and practical challenges in deployment.",111,499,610,9.726797100000113,5,4,5,5,4.75
+4,gpt-4o-mini,"How does cloud computing function, and what follow-up questions should I ask to understand service models, deployment models, scalability, cost optimization, and security considerations?","Question : How does cloud computing function, and what follow-up questions should I ask to understand service models, deployment models, scalability, cost optimization, and security considerations?
+
+Are follow up question needed here  : Yes.
+Follow up: What are the basic components of cloud computing?
+Intermediate answer : Cloud computing functions by providing on-demand access to a shared pool of configurable computing resources (like servers, storage, applications) over the internet. It relies on virtualization, networking, and automation technologies to deliver services.
+
+Follow up: What are the main service models of cloud computing?
+Intermediate answer : The main service models of cloud computing are Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS).
+
+Follow up: What are the different deployment models of cloud computing?
+Intermediate answer : The different deployment models of cloud computing are Public Cloud, Private Cloud, Hybrid Cloud, and Community Cloud.
+
+Follow up: How does scalability work in cloud computing?
+Intermediate answer : Scalability in cloud computing refers to the ability to increase or decrease resources and services as needed, often automatically, to accommodate varying workloads.
+
+Follow up: What are the cost optimization strategies in cloud computing?
+Intermediate answer : Cost optimization strategies in cloud computing include using pay-as-you-go pricing, selecting the right service model, optimizing resource usage, and implementing auto-scaling.
+
+Follow up: What are the security considerations in cloud computing?
+Intermediate answer : Security considerations in cloud computing include data encryption, access control, compliance with regulations, and ensuring that service providers have robust security measures in place.
+
+So the final answer is : Cloud computing functions by providing on-demand access to shared computing resources over the internet, utilizing various service models (IaaS, PaaS, SaaS), deployment models (Public, Private, Hybrid, Community), and incorporates scalability, cost optimization strategies, and security considerations.",111,380,491,4.914128100001108,4,4,5,4,4
+5,gpt-4o-mini,"What is Kubernetes, and how can self-ask prompting help me understand its architecture, key components, deployment workflow, scaling, and troubleshooting process?","Question : What is Kubernetes, and how can self-ask prompting help me understand its architecture, key components, deployment workflow, scaling, and troubleshooting process?
+
+Are follow up questions needed here : Yes. 
+Follow up: What is Kubernetes?
+Intermediate answer : Kubernetes is an open-source container orchestration platform designed to automate the deployment, scaling, and management of containerized applications.
+
+Follow up: What are the key components of Kubernetes?
+Intermediate answer : The key components of Kubernetes include the Kubernetes Master (which manages the cluster), Nodes (which run the applications), Pods (the smallest deployable units), Services (which expose applications), and Controllers (which manage the state of the applications).
+
+Follow up: What is the architecture of Kubernetes?
+Intermediate answer : The architecture of Kubernetes is based on a master-slave model, where the master node controls and manages the cluster, while worker nodes run the applications. It includes various components such as the API server, etcd (a key-value store), scheduler, and controllers.
+
+Follow up: What is the deployment workflow in Kubernetes?
+Intermediate answer : The deployment workflow in Kubernetes involves defining application specifications using YAML files, applying these configurations to the cluster using `kubectl`, and Kubernetes then manages the deployment process, including rolling updates and rollbacks.
+
+Follow up: How does scaling work in Kubernetes?
+Intermediate answer : Scaling in Kubernetes can be done manually by changing the number of replicas in a deployment configuration or automatically using the Horizontal Pod Autoscaler, which adjusts the number of pods based on CPU and memory usage.
+
+Follow up: What is the troubleshooting process in Kubernetes?
+Intermediate answer : The troubleshooting process in Kubernetes involves checking the status of pods, using logs to diagnose issues, inspecting events for warnings/errors, and utilizing tools like `kubectl` commands to gather information about the cluster and its components.
+
+So the final answer is : Kubernetes is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications. Understanding its architecture involves recognizing the master-slave model and key components like the API server and etcd. The deployment workflow includes defining specifications and applying them with `kubectl`. Scaling can be done manually or automatically, while troubleshooting involves checking pod status, logs, and events. Self-ask prompting can help break down these aspects for better comprehension.",109,463,572,16.691044799998053,5,4,4,4,4
+6,gpt-4o-mini,"How do large language models (LLMs) work, and what sequence of self-questions can help me understand tokens, parameters, training, fine-tuning, inference, and limitations?","Question : How do large language models (LLMs) work, and what sequence of self-questions can help me understand tokens, parameters, training, fine-tuning, inference, and limitations?
+
+Are follow up question needed here  : Yes.
+Follow up: What are tokens in the context of LLMs?
+Intermediate answer : Tokens are the basic units of text that LLMs process. They can represent words, parts of words, or even characters, depending on the tokenization method used.
+
+Follow up: What are parameters in LLMs?
+Intermediate answer : Parameters are the internal variables in the model that are adjusted during training. They determine how the model processes input data and generates output.
+
+Follow up: How are LLMs trained?
+Intermediate answer : LLMs are trained using large datasets of text, where they learn to predict the next token in a sequence given the previous tokens. This process involves adjusting parameters through optimization techniques.
+
+Follow up: What is fine-tuning in the context of LLMs?
+Intermediate answer : Fine-tuning is a process where a pre-trained LLM is further trained on a smaller, task-specific dataset to improve its performance on that particular task.
+
+Follow up: What is inference in LLMs?
+Intermediate answer : Inference is the process of using a trained LLM to generate predictions or outputs based on new input data, without further training.
+
+Follow up: What are the limitations of LLMs?
+Intermediate answer : Limitations of LLMs include biases in training data, inability to understand context beyond training, potential for generating nonsensical or harmful outputs, and high computational resource requirements.
+
+So the final answer is : Large language models (LLMs) work by processing tokens, which are the basic units of text. They have parameters that are adjusted during training, where they learn from large datasets to predict the next token. Fine-tuning allows them to specialize in specific tasks. Inference is the application of the trained model to generate outputs. However, LLMs have limitations, including biases, context understanding issues, and resource demands.",117,419,536,8.606779000001552,5,4,4,4,4
+7,gpt-4o-mini,"What is prompt injection, and how can I use self-ask prompting to explore attack categories, vulnerabilities, detection methods, prevention strategies, and enterprise security implications?","Question : What is prompt injection, and how can I use self-ask prompting to explore attack categories, vulnerabilities, detection methods, prevention strategies, and enterprise security implications?
+
+Are follow up question needed here  : Yes.
+Follow up: What is prompt injection?
+Intermediate answer : Prompt injection is a type of attack where an adversary manipulates the input to a language model or AI system to produce unintended or harmful outputs. This can occur by embedding malicious instructions within the input text, leading the model to execute these instructions instead of providing a standard response.
+
+Follow up: What are the attack categories related to prompt injection?
+Intermediate answer : Attack categories related to prompt injection include direct manipulation of input, social engineering to trick users or models, and exploiting model vulnerabilities to extract sensitive information or alter outputs.
+
+Follow up: What are some common vulnerabilities associated with prompt injection?
+Intermediate answer : Common vulnerabilities include lack of input validation, insufficient context understanding by the model, and the model's inability to discern between benign and malicious prompts.
+
+Follow up: What detection methods can be employed to identify prompt injection attacks?
+Intermediate answer : Detection methods can include monitoring input patterns for anomalies, employing filters to detect known malicious prompts, and using machine learning models to classify input as safe or unsafe.
+
+Follow up: What prevention strategies can be implemented against prompt injection?
+Intermediate answer : Prevention strategies include improving input validation, training models with diverse datasets to enhance context understanding, and implementing user authentication and access controls.
+
+Follow up: What are the enterprise security implications of prompt injection?
+Intermediate answer : The enterprise security implications of prompt injection can include data breaches, loss of sensitive information, reputational damage, and legal liabilities due to the misuse of AI systems.
+
+So the final answer is : Prompt injection is a type of attack that manipulates input to AI systems, leading to unintended outputs. To explore this topic, one can investigate attack categories (direct manipulation, social engineering, exploiting vulnerabilities), vulnerabilities (input validation issues, context misunderstanding), detection methods (anomaly monitoring, filters, classification models), prevention strategies (input validation, diverse training datasets, access controls), and enterprise security implications (data breaches, reputational damage, legal liabilities).",112,435,547,8.596131799997238,5,4,4,4,4
+8,gpt-4o-mini,"How does vector search operate, and what self-directed questions can help me understand embeddings, similarity metrics, indexing, storage, retrieval accuracy, and enterprise AI applications?","Question : How does vector search operate, and what self-directed questions can help me understand embeddings, similarity metrics, indexing, storage, retrieval accuracy, and enterprise AI applications?
+
+Are follow up questions needed here : Yes.
+Follow up: What are embeddings and how are they created?
+Intermediate answer : Embeddings are numerical representations of data (like words, images, etc.) that capture their semantic meaning. They are typically created using techniques such as word2vec, GloVe, or neural networks.
+
+Follow up: What are similarity metrics and how do they work?
+Intermediate answer : Similarity metrics are mathematical measures used to quantify how similar two embeddings are. Common metrics include cosine similarity, Euclidean distance, and Manhattan distance.
+
+Follow up: How is indexing done in vector search?
+Intermediate answer : Indexing in vector search involves organizing the embeddings in a way that allows for efficient retrieval. This can be done using data structures like KD-trees, Ball trees, or more advanced methods like Approximate Nearest Neighbors (ANN).
+
+Follow up: What are the storage requirements for vector embeddings?
+Intermediate answer : Storage requirements for vector embeddings depend on the dimensionality of the embeddings and the number of data points. Higher dimensional embeddings and larger datasets require more storage space.
+
+Follow up: How can retrieval accuracy be measured in vector search?
+Intermediate answer : Retrieval accuracy can be measured using metrics such as precision, recall, and F1 score, which evaluate how well the retrieved results match the relevant items.
+
+Follow up: What are some enterprise AI applications of vector search?
+Intermediate answer : Enterprise AI applications of vector search include recommendation systems, image and video search, natural language processing tasks, and customer support chatbots.
+
+So the final answer is : Vector search operates by using embeddings to represent data points, employing similarity metrics to measure the closeness of these embeddings, indexing techniques for efficient retrieval, and considering storage and retrieval accuracy for effectiveness. Enterprise AI applications include recommendation systems and NLP tasks.",112,393,505,8.194240699998772,5,4,5,4,4.5
+9,gpt-4o-mini,"What is agentic AI, and how can I break it into smaller self-questions to understand tools, memory, planning, orchestration, multi-agent systems, and production challenges?","Question : What is agentic AI, and how can I break it into smaller self-questions to understand tools, memory, planning, orchestration, multi-agent systems, and production challenges?
+
+Are follow up questions needed here : Yes.
+Follow up: What are the defining characteristics of agentic AI?
+Intermediate answer : Agentic AI refers to artificial intelligence systems that can act autonomously and make decisions based on their own goals and objectives.
+
+Follow up: What tools are commonly associated with agentic AI?
+Intermediate answer : Tools for agentic AI include machine learning frameworks, decision-making algorithms, and natural language processing systems.
+
+Follow up: How does memory function in agentic AI systems?
+Intermediate answer : Memory in agentic AI systems allows them to store and retrieve information, enabling them to learn from past experiences and improve their decision-making over time.
+
+Follow up: What is the role of planning in agentic AI?
+Intermediate answer : Planning in agentic AI involves creating strategies and sequences of actions to achieve specific goals efficiently.
+
+Follow up: How does orchestration work in the context of agentic AI?
+Intermediate answer : Orchestration in agentic AI refers to the coordination of multiple AI agents or components to work together towards a common objective.
+
+Follow up: What are multi-agent systems in relation to agentic AI?
+Intermediate answer : Multi-agent systems are frameworks where multiple autonomous agents interact and collaborate to solve complex problems or perform tasks.
+
+Follow up: What are the production challenges faced by agentic AI?
+Intermediate answer : Production challenges for agentic AI include scalability, robustness, ethical considerations, and integration with existing systems.
+
+So the final answer is : Agentic AI encompasses autonomous systems capable of decision-making, characterized by tools for learning and interaction, memory for knowledge retention, planning for goal achievement, orchestration for coordination, multi-agent systems for collaboration, and various production challenges such as scalability and ethics.",116,378,494,7.3705459000011615,5,4,4,4,4
+10,gpt-4o-mini,"How can I design a production-grade AI system, and what self-ask questions should I use to evaluate architecture, scalability, observability, governance, security, and long-term maintenance?","Question : How can I design a production-grade AI system, and what self-ask questions should I use to evaluate architecture, scalability, observability, governance, security, and long-term maintenance?
+
+Are follow up questions needed here  : Yes.
+Follow up: What are the key architectural components of a production-grade AI system?
+Intermediate answer : The key architectural components include data ingestion, data processing, model training, model serving, monitoring, and feedback loops.
+
+Follow up: How do I evaluate the scalability of the AI system?
+Intermediate answer : Evaluate scalability by considering the system's ability to handle increasing data volumes, user requests, and model complexity without degradation in performance.
+
+Follow up: What self-ask questions should I consider for observability?
+Intermediate answer : Consider questions like: How will I monitor system performance? What metrics will I track? How will I log and visualize data?
+
+Follow up: What governance aspects should I address in the AI system?
+Intermediate answer : Address questions like: What ethical guidelines will I follow? How will I ensure compliance with regulations? How will I handle data privacy?
+
+Follow up: What security measures should I implement in the AI system?
+Intermediate answer : Implement measures such as data encryption, access control, regular security audits, and vulnerability assessments.
+
+Follow up: How can I ensure long-term maintenance of the AI system?
+Intermediate answer : Ensure long-term maintenance by asking: How will I manage model updates? What is my strategy for technical debt? How will I document system changes?
+
+So the final answer is : To design a production-grade AI system, focus on key architectural components like data ingestion, processing, training, serving, monitoring, and feedback loops. Evaluate scalability by assessing the system’s ability to handle growth. For observability, ask how to monitor performance and track metrics. Address governance by following ethical guidelines and compliance. Implement security measures like encryption and access control. Finally, ensure long-term maintenance through effective model management and documentation.",117,392,509,6.043283100003464,5,4,4,4,4

@@ -295,5 +295,12 @@ The savings are real, the implementation is minimal, and understanding where the
 | **Google Vertex AI** | Gemini on Vertex | [Context Caching (Vertex)](https://cloud.google.com/vertex-ai/generative-ai/docs/context-cache/context-cache-overview) |
 | **Amazon Bedrock** | Claude via Bedrock | [Prompt Caching on Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-caching.html) |
 
-### Anthropic Pricing
-- [Anthropic Model Pricing](https://www.anthropic.com/pricing)
+### Prompt Caching Pricing
+
+| Provider | Cache Write | Cache Read | Pricing Reference |
+|---|---|---|---|
+| **Anthropic** | 125% of input price | 10% of input price | [Prompt Caching Pricing](https://www.anthropic.com/pricing#prompt-caching) |
+| **OpenAI** | No explicit write charge (automatic) | 50% of input price | [Prompt Caching Pricing](https://platform.openai.com/docs/guides/prompt-caching#what-is-cached) |
+| **Google Gemini API** | Storage charged per token per hour | 25% of input price | [Context Caching Pricing](https://ai.google.dev/gemini-api/docs/caching?lang=python#pricing) |
+| **Google Vertex AI** | Storage charged per token per hour | 25% of input price | [Context Caching Pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing#context-caching) |
+| **Amazon Bedrock** | 125% of input price | 10% of input price | [Prompt Caching Pricing](https://aws.amazon.com/bedrock/pricing/#Prompt_Caching) |

@@ -5,6 +5,14 @@ from AnthropicChatTest import AnthropicChatTest
 from ModelUsageData import ModelUsageData, write_usage_to_csv
 from ResponseQuality import ResponseQuality
 from typing import Any 
+from ModelRouterResponse import ModelRouterMatrics, RouterResponse
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)s | %(message)s"
+)
+
 
 class ModelRouter:
     
@@ -30,7 +38,7 @@ class ModelRouter:
         self._default_Model = OpenAITest(model_name= 'gpt-4o', token_size=1000, temperature=0.4)        
         
     def __load_RotuerModels(self):
-        pass     
+        self._router_Model = MistralAiChat()
     
     def Calculate_Inference_Time(self, questions:list[str])->list[Any]:
         data : list[Any] 
@@ -43,7 +51,37 @@ class ModelRouter:
             
 
         
-        return data             
+        return data   
+    
+    def single_quesetion_calculate_Inference_Time(self, question:str)->ModelRouterMatrics:
+        result =  ModelRouterMatrics ()
+        result.question = question
+        
+        data : ModelUsageData
+        result.routerMatrix  = self._router_Model.single_question(question)
+        
+        try:
+            result.routerResponse = RouterResponse.model_validate_json(result.routerMatrix.answer)
+            logging.info(result.routerResponse)
+        
+        except Exception as e:
+            logging.error(str(e))
+            result.routerResponse= None 
+            
+        return result 
+        
+        
+        
+        
+        
+         
+        
+            
+
+        
+        return data     
+    
+              
             
         
         

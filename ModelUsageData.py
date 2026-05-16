@@ -1,8 +1,9 @@
 import csv
 from typing import List, Dict, Any
+from pydantic import BaseModel 
 
-class ModelUsageData:
-    model_name = ''
+class ModelUsageData(BaseModel):
+    model_name :str = ''
     question: str = ''
     answer: str = ''
     prompt_token: int = 0

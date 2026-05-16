@@ -67,7 +67,35 @@ class OpenAITest:
             
             
             
-        return data      
+        return data  
+    
+    
+    def single_quesetion_perform_cost_time(self, question:str) -> ModelUsageData :
+                   
+        usageData =  ModelUsageData()
+        start_time = time.perf_counter() 
+        
+        
+        response : AIMessage = None
+        
+        response = self.llm.invoke(
+            [
+                HumanMessage(question)
+            ]
+        )
+
+        end_time = time.perf_counter() 
+
+        latency = end_time - start_time
+        usageData.model_name = self.model_name
+        usageData.question = question
+        usageData.answer =    response.content
+        usageData.prompt_token = int( response.usage_metadata["input_tokens"])
+        usageData.response_token = int(response.usage_metadata["output_tokens"])
+        usageData.total_token = usageData.prompt_token + usageData.response_token
+        usageData.total_response_time = latency
+            
+        return usageData    
         
     
     

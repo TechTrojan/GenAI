@@ -1,7 +1,12 @@
 
 from ModelUsageData import ModelUsageData, write_usage_to_csv
+from ModelRouterResponse import ModelRouterMatrics , RouterResponse
+import logging
 
-
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)s | %(message)s"
+)
 
 # from OpenAITest import OpenAITest 
 # from ResponseQuality import  ResponseQuality
@@ -10,16 +15,17 @@ from ModelUsageData import ModelUsageData, write_usage_to_csv
 
 
 questions = [
-    "What factors should I consider when buying a wireless noise-cancelling headphone?",
-    "Summarize the benefits of using cloud computing for a small business in simple terms.",
-    "Write a short LinkedIn post about continuous learning in Artificial Intelligence.",
-    "Explain the difference between Kubernetes HPA, VPA, and Cluster Autoscaler with examples.",
-    "Compare RAG and fine-tuning for building a domain-specific AI assistant.",
-    "Design a high-level architecture for a smart model router that selects models based on prompt complexity.",
-    "Generate Python code that reads a CSV file, calculates average latency by model name, and prints the result.",
-    "Debug this Python error conceptually: TypeError: Object of type CustomClass is not JSON serializable.",
-    "Create a production-ready architecture for an AI chatbot that uses RAG, model routing, observability, and cost tracking.",
-    "Explain the tradeoffs between using a smaller LLM for fast responses and a larger LLM for complex reasoning tasks."
+    "What factors should I consider when buying a wireless noise-cancelling headphone?"
+    # "What factors should I consider when buying a wireless noise-cancelling headphone?",
+    # "Summarize the benefits of using cloud computing for a small business in simple terms.",
+    # "Write a short LinkedIn post about continuous learning in Artificial Intelligence.",
+    # "Explain the difference between Kubernetes HPA, VPA, and Cluster Autoscaler with examples.",
+    # "Compare RAG and fine-tuning for building a domain-specific AI assistant.",
+    # "Design a high-level architecture for a smart model router that selects models based on prompt complexity.",
+    # "Generate Python code that reads a CSV file, calculates average latency by model name, and prints the result.",
+    # "Debug this Python error conceptually: TypeError: Object of type CustomClass is not JSON serializable.",
+    # "Create a production-ready architecture for an AI chatbot that uses RAG, model routing, observability, and cost tracking.",
+    # "Explain the tradeoffs between using a smaller LLM for fast responses and a larger LLM for complex reasoning tasks."
 ]
 
 # questions = [
@@ -77,8 +83,14 @@ questions = [
 from ModelRouter import ModelRouter
 
 
-router = ModelRouter(False)
+router = ModelRouter(True)
 
-data = router.Calculate_Inference_Time(questions=questions)
+#data = router.Calculate_Inference_Time(questions=questions)
 
-write_usage_to_csv("Baseline_model.csv",data )
+#write_usage_to_csv("Baseline_model.csv",data )
+data : ModelRouterMatrics
+
+for q in questions:
+    data= router.single_quesetion_calculate_Inference_Time(q)
+    logging.info(data)
+    

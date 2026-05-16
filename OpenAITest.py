@@ -9,14 +9,14 @@ import time
 load_dotenv()
 
 class OpenAITest:
-    def __init__(self):
+    def __init__(self, model_name:str= 'gpt-4o-mini' , token_size:int=200, temperature:float=0.5):
         self.api_key = os.getenv("API_KEY")
         self.base_url  = os.getenv("OPENAI_API_BASE")
-        self.model_name = 'gpt-4o-mini'        
+        self.model_name = model_name       
         self.llm = ChatOpenAI(
                 model = self.model_name, 
-                temperature=0.5 , 
-                max_tokens = 1000, 
+                temperature=temperature , 
+                max_tokens = token_size, 
                 timeout= 50,
                 max_retries= 2 ,
                 api_key= self.api_key,

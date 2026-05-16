@@ -1,5 +1,5 @@
 import csv
-from typing import List
+from typing import List, Dict, Any
 
 class ModelUsageData:
     model_name = ''
@@ -49,3 +49,33 @@ def write_usage_to_csv(file_name: str, data: List[ModelUsageData]):
             ])
             
             i=i+1 
+
+
+ 
+
+def write_dict_list_to_csv(file_name: str, data: List[Dict[str, Any]]):
+    
+    # Handle empty data
+    if not data:
+        print("No data found.")
+        return
+
+    # Extract column names dynamically from first dictionary
+    headers = list(data[0].keys())
+
+    with open(file_name, mode='w', newline='', encoding='utf-8') as file:
+
+        writer = csv.writer(file)
+
+        # Write Header
+        writer.writerow(["Sr.No"] + headers)
+
+        # Write Rows
+        for index, item in enumerate(data, start=1):
+
+            row = [index]
+
+            for header in headers:
+                row.append(item.get(header, ""))
+
+            writer.writerow(row)            

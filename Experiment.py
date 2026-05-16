@@ -3,18 +3,24 @@ from ModelUsageData import ModelUsageData, write_usage_to_csv
 
 
 
-from OpenAITest import OpenAITest 
-from ResponseQuality import  ResponseQuality
-from AnthropicChatTest import AnthropicChatTest
-from MistralAiChat import MistralAiChat
-
+# from OpenAITest import OpenAITest 
+# from ResponseQuality import  ResponseQuality
+# from AnthropicChatTest import AnthropicChatTest
+# from MistralAiChat import MistralAiChat
 
 
 questions = [
     "What factors should I consider when buying a wireless noise-cancelling headphone?",
-    
-    "Explain the key differences between SSD and HDD storage in simple terms."
-    ]
+    "Summarize the benefits of using cloud computing for a small business in simple terms.",
+    "Write a short LinkedIn post about continuous learning in Artificial Intelligence.",
+    "Explain the difference between Kubernetes HPA, VPA, and Cluster Autoscaler with examples.",
+    "Compare RAG and fine-tuning for building a domain-specific AI assistant.",
+    "Design a high-level architecture for a smart model router that selects models based on prompt complexity.",
+    "Generate Python code that reads a CSV file, calculates average latency by model name, and prints the result.",
+    "Debug this Python error conceptually: TypeError: Object of type CustomClass is not JSON serializable.",
+    "Create a production-ready architecture for an AI chatbot that uses RAG, model routing, observability, and cost tracking.",
+    "Explain the tradeoffs between using a smaller LLM for fast responses and a larger LLM for complex reasoning tasks."
+]
 
 # questions = [
 #     "What factors should I consider when buying a wireless noise-cancelling headphone?",
@@ -22,48 +28,57 @@ questions = [
 #     "Explain the key differences between SSD and HDD storage in simple terms."
 #     ]
 
-qc = ResponseQuality()
+# qc = ResponseQuality()
 
 
-def RunMistralAIModel():
-    miChat = MistralAiChat()
-    miData: list[ModelUsageData]= [] 
+# def RunMistralAIModel():
+#     miChat = MistralAiChat()
+#     miData: list[ModelUsageData]= [] 
     
-    miData = miChat.perform_cost_time(questions)
+#     miData = miChat.perform_cost_time(questions)
     
-    data  = qc.GetResponseQuality(miData)
+#     data  = qc.GetResponseQuality(miData)
 
-    write_usage_to_csv("MistralAI_result.csv",data )
+#     write_usage_to_csv("MistralAI_result.csv",data )
     
-    print('Generated result for MistralAI')
+#     print('Generated result for MistralAI')
 
 
 
-def RunOpenAITest():
+# def RunOpenAITest():
 
-    oaiChat =  OpenAITest() 
-    miData: list[ModelUsageData]= [] 
-    miData = oaiChat.perform_cost_time(questions)
+#     oaiChat =  OpenAITest() 
+#     miData: list[ModelUsageData]= [] 
+#     miData = oaiChat.perform_cost_time(questions)
 
-    data  = qc.GetResponseQuality(miData)
+#     data  = qc.GetResponseQuality(miData)
 
-    write_usage_to_csv("OpenAI_result.csv",data )
+#     write_usage_to_csv("OpenAI_result.csv",data )
     
-    print('Generated result for OPEN AI')    
+#     print('Generated result for OPEN AI')    
 
-def RunAnthropicTest(): 
+# def RunAnthropicTest(): 
     
-    anthChat = AnthropicChatTest()
+#     anthChat = AnthropicChatTest()
     
-    miData: list[ModelUsageData]= [] 
-    miData = anthChat.perform_cost_time(questions)
+#     miData: list[ModelUsageData]= [] 
+#     miData = anthChat.perform_cost_time(questions)
     
-    data  = qc.GetResponseQuality(miData)
+#     data  = qc.GetResponseQuality(miData)
 
-    write_usage_to_csv("Anthropic_result.csv",data )
+#     write_usage_to_csv("Anthropic_result.csv",data )
     
-    print('Generated result for Anthropic')
+#     print('Generated result for Anthropic')
 
-RunMistralAIModel()
-RunOpenAITest()
-RunAnthropicTest()
+#RunMistralAIModel()
+#RunOpenAITest()
+#RunAnthropicTest()
+
+from ModelRouter import ModelRouter
+
+
+router = ModelRouter(False)
+
+data = router.Calculate_Inference_Time(questions=questions)
+
+write_usage_to_csv("Baseline_model.csv",data )

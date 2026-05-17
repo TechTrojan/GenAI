@@ -1,195 +1,353 @@
-# Cost, Latency & Response Quality Evaluation
+# Smart Model Router: Cost-Aware LLM Routing Experiment
 
 ## Overview
 
-I wanted to understand how different LLMs behave when you look beyond just “it works” and start measuring what actually matters in real systems — tokens, latency, and response quality.
+This experiment explores a practical question in AI application design:
 
-This small experiment compares three models:
+> Can a lightweight router model reduce overall LLM cost by sending simpler questions to cheaper models while keeping more complex/code-related questions on stronger models?
 
-- mistral-small-latest  
-- gpt-4o-mini  
-- claude-sonnet-4-6  
+Instead of sending every user question to the same baseline model, this experiment introduces a **Smart Model Router**. The router first analyzes the user question, classifies it into a route, and then selects the final LLM based on that route.
 
-The goal was simple: run the same set of questions across all three and observe how they differ in performance and output.
+The experiment compares:
 
----
+* **Baseline approach:** all questions go directly to `gpt-4o`
+* **Router approach:** questions first go to a router model, then to the selected final model
 
-## What I Built
-
-A lightweight evaluation pipeline using:
-
-- LangChain for orchestration  
-- MistralAI + other model APIs for execution  
-- Python script to run tests and collect metrics  
-
-Each model receives the same set of 10 questions, and I capture:
-
-- Token usage  
-- Latency  
-- Response output (for quality evaluation)  
+The goal is not only to compare cost and response time, but also to understand whether the router makes correct routing decisions.
 
 ---
 
-## 🧠 Architecture Diagram
+## Experiment Design
+
+The experiment uses a mixed workload of **40 questions** covering three types of tasks:
+
+* Simple explanation / short writing tasks
+* Quality-focused architecture, comparison, and reasoning tasks
+* Code generation and debugging tasks
+
+The router model returns a structured JSON response with:
+
+```json
+{
+  "route": "Simple | Quality | Code",
+  "confidence": 0.95,
+  "reason": "Reason for selecting this route"
+}
+```
+
+---
+
+## Architecture Diagram
+
 
 <p align="center">
   <img src="./assets/images/architecture.png" alt="Architecture Diagram" width="900"/>
 </p>
+---
+
+## How the Model Router Works
+
+The main routing logic is implemented in `ModelRouter.py`.
+
+### Route-to-model mapping
+
+```python
+Simple  -> gpt-4o-mini
+Quality -> gpt-4o-mini
+Code    -> gpt-4o
+```
+
+### Why this mapping matters
+
+The baseline sends all 40 questions to `gpt-4o`.
+
+The router approach sends:
+
+* Simple questions to `gpt-4o-mini`
+* Quality questions to `gpt-4o-mini`
+* Code questions to `gpt-4o`
+
+This means **29 out of 40 questions** are routed to the lower-cost model, while only code-heavy questions stay on `gpt-4o`.
 
 ---
 
 ## Evaluation Flow
 
-1. Define a fixed set of 10 questions  
-2. Send each question to all 3 models  
-3. Capture:
-   - Tokens used  
-   - Response time  
-   - Generated answer  
-4. Store results  
-5. Compare across models  
+1. Prepare the same set of 40 questions.
+2. Run all questions through the baseline model: `gpt-4o`.
+3. Run the same questions through the model router.
+4. Router model classifies each question into one route.
+5. Final LLM is selected based on route.
+6. Capture metrics for both router model and final LLM.
+7. Compare baseline vs router approach.
 
 ---
 
-## Metrics Considered
+## Metrics Captured
 
-### 1. Token Usage
-Tracks how many tokens each model consumes per request.
+### Cost metrics
 
-Why it matters:
-- Direct impact on cost  
-- Efficiency of model responses  
+* Router model input cost
+* Router model output cost
+* Router model total cost
+* Final LLM input cost
+* Final LLM output cost
+* Final LLM total cost
+* Total cost per question
+* Total experiment cost
 
----
+### Latency metrics
 
-### 2. Latency
-Measures response time for each model.
+* Router response time
+* Final LLM response time
+* Total response time per question
+* Total experiment response time
 
-Why it matters:
-- User experience  
-- Real-time system feasibility  
+### Router quality metrics
 
----
-
-### 3. Response Quality
-Manual / qualitative observation of:
-- Relevance  
-- Clarity  
-- Completeness  
-
----
-
-## Key Observations
-
-- Different models show clear trade-offs between **speed and quality**  
-- Lower latency models are not always the most concise  
-- Token usage varies more than expected for similar prompts  
-- Response style (verbose vs concise) significantly impacts token count  
+* Route accuracy
+* Route distribution
+* Router confidence
+* Model selection correctness
+* Router reason for each decision
 
 ---
 
-## 📊 Evaluation Results
+## Result Summary
 
-The experiment evaluated all three models using the same set of 10 questions, focusing on **token usage, cost, latency, and response quality**.
+### Route distribution
 
----
+| Route     | Question Count |
+| --------- | -------------: |
+| Simple    |             18 |
+| Quality   |             11 |
+| Code      |             11 |
+| **Total** |         **40** |
 
-### 🔹 Mistral – `mistral-small-latest`
+### Router evaluation metrics
 
-- **Token Usage:**  
-  More than 60% of responses reached the maximum output limit of 1000 tokens, indicating a tendency toward more verbose outputs.
+| Metric                      | Result |
+| --------------------------- | -----: |
+| Route Accuracy              |   100% |
+| Average Router Confidence   |  95.8% |
+| Model Selection Correctness |   100% |
 
-- **Cost:**  
-  Total cost for all queries was approximately **$0.00255**, making it the most cost-efficient option in this comparison.
+### Cost comparison
 
-- **Latency:**  
-  Most responses were generated within **6 to 8.5 seconds**, showing relatively stable and faster performance.
+| Approach                            | Total Cost |
+| ----------------------------------- | ---------: |
+| Baseline: all questions to `gpt-4o` |   $0.18107 |
+| Router model cost                   |   $0.00535 |
+| Final LLM cost after routing        |   $0.05852 |
+| Router experiment total cost        |   $0.06388 |
 
-- **Response Quality:**  
-  Around **70% of responses achieved a quality score of 5**, reflecting strong but slightly variable output quality.
+### Cost savings
 
----
+```text
+Cost savings = Baseline cost - Router experiment cost
+             = $0.18107 - $0.06388
+             = $0.11719 saved
+```
 
-### 🔹 OpenAI – `gpt-4o-mini`
+The router approach reduced total cost by approximately:
 
-- **Token Usage:**  
-  Approximately 60% of responses were under **600 tokens**, indicating more concise and controlled responses.
-
-- **Cost:**  
-  Total cost was approximately **$0.00333**, slightly higher than Mistral.
-
-- **Latency:**  
-  Around 60% of responses took **more than 9 seconds**, with a few responses reaching up to **14 seconds**.
-
-- **Response Quality:**  
-  All responses consistently achieved a **quality score of 5**, demonstrating highly reliable performance.
-
----
-
-### 🔹 Anthropic – `claude-sonnet-4-6`
-
-- **Token Usage:**  
-  About 50% of responses were under **500 tokens**, while a few responses reached the maximum limit of 1000 tokens, showing mixed verbosity.
-
-- **Cost:**  
-  Total cost for all queries was approximately **$0.00371**, the highest among the evaluated models.
-
-- **Latency:**  
-  Around 50% of responses took between **12 to 23 seconds**, indicating higher response times.
-
-- **Response Quality:**  
-  Approximately **80% of responses achieved a quality score of 5**, showing strong overall quality.
+```text
+64.7% lower cost compared to baseline
+```
 
 ---
 
-## 🧠 Summary Insights
+## Response Time Comparison
 
-- **Mistral** stands out for **cost efficiency and lower latency**, but tends to generate longer responses.  
-- **GPT-4o-mini** provides the most **consistent response quality**, with more concise outputs.  
-- **Claude Sonnet** delivers strong quality but at the cost of **higher latency and overall expense**.  
+| Approach                            | Total Response Time |
+| ----------------------------------- | ------------------: |
+| Baseline: all questions to `gpt-4o` |          160.03 sec |
+| Router approach                     |          340.10 sec |
 
-👉 Each model presents a different balance between **efficiency, speed, and quality**, making model selection highly dependent on the specific use case.
+### Latency impact
+
+The router approach was slower by:
+
+```text
++180.07 sec
++112.5% slower than baseline
+```
+
+This happened because every request first passes through the router model before calling the final selected LLM.
 
 ---
 
-## Why This Experiment Matters
+## Key Findings
 
-In real applications, choosing a model is not just about accuracy.
+### 1. The router reduced cost significantly
 
-You need to balance:
-- Cost (tokens)  
-- Performance (latency)  
-- Output usefulness (quality)  
+The router saved cost because most questions did not need the expensive baseline model.
+
+In this experiment:
+
+* 29 questions were served by `gpt-4o-mini`
+* 11 code-related questions were served by `gpt-4o`
+
+This routing strategy reduced total cost by **64.7%** compared to sending all questions directly to `gpt-4o`.
 
 ---
 
-## Possible Extensions
+### 2. Router overhead was small in cost
 
-- Add automated scoring (LLM-as-judge)  
-- Track cost per request  
-- Increase dataset size  
-- Introduce domain-specific queries  
-- Visualize results (charts / dashboards)  
+The router model added extra cost, but the router cost was small compared to the savings from using `gpt-4o-mini` for Simple and Quality routes.
+
+```text
+Router total cost: $0.00535
+Final LLM total cost: $0.05852
+Total routed cost: $0.06388
+```
+
+The router cost did not eliminate the savings.
+
+---
+
+### 3. Router overhead increased latency
+
+The main tradeoff was response time.
+
+The routed approach requires two model calls:
+
+1. Router model call
+2. Final LLM call
+
+That extra step increased total response time from **160.03 sec** to **340.10 sec**.
+
+So the router design is cost-efficient, but not latency-efficient in the current version.
+
+---
+
+### 4. Route accuracy and model selection were strong
+
+The router selected the expected route for all 40 questions.
+
+```text
+Route Accuracy: 100%
+Model Selection Correctness: 100%
+Average Router Confidence: 95.8%
+```
+
+This shows that the routing logic worked well for the test dataset.
+
+---
+
+## Important Tradeoff
+
+This experiment shows a common production AI tradeoff:
+
+| Goal                         | Result         |
+| ---------------------------- | -------------- |
+| Reduce cost                  | Successful     |
+| Preserve routing correctness | Successful     |
+| Improve latency              | Not successful |
+
+The router is useful when cost optimization is more important than lowest possible latency.
+
+For real-time chat experiences, latency needs additional optimization.
+
+---
+
+## What I Would Improve Next
+
+### 1. Reduce router latency
+
+Possible improvements:
+
+* Use a smaller/faster classifier model
+* Use rule-based routing for obvious cases
+* Cache router decisions for repeated prompts
+* Run router with very low max tokens
+* Use prompt caching for repeated router instructions
+
+---
+
+### 2. Add fallback logic
+
+Example:
+
+```python
+if router_confidence < 0.85:
+    selected_model = "gpt-4o"
+```
+
+This protects quality when the router is unsure.
+
+---
+
+### 3. Add quality scoring
+
+Cost savings are useful only if response quality stays acceptable.
+
+Future evaluation should include:
+
+* Relevance
+* Clarity
+* Completeness
+* Usefulness
+* Technical correctness
+* Overall quality score
+
+---
+
+### 4. Compare multiple routing strategies
+
+Useful future comparison:
+
+| Strategy            | Mapping                                                       |
+| ------------------- | ------------------------------------------------------------- |
+| Baseline            | All questions -> `gpt-4o`                                     |
+| Cost-aware Router   | Simple/Quality -> `gpt-4o-mini`, Code -> `gpt-4o`             |
+| Conservative Router | Simple -> `gpt-4o-mini`, Quality/Code -> `gpt-4o`             |
+| Aggressive Router   | Simple/Quality/Code -> cheaper model unless confidence is low |
 
 ---
 
 ## How to Run
 
-1. Clone the repo  
-2. Set API keys for each provider  
-3. Run the evaluation script  
-4. Review output logs / results  
+1. Clone the repository.
+2. Switch to the `Model_Router` branch.
+3. Configure API keys for OpenAI and Mistral.
+4. Run the baseline experiment.
+5. Run the router experiment.
+6. Compare generated CSV files.
+
+```bash
+git clone https://github.com/TechTrojan/GenAI.git
+cd GenAI
+git checkout Model_Router
+```
 
 ---
 
-## Repo
+## Output Files
 
-https://github.com/TechTrojan/GenAI/tree/Cost_Lat_Eng
+The experiment generates result files such as:
+
+* `Baseline_model_version2_with_cost.csv`
+* `model_router_question_costs.csv`
+* `RouterResult_gpt4o_mini_quality.json.json`
+
+These files are used to compare:
+
+* Cost per question
+* Response time per question
+* Router route
+* Router confidence
+* Router reasoning
+* Final selected model
 
 ---
 
-## Final Thought
+## Final Takeaway
 
-This wasn’t about finding the “best” model.
+The Smart Model Router successfully reduced cost by routing most questions to a cheaper model while keeping code-related questions on a stronger model.
 
-It was about understanding how each model behaves under the same conditions — and that’s where real insights start.
+The main learning is:
+
+> Model routing can reduce cost, but it introduces routing overhead. A good production design should optimize both cost and latency, not just one metric.
+
+This experiment is a practical starting point for building cost-aware AI systems where different prompt types are handled by different models based on complexity, confidence, and expected quality.

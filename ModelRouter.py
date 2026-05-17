@@ -2,7 +2,7 @@ from typing import Optional
 from OpenAITest import OpenAITest
 from MistralAiChat import MistralAiChat
 from AnthropicChatTest import AnthropicChatTest 
-from ModelUsageData import ModelUsageData, write_usage_to_csv
+from ModelUsageData import ModelUsageData
 from ResponseQuality import ResponseQuality
 from typing import Any 
 from ModelRouterResponse import ModelRouterMatrics, RouterResponse

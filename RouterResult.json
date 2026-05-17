@@ -1,0 +1,362 @@
+[
+  {
+    "question": "What factors should I consider when buying a wireless noise-cancelling headphone?",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "What factors should I consider when buying a wireless noise-cancelling headphone?",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.95,\n  \"reason\": \"The question asks for a list of factors to consider, which is a basic recommendation and does not require deep reasoning or code.\"\n}",
+      "prompt_token": 705,
+      "response_token": 51,
+      "total_token": 756,
+      "total_response_time": 1.2543835000001309,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "What factors should I consider when buying a wireless noise-cancelling headphone?",
+      "answer": "When buying wireless noise-cancelling headphones, there are several important factors to consider to ensure you choose a pair that meets your needs and preferences. Here are the key factors to keep in mind:\n\n1. **Sound Quality**:\n   - Look for headphones with good audio performance, including clarity, bass response, and overall balance.\n   - Consider reviews and comparisons to find models that excel in sound quality.\n\n2. **Noise Cancellation Performance**:\n   - Evaluate the effectiveness of the noise-cancelling technology. Some headphones may be better at blocking out certain frequencies (like low rumble from engines) than others.\n   - Read user reviews or expert tests to assess how well the headphones perform in various environments.\n\n3. **Comfort and Fit**:\n   - Choose headphones that are comfortable for extended wear, especially if you plan to use them for long periods.\n   - Look for adjustable headbands, cushioned ear cups, and lightweight designs.\n\n4. **Battery Life**:\n   - Check the battery life with noise cancellation activated and without it. Longer battery life is preferable, especially for travel or long listening sessions.\n   - Consider whether the headphones support quick charging features.\n\n5. **Wireless Connectivity**:\n   - Ensure the headphones use a reliable Bluetooth version (preferably 5.0 or higher) for better range and connection stability.\n   - Look for features like multipoint connectivity, which allows you to connect to multiple devices simultaneously.\n\n6. **Controls and Features**:\n   - Consider the ease of use of controls (buttons vs. touch controls) and whether they are intuitive.\n   - Look for additional features such as voice assistant integration, customizable sound profiles, and ambient sound modes.\n\n7. **Durability and Build Quality**:\n   - Check the materials used in the construction of the headphones. A sturdy build is important for longevity.\n   - Consider whether they are water or sweat-resistant, especially if you plan to use them during workouts or travel.\n\n8. **Brand Reputation and Warranty**:\n   - Research the brand's reputation for quality and customer service.\n   - Check the warranty period and what it covers in case of defects or issues.\n\n9. **Price**:\n   - Set a budget and compare options within that range. Higher-priced models often offer better sound quality and features, but there are also good mid-range options.\n   - Look for sales or discounts to get the best value.\n\n10. **Portability**:\n    - Consider whether the headphones are foldable",
+      "prompt_token": 22,
+      "response_token": 500,
+      "total_token": 522,
+      "total_response_time": 4.7574030000000675,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.95,
+      "reason": "The question asks for a list of factors to consider, which is a basic recommendation and does not require deep reasoning or code."
+    }
+  },
+  {
+    "question": "Summarize the benefits of using cloud computing for a small business in simple terms.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Summarize the benefits of using cloud computing for a small business in simple terms.",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.98,\n  \"reason\": \"The question asks for a simple summary of benefits, which is a low-complexity task.\"\n}",
+      "prompt_token": 706,
+      "response_token": 45,
+      "total_token": 751,
+      "total_response_time": 0.7701081000000158,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Summarize the benefits of using cloud computing for a small business in simple terms.",
+      "answer": "Cloud computing offers several benefits for small businesses:\n\n1. **Cost Savings**: You can save money on hardware and maintenance since you don\u2019t need to buy expensive servers or software. You pay only for what you use.\n\n2. **Flexibility**: Cloud services can easily scale up or down based on your needs, allowing you to adjust resources without major investments.\n\n3. **Accessibility**: You can access your data and applications from anywhere with an internet connection, making remote work easier.\n\n4. **Collaboration**: Teams can work together in real-time on projects, sharing documents and information seamlessly.\n\n5. **Automatic Updates**: Cloud providers handle software updates and security patches, so you always have the latest features and protections without extra effort.\n\n6. **Data Backup and Recovery**: Cloud services often include automatic backups, helping to keep your data safe and making recovery easier in case of a problem.\n\n7. **Improved Security**: Many cloud providers offer robust security measures to protect your data, often better than what a small business could afford on its own.\n\nOverall, cloud computing helps small businesses operate more efficiently and effectively while reducing costs and enhancing flexibility.",
+      "prompt_token": 24,
+      "response_token": 234,
+      "total_token": 258,
+      "total_response_time": 4.812846600000057,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.98,
+      "reason": "The question asks for a simple summary of benefits, which is a low-complexity task."
+    }
+  },
+  {
+    "question": "Write a short LinkedIn post about continuous learning in Artificial Intelligence.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Write a short LinkedIn post about continuous learning in Artificial Intelligence.",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.9,\n  \"reason\": \"The request is for a short, lightweight content generation task without deep technical or coding requirements.\"\n}",
+      "prompt_token": 702,
+      "response_token": 43,
+      "total_token": 745,
+      "total_response_time": 0.6142826999998761,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Write a short LinkedIn post about continuous learning in Artificial Intelligence.",
+      "answer": "\ud83c\udf1f Embracing Continuous Learning in Artificial Intelligence \ud83c\udf1f\n\nIn the rapidly evolving world of Artificial Intelligence, the only constant is change. As professionals, we must prioritize continuous learning to stay ahead of the curve. \n\nFrom exploring the latest algorithms to understanding ethical implications, every new insight fuels our ability to innovate and solve complex problems. Whether it's through online courses, webinars, or collaborative projects, investing in our knowledge is key to harnessing the full potential of AI.\n\nLet\u2019s commit to being lifelong learners and share resources, insights, and experiences that can help us all grow in this exciting field! \ud83d\ude80\n\n#ArtificialIntelligence #ContinuousLearning #Innovation #LifelongLearning #AICommunity",
+      "prompt_token": 20,
+      "response_token": 140,
+      "total_token": 160,
+      "total_response_time": 2.149175600000035,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.9,
+      "reason": "The request is for a short, lightweight content generation task without deep technical or coding requirements."
+    }
+  },
+  {
+    "question": "Explain the difference between Kubernetes HPA, VPA, and Cluster Autoscaler with examples.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Explain the difference between Kubernetes HPA, VPA, and Cluster Autoscaler with examples.",
+      "answer": "{\n  \"route\": \"Quality\",\n  \"confidence\": 0.95,\n  \"reason\": \"The question asks for a detailed comparison with examples, which requires deep technical explanation and tradeoff analysis.\"\n}",
+      "prompt_token": 709,
+      "response_token": 46,
+      "total_token": 755,
+      "total_response_time": 0.717423300000064,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "claude-sonnet-4-6",
+      "question": "Explain the difference between Kubernetes HPA, VPA, and Cluster Autoscaler with examples.",
+      "answer": "# Kubernetes Autoscaling: HPA vs VPA vs Cluster Autoscaler\n\n## Overview\n\n```\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502                    Kubernetes Autoscaling                        \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502       HPA       \u2502       VPA        \u2502    Cluster Autoscaler       \u2502\n\u2502  (Horizontal)   \u2502   (Vertical)     \u2502    (Infrastructure)         \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 Scales PODS     \u2502 Sizes CONTAINERS \u2502 Scales NODES               \u2502\n\u2502 (more replicas) \u2502 (bigger/smaller) \u2502 (more/fewer machines)      \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n```\n\n---\n\n## 1. Horizontal Pod Autoscaler (HPA)\n\n### What it does\n**Adds or removes Pod replicas** based on metrics (CPU, memory, custom metrics)\n\n```\nNormal Load:          High Load:            Spike Resolved:\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510       \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510       \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502  [Pod] [Pod]\u2502  \u2192\u2192\u2192  \u2502[Pod][Pod]   \u2502  \u2192\u2192\u2192  \u2502  [Pod] [Pod]\u2502\n\u2502             \u2502       \u2502[Pod][Pod]   \u2502       \u2502             \u2502\n\u2502  2 replicas \u2502       \u2502  4 replicas \u2502       \u2502  2 replicas \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518       \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518       \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n```\n\n### HPA Example\n\n```yaml\n# deployment.yaml\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: web-app\nspec:\n  replicas: 2\n  selector:\n    matchLabels:\n      app: web-app\n  template:\n    metadata:\n      labels:\n        app: web-app\n    spec:\n      containers:\n      - name: web-app\n        image: nginx:latest\n        resources:\n          requests:\n            cpu: \"200m\"        # \u2190 HPA uses this as baseline\n            memory: \"256Mi\"\n          limits:\n            cpu: \"500m\"\n            memory: \"512Mi\"\n\n---\n# hpa.yaml\napiVersion: autoscaling/v2\nkind: HorizontalPodAutoscaler\nmetadata:\n  name: web-app-hpa\nspec:\n  scaleTargetRef:\n    apiVersion: apps/v1\n    kind: Deployment\n    name: web-app\n  \n  minReplicas: 2          # Never go below 2\n  maxReplicas: 10         # Never exceed 10\n  \n  metrics:\n  # CPU-based scaling\n  - type: Resource\n    resource:\n      name: cpu\n      target:\n        type: Utilization\n        averageUtilization: 70    # Scale when avg CPU > 70%\n  \n  # Memory-based scaling\n  - type: Resource\n    resource:\n      name: memory\n      target:\n        type: Utilization\n        averageUtilization: 80    # Scale when avg memory > 80%\n  \n  # Custom metric (e.g., requests per second)\n  - type: Pods\n    pods:\n      metric:\n        name: http_requests_per_second\n      target:\n        type: AverageValue\n        averageValue: \"100\"       # Scale when >100 rps per pod\n  \n  behavior:\n    scaleUp:\n      stabilizationWindowSeconds: 60    # Wait 60s before scaling up again\n      policies:\n      - type: Pods\n        value: 4\n        periodSeconds: 60               # Add max 4 pods per minute\n    scaleDown:\n      stabilizationWindowSeconds: 300   # Wait 5min before scaling down\n      policies:\n      - type: Percent\n        value: 25\n        periodSeconds: 60               # Remove max 25% pods per minute",
+      "prompt_token": 30,
+      "response_token": 1000,
+      "total_token": 1030,
+      "total_response_time": 13.727278799999795,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Quality",
+      "confidence": 0.95,
+      "reason": "The question asks for a detailed comparison with examples, which requires deep technical explanation and tradeoff analysis."
+    }
+  },
+  {
+    "question": "Compare RAG and fine-tuning for building a domain-specific AI assistant.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Compare RAG and fine-tuning for building a domain-specific AI assistant.",
+      "answer": "{\n  \"route\": \"Quality\",\n  \"confidence\": 0.95,\n  \"reason\": \"The question asks for a detailed comparison and tradeoff analysis between RAG and fine-tuning, which requires deeper reasoning and strategic insight.\"\n}",
+      "prompt_token": 704,
+      "response_token": 53,
+      "total_token": 757,
+      "total_response_time": 0.8119517000000087,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "claude-sonnet-4-6",
+      "question": "Compare RAG and fine-tuning for building a domain-specific AI assistant.",
+      "answer": "# RAG vs. Fine-Tuning for Domain-Specific AI Assistants\n\n## Conceptual Overview\n\n```\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502                                                             \u2502\n\u2502  RAG: Retrieval-Augmented Generation                        \u2502\n\u2502  \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510    \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510    \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510  \u2502\n\u2502  \u2502 Question \u2502\u2500\u2500\u2500\u25b6\u2502   Retrieve   \u2502\u2500\u2500\u2500\u25b6\u2502  LLM + Context   \u2502  \u2502\n\u2502  \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518    \u2502  from Docs   \u2502    \u2502  = Answer        \u2502  \u2502\n\u2502                  \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518    \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518  \u2502\n\u2502                                                             \u2502\n\u2502  Fine-Tuning: Baked-in Knowledge                           \u2502\n\u2502  \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510    \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510  \u2502\n\u2502  \u2502 Question \u2502\u2500\u2500\u2500\u25b6\u2502  Model with domain knowledge         \u2502  \u2502\n\u2502  \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518    \u2502  trained into weights                \u2502  \u2502\n\u2502                  \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518  \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n```\n\n---\n\n## Head-to-Head Comparison\n\n| Dimension | RAG | Fine-Tuning |\n|-----------|-----|-------------|\n| **Knowledge update** | Real-time, swap docs | Retrain required |\n| **Setup cost** | Medium (pipeline infra) | High (training compute) |\n| **Ongoing cost** | Retrieval + inference | Inference only |\n| **Explainability** | High (cite sources) | Low (black box) |\n| **Hallucination risk** | Lower | Higher without grounding |\n| **Style/tone adaptation** | Limited | Excellent |\n| **Reasoning patterns** | Base model behavior | Can be reshaped |\n| **Data requirement** | Documents | Labeled Q&A pairs |\n| **Latency** | Higher (retrieval step) | Lower |\n| **Privacy** | Docs stay external | Data baked into weights |\n\n---\n\n## When Each Approach Wins\n\n### RAG is Better When...\n\n```\n\u2705 Knowledge changes frequently\n   \u2514\u2500\u2500 Legal regulations, product docs, research papers\n\n\u2705 You need source attribution\n   \u2514\u2500\u2500 \"According to Policy 3.2...\"\n\n\u2705 Large knowledge bases (millions of docs)\n   \u2514\u2500\u2500 Searching > memorizing\n\n\u2705 Limited training data\n   \u2514\u2500\u2500 No thousands of Q&A pairs available\n\n\u2705 Quick deployment needed\n   \u2514\u2500\u2500 Days vs. weeks/months\n\n\u2705 Compliance requires auditability\n   \u2514\u2500\u2500 Medical, legal, financial domains\n```\n\n### Fine-Tuning is Better When...\n\n```\n\u2705 Specialized output FORMAT is critical\n   \u2514\u2500\u2500 Medical coding, legal clause drafting\n\n\u2705 Domain jargon and reasoning style\n   \u2514\u2500\u2500 Model should \"think\" like an expert\n\n\u2705 Low latency is non-negotiable\n   \u2514\u2500\u2500 Real-time applications\n\n\u2705 Knowledge is stable\n   \u2514\u2500\u2500 Doesn't change often\n\n\u2705 Private inference (no retrieval calls)\n   \u2514\u2500\u2500 Air-gapped environments\n\n\u2705 Base model lacks domain foundation\n   \u2514\u2500\u2500 Highly technical niche fields\n```\n\n---\n\n## Architecture Deep-Dive\n\n### RAG Pipeline\n\n```python\nclass RAGAssistant:\n    def __init__(self):\n        self.embedder    = EmbeddingModel()\n        self.vectorstore = VectorDatabase()   # Pinecone, Weaviate, etc.\n        self.llm         = BaseLanguageModel() # GPT-4, Claude, etc.\n\n    def index_documents(self, docs):\n        chunks     = self.chunk(docs)          # ~512 tokens each\n        embeddings = self.embedder.encode(chunks)\n        self.vectorstore.upsert(chunks, embeddings)\n\n    def answer(self, query):\n        # 1. Retrieve\n        query_vec = self.embedder.encode(query)\n        context   = self.vectorstore.search(",
+      "prompt_token": 24,
+      "response_token": 1000,
+      "total_token": 1024,
+      "total_response_time": 16.58974740000008,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Quality",
+      "confidence": 0.95,
+      "reason": "The question asks for a detailed comparison and tradeoff analysis between RAG and fine-tuning, which requires deeper reasoning and strategic insight."
+    }
+  },
+  {
+    "question": "Design a high-level architecture for a smart model router that selects models based on prompt complexity.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Design a high-level architecture for a smart model router that selects models based on prompt complexity.",
+      "answer": "{\n  \"route\": \"Quality\",\n  \"confidence\": 0.95,\n  \"reason\": \"The question asks for a high-level architecture design, which requires deep reasoning and detailed planning.\"\n}",
+      "prompt_token": 707,
+      "response_token": 44,
+      "total_token": 751,
+      "total_response_time": 0.8184183999999277,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "claude-sonnet-4-6",
+      "question": "Design a high-level architecture for a smart model router that selects models based on prompt complexity.",
+      "answer": "# Smart Model Router: High-Level Architecture\n\n## System Overview\n\n```\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502                    SMART MODEL ROUTER                           \u2502\n\u2502                                                                 \u2502\n\u2502  Input \u2192 [Analyzer] \u2192 [Classifier] \u2192 [Selector] \u2192 [Executor]  \u2502\n\u2502              \u2191              \u2191             \u2191            \u2193        \u2502\n\u2502         [Feature DB]  [Cost Engine] [Model Registry] [Cache]   \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n```\n\n---\n\n## Core Architecture Layers\n\n```\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502  LAYER 1: INGESTION & PREPROCESSING                             \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502                                                                 \u2502\n\u2502   Client Request                                                \u2502\n\u2502        \u2502                                                        \u2502\n\u2502        \u25bc                                                        \u2502\n\u2502   \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510    \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510    \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510  \u2502\n\u2502   \u2502   API Gate  \u2502\u2500\u2500\u2500\u25b6\u2502  Normalizer  \u2502\u2500\u2500\u2500\u25b6\u2502  Context Builder\u2502  \u2502\n\u2502   \u2502  (REST/gRPC)\u2502    \u2502  (clean,     \u2502    \u2502  (history,      \u2502  \u2502\n\u2502   \u2502             \u2502    \u2502   tokenize)  \u2502    \u2502   session data) \u2502  \u2502\n\u2502   \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518    \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518    \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518  \u2502\n\u2502                                                                 \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502  LAYER 2: COMPLEXITY ANALYSIS ENGINE                            \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502                                                                 \u2502\n\u2502   \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510 \u2502\n\u2502   \u2502              FEATURE EXTRACTION                          \u2502 \u2502\n\u2502   \u2502                                                          \u2502 \u2502\n\u2502   \u2502  \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510  \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510  \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510 \u2502 \u2502\n\u2502   \u2502  \u2502  Lexical   \u2502  \u2502 Semantic   \u2502  \u2502   Task-Type        \u2502 \u2502 \u2502\n\u2502   \u2502  \u2502  Features  \u2502  \u2502 Features   \u2502  \u2502   Detector         \u2502 \u2502 \u2502\n\u2502   \u2502  \u2502            \u2502  \u2502            \u2502  \u2502                    \u2502 \u2502 \u2502\n\u2502   \u2502  \u2502 \u2022 Length   \u2502  \u2502 \u2022 Concepts \u2502  \u2502 \u2022 Reasoning        \u2502 \u2502 \u2502\n\u2502   \u2502  \u2502 \u2022 Vocab    \u2502  \u2502 \u2022 Entities \u2502  \u2502 \u2022 Code gen         \u2502 \u2502 \u2502\n\u2502   \u2502  \u2502 \u2022 Syntax   \u2502  \u2502 \u2022 Relations\u2502  \u2502 \u2022 Summarization    \u2502 \u2502 \u2502\n\u2502   \u2502  \u2502 \u2022 Entropy  \u2502  \u2502 \u2022 Ambiguity\u2502  \u2502 \u2022 Translation      \u2502 \u2502 \u2502\n\u2502   \u2502  \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518  \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518  \u2502 \u2022 Math/Logic       \u2502 \u2502 \u2502\n\u2502   \u2502                                  \u2502 \u2022 Creative         \u2502 \u2502 \u2502\n\u2502   \u2502                                  \u2502 \u2022 Factual lookup   \u2502 \u2502 \u2502\n\u2502   \u2502                                  \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518 \u2502 \u2502\n\u2502   \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518 \u2502\n\u2502                           \u2502                                     \u2502\n\u2502                           \u25bc                                     \u2502\n\u2502   \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510 \u2502\n\u2502   \u2502           COMPLEXITY SCORING                             \u2502 \u2502\n\u2502   \u2502                                                          \u2502 \u2502\n\u2502   \u2502   Score = w1(lexical) + w2(semantic) + w3(task_type)    \u2502 \u2502\n\u2502",
+      "prompt_token": 27,
+      "response_token": 1000,
+      "total_token": 1027,
+      "total_response_time": 11.879176200000074,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Quality",
+      "confidence": 0.95,
+      "reason": "The question asks for a high-level architecture design, which requires deep reasoning and detailed planning."
+    }
+  },
+  {
+    "question": "Generate Python code that reads a CSV file, calculates average latency by model name, and prints the result.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Generate Python code that reads a CSV file, calculates average latency by model name, and prints the result.",
+      "answer": "{\n  \"route\": \"Code\",\n  \"confidence\": 0.99,\n  \"reason\": \"The question explicitly asks for Python code generation to perform a specific data processing task.\"\n}",
+      "prompt_token": 710,
+      "response_token": 42,
+      "total_token": 752,
+      "total_response_time": 0.8187530000000152,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o",
+      "question": "Generate Python code that reads a CSV file, calculates average latency by model name, and prints the result.",
+      "answer": "To achieve this task, you can use the `pandas` library in Python, which provides powerful tools for data manipulation and analysis. Below is a sample Python script that reads a CSV file, calculates the average latency by model name, and prints the result.\n\nFirst, ensure you have the `pandas` library installed. You can install it using pip if you haven't already:\n\n```bash\npip install pandas\n```\n\nHere's the Python code:\n\n```python\nimport pandas as pd\n\ndef calculate_average_latency(csv_file_path):\n    # Read the CSV file into a DataFrame\n    df = pd.read_csv(csv_file_path)\n    \n    # Check if the necessary columns exist in the DataFrame\n    if 'model_name' not in df.columns or 'latency' not in df.columns:\n        raise ValueError(\"CSV file must contain 'model_name' and 'latency' columns.\")\n    \n    # Group the data by 'model_name' and calculate the average latency for each group\n    average_latency = df.groupby('model_name')['latency'].mean()\n    \n    # Print the result\n    print(\"Average Latency by Model Name:\")\n    print(average_latency)\n\n# Example usage\ncsv_file_path = 'your_file.csv'  # Replace with your CSV file path\ncalculate_average_latency(csv_file_path)\n```\n\n### Explanation:\n\n1. **Importing pandas**: The script starts by importing the `pandas` library, which is essential for handling CSV files and performing data analysis.\n\n2. **Reading the CSV File**: The `pd.read_csv()` function is used to read the CSV file into a DataFrame. You need to provide the path to your CSV file.\n\n3. **Checking Columns**: Before proceeding, the script checks if the necessary columns (`model_name` and `latency`) exist in the DataFrame. If not, it raises a `ValueError`.\n\n4. **Grouping and Calculating Averages**: The `groupby()` function is used to group the data by `model_name`, and the `mean()` function calculates the average latency for each model.\n\n5. **Printing the Result**: Finally, the script prints the average latency for each model name.\n\nReplace `'your_file.csv'` with the actual path to your CSV file when using the script. Make sure your CSV file has columns named `model_name` and `latency` for this script to work correctly.",
+      "prompt_token": 28,
+      "response_token": 493,
+      "total_token": 521,
+      "total_response_time": 4.307516000000078,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Code",
+      "confidence": 0.99,
+      "reason": "The question explicitly asks for Python code generation to perform a specific data processing task."
+    }
+  },
+  {
+    "question": "Debug this Python error conceptually: TypeError: Object of type CustomClass is not JSON serializable.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Debug this Python error conceptually: TypeError: Object of type CustomClass is not JSON serializable.",
+      "answer": "{\n  \"route\": \"Code\",\n  \"confidence\": 0.98,\n  \"reason\": \"The question involves debugging a Python error related to JSON serialization, which requires code-specific troubleshooting.\"\n}",
+      "prompt_token": 710,
+      "response_token": 45,
+      "total_token": 755,
+      "total_response_time": 0.709125800000038,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o",
+      "question": "Debug this Python error conceptually: TypeError: Object of type CustomClass is not JSON serializable.",
+      "answer": "The error message you're encountering, `TypeError: Object of type CustomClass is not JSON serializable`, indicates that you're trying to serialize an instance of `CustomClass` into a JSON format, but the `json` module in Python doesn't know how to handle this custom object by default.\n\nHere's a conceptual breakdown of the issue and how you might resolve it:\n\n### Understanding the Error\n\n1. **JSON Serialization**: The `json` module in Python can serialize basic data types like dictionaries, lists, strings, numbers, booleans, and `None`. However, it doesn't know how to serialize custom objects directly.\n\n2. **CustomClass**: This is a user-defined class. Instances of this class are not automatically serializable because the `json` module doesn't know how to convert them into a JSON-compatible format.\n\n### Solutions\n\nTo resolve this error, you have a few options:\n\n1. **Custom Serialization Method**:\n   - Implement a method in your class that converts the object into a JSON-serializable format, such as a dictionary.\n   - Example:\n     ```python\n     class CustomClass:\n         def __init__(self, attribute1, attribute2):\n             self.attribute1 = attribute1\n             self.attribute2 = attribute2\n\n         def to_dict(self):\n             return {\n                 'attribute1': self.attribute1,\n                 'attribute2': self.attribute2\n             }\n     ```\n\n2. **Custom JSON Encoder**:\n   - Create a custom JSON encoder by subclassing `json.JSONEncoder` and overriding the `default` method to handle instances of your custom class.\n   - Example:\n     ```python\n     import json\n\n     class CustomClassEncoder(json.JSONEncoder):\n         def default(self, obj):\n             if isinstance(obj, CustomClass):\n                 return obj.to_dict()\n             return super().default(obj)\n\n     # Usage\n     custom_obj = CustomClass('value1', 'value2')\n     json_str = json.dumps(custom_obj, cls=CustomClassEncoder)\n     ```\n\n3. **Using `__dict__`**:\n   - If your class doesn't have complex attributes (like other custom objects), you can use the `__dict__` attribute to convert it to a dictionary.\n   - Example:\n     ```python\n     custom_obj = CustomClass('value1', 'value2')\n     json_str = json.dumps(custom_obj.__dict__)\n     ```\n\n4. **Manual Conversion**:\n   - Manually convert the object to a dictionary or another serializable structure before passing it to `json.dumps`.\n   - Example:\n     ```python\n     custom_obj = CustomClass('value1', 'value2')\n     obj_dict = {'attribute1': custom_obj.attribute1, 'attribute2': custom_obj.attribute2}\n     json_str = json.dumps(obj_dict)\n     ```\n\nBy implementing one of these solutions, you can ensure that instances of `CustomClass` can be serialized into JSON format.",
+      "prompt_token": 28,
+      "response_token": 599,
+      "total_token": 627,
+      "total_response_time": 4.070884200000137,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Code",
+      "confidence": 0.98,
+      "reason": "The question involves debugging a Python error related to JSON serialization, which requires code-specific troubleshooting."
+    }
+  },
+  {
+    "question": "Create a production-ready architecture for an AI chatbot that uses RAG, model routing, observability, and cost tracking.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Create a production-ready architecture for an AI chatbot that uses RAG, model routing, observability, and cost tracking.",
+      "answer": "{\n  \"route\": \"Quality\",\n  \"confidence\": 0.98,\n  \"reason\": \"The question asks for a production-ready architecture design involving multiple complex components (RAG, model routing, observability, cost tracking), which requires deep technical reasoning and detailed planning.\"\n}",
+      "prompt_token": 715,
+      "response_token": 62,
+      "total_token": 777,
+      "total_response_time": 0.7426451999999699,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "claude-sonnet-4-6",
+      "question": "Create a production-ready architecture for an AI chatbot that uses RAG, model routing, observability, and cost tracking.",
+      "answer": "# Production-Ready AI Chatbot Architecture with RAG, Model Routing, Observability & Cost Tracking\n\n## Project Structure\n\n```\nai-chatbot/\n\u251c\u2500\u2500 src/\n\u2502   \u251c\u2500\u2500 api/\n\u2502   \u2502   \u251c\u2500\u2500 routes/\n\u2502   \u2502   \u251c\u2500\u2500 middleware/\n\u2502   \u2502   \u2514\u2500\u2500 server.ts\n\u2502   \u251c\u2500\u2500 core/\n\u2502   \u2502   \u251c\u2500\u2500 rag/\n\u2502   \u2502   \u251c\u2500\u2500 routing/\n\u2502   \u2502   \u251c\u2500\u2500 models/\n\u2502   \u2502   \u2514\u2500\u2500 pipeline/\n\u2502   \u251c\u2500\u2500 observability/\n\u2502   \u2502   \u251c\u2500\u2500 tracing/\n\u2502   \u2502   \u251c\u2500\u2500 metrics/\n\u2502   \u2502   \u2514\u2500\u2500 logging/\n\u2502   \u251c\u2500\u2500 cost/\n\u2502   \u251c\u2500\u2500 cache/\n\u2502   \u251c\u2500\u2500 types/\n\u2502   \u2514\u2500\u2500 config/\n\u251c\u2500\u2500 tests/\n\u251c\u2500\u2500 docker/\n\u2514\u2500\u2500 k8s/\n```\n\n## Core Type System\n\n```typescript\n// src/types/index.ts\nexport interface ChatRequest {\n  sessionId: string;\n  userId: string;\n  message: string;\n  conversationHistory: Message[];\n  metadata?: Record<string, unknown>;\n  constraints?: RequestConstraints;\n}\n\nexport interface RequestConstraints {\n  maxTokens?: number;\n  maxLatencyMs?: number;\n  maxCostUsd?: number;\n  requiresCitation?: boolean;\n  sensitivityLevel?: \"public\" | \"internal\" | \"confidential\";\n  preferredModel?: ModelProvider;\n}\n\nexport interface ChatResponse {\n  requestId: string;\n  message: string;\n  citations: Citation[];\n  model: ModelInfo;\n  usage: TokenUsage;\n  cost: CostBreakdown;\n  latencyMs: number;\n  confidence: number;\n  cached: boolean;\n}\n\nexport interface Message {\n  role: \"user\" | \"assistant\" | \"system\";\n  content: string;\n  timestamp: Date;\n  metadata?: MessageMetadata;\n}\n\nexport interface MessageMetadata {\n  tokens?: number;\n  model?: string;\n  cost?: number;\n}\n\nexport interface Citation {\n  id: string;\n  content: string;\n  source: string;\n  score: number;\n  chunkId: string;\n  documentId: string;\n  pageNumber?: number;\n  metadata: Record<string, unknown>;\n}\n\nexport interface ModelInfo {\n  provider: ModelProvider;\n  model: string;\n  version: string;\n  routingReason: string;\n}\n\nexport interface TokenUsage {\n  promptTokens: number;\n  completionTokens: number;\n  totalTokens: number;\n  embeddingTokens?: number;\n}\n\nexport interface CostBreakdown {\n  promptCostUsd: number;\n  completionCostUsd: number;\n  embeddingCostUsd: number;\n  totalCostUsd: number;\n  currency: \"USD\";\n}\n\nexport type ModelProvider = \n  | \"openai-gpt4\"\n  | \"openai-gpt35\"\n  | \"anthropic-claude3\"\n  | \"anthropic-claude2\"\n  | \"cohere-command\"\n  | \"local-llama\";\n\nexport interface RetrievedDocument {\n  id: string;\n  content: string;\n  embedding?: number[];\n  score: number;\n  metadata: DocumentMetadata;\n}\n\nexport interface DocumentMetadata {\n  source: string;\n  title: string;\n  createdAt: Date;\n  tags: string[];\n  chunkIndex: number;\n  totalChunks: number;\n}\n\nexport interface RoutingDecision {\n  selectedModel: ModelProvider;\n  reason: string;\n  confidence: number;\n  alternativeModels: ModelProvider[];\n  estimatedCostUsd: number;\n  estimatedLatencyMs: number;\n}\n\nexport interface PipelineContext {\n  requestId: string;\n  sessionId: string;\n  userId: string;\n  startTime: Date;\n  spans: TraceSpan[];\n}\n\nexport interface TraceSpan {\n  name: string;\n  startTime: Date;\n  endTime?: Date;",
+      "prompt_token": 33,
+      "response_token": 1000,
+      "total_token": 1033,
+      "total_response_time": 12.916032000000087,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Quality",
+      "confidence": 0.98,
+      "reason": "The question asks for a production-ready architecture design involving multiple complex components (RAG, model routing, observability, cost tracking), which requires deep technical reasoning and detailed planning."
+    }
+  },
+  {
+    "question": "Explain the tradeoffs between using a smaller LLM for fast responses and a larger LLM for complex reasoning tasks.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Explain the tradeoffs between using a smaller LLM for fast responses and a larger LLM for complex reasoning tasks.",
+      "answer": "{\n  \"route\": \"Quality\",\n  \"confidence\": 0.95,\n  \"reason\": \"The question asks for a detailed tradeoff analysis between model sizes and use cases, which requires deeper reasoning and architectural thinking.\"\n}",
+      "prompt_token": 713,
+      "response_token": 50,
+      "total_token": 763,
+      "total_response_time": 0.906671999999844,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "claude-sonnet-4-6",
+      "question": "Explain the tradeoffs between using a smaller LLM for fast responses and a larger LLM for complex reasoning tasks.",
+      "answer": "# Tradeoffs: Small vs. Large LLMs\n\n## The Core Tension\n\nYou're fundamentally trading **computational cost and latency** against **capability and accuracy**. Neither choice is universally correct \u2014 the right answer depends on your specific workload.\n\n---\n\n## Quantified Differences (Approximate, Real-World)\n\n| Dimension | Small LLM (1-7B params) | Large LLM (70B+ / API) |\n|-----------|------------------------|------------------------|\n| Latency | 50-200ms | 500ms-5s+ |\n| Cost per 1M tokens | $0.10-$0.50 | $5-$30 |\n| Throughput | High | Lower |\n| RAM required | 4-16GB | 40GB+ or cloud |\n| Reasoning depth | Shallow | Multi-step |\n| Context handling | Often weaker | Generally stronger |\n\n---\n\n## Where Small Models Win\n\n### \u2705 Clear Advantages\n- **Real-time applications** \u2014 chat interfaces, autocomplete, live translation where >1s feels broken\n- **High-volume, low-complexity tasks** \u2014 classification, extraction, summarization of short text\n- **Edge/offline deployment** \u2014 mobile, IoT, air-gapped systems\n- **Cost at scale** \u2014 100M simple queries/month becomes economically viable\n- **Privacy** \u2014 data never leaves your infrastructure\n- **Predictable latency** \u2014 easier to build reliable SLAs around\n\n### Example tasks small models handle well\n```\n- Sentiment classification\n- Named entity extraction  \n- Template-based generation\n- Simple Q&A with retrieved context (RAG)\n- Code completion (single function)\n- Intent detection\n```\n\n---\n\n## Where Large Models Win\n\n### \u2705 Clear Advantages\n- **Multi-step reasoning** \u2014 problems requiring 5+ logical steps\n- **Novel problem synthesis** \u2014 combining concepts in non-obvious ways\n- **Long-context coherence** \u2014 maintaining consistency across 50k+ tokens\n- **Instruction following** \u2014 complex, nuanced, or ambiguous instructions\n- **Low-resource languages** \u2014 better training data coverage\n- **Fewer hallucinations** \u2014 on knowledge-intensive tasks (with caveats)\n- **Code generation** \u2014 complete systems, not just snippets\n\n### Example tasks requiring large models\n```\n- Architecture design from vague requirements\n- Legal/medical document analysis\n- Complex debugging across multiple files\n- Research synthesis across conflicting sources\n- Multi-turn strategic planning\n```\n\n---\n\n## The Failure Modes Are Different\n\n### Small model failures\n```\nProblem: \"Analyze the second-order economic effects of \n          this policy, considering stakeholder incentives\"\n\nSmall model output: Surface-level bullet points that \nrestate the question, miss key interactions, \nconfidently wrong on specifics\n```\n\n**Dangerous because:** Confident-sounding but shallow \u2014 hard to detect without domain expertise\n\n### Large model failures\n```\nProblem: \"Is this customer message positive or negative?\"\nSent 50,000 times/hour\n\nLarge model issues: \n- $400/hour API costs\n- Occasional 8-second timeouts breaking your pipeline\n- Overkill creates brittleness (minor phrasing changes \n  cause unexpected behavior)\n```\n\n**Dangerous because:** Cost and reliability issues at scale\n\n---\n\n## Practical Architectural Patterns\n\n### 1. Cascading / Router Pattern\n```\nRequest \u2192 Classifier \u2192 Simple? \u2192 Small Model \u2192 Response\n                    \u2193\n               Complex? \u2192 Large Model \u2192 Response\n```\n**Challenge:** The classifier itself can be wrong; adds latency\n\n### 2. Speculative Decoding\nSmall model drafts tokens, large model verifies \u2014 best of both worlds for latency/quality, but implementation complexity is high\n\n### 3. Task Decomposition\n```\nLarge model: Plans and breaks down complex task\nSmall model: Executes individual sub-tasks\nLarge model: Synthesizes and validates results\n```\n\n### 4. Fine-tuned Small Models\nA 7B model fine-tuned on your specific domain often **beats** a general 70B model on that narrow task \u2014 at 1/10th the cost. This is frequently underutilized.\n\n---\n\n## Hidden Costs People Overlook\n\n### With small models\n- **Fine-tuning labor** \u2014 getting good performance often requires significant data",
+      "prompt_token": 34,
+      "response_token": 1000,
+      "total_token": 1034,
+      "total_response_time": 23.451334100000167,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Quality",
+      "confidence": 0.95,
+      "reason": "The question asks for a detailed tradeoff analysis between model sizes and use cases, which requires deeper reasoning and architectural thinking."
+    }
+  }
+]

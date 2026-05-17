@@ -1,7 +1,8 @@
 
-from ModelUsageData import ModelUsageData, write_usage_to_csv
+from ModelUsageData import ModelUsageData
 from ModelRouterResponse import ModelRouterMatrics , RouterResponse
 import logging
+from UtilityFunctions import  write_usage_to_csv, save_to_json, write_dict_list_to_csv 
 
 logging.basicConfig(
     level=logging.INFO,
@@ -27,11 +28,6 @@ questions = [
     "Explain the tradeoffs between using a smaller LLM for fast responses and a larger LLM for complex reasoning tasks."
 ]
 
-questions = [
-     "What factors should I consider when buying a wireless noise-cancelling headphone?",    
-     "Explain the difference between Kubernetes HPA, VPA, and Cluster Autoscaler with examples.",
-     "Generate Python code that reads a CSV file, calculates average latency by model name, and prints the result."
-     ]
 
 # qc = ResponseQuality()
 
@@ -92,11 +88,15 @@ router = ModelRouter(True)
 routerEvalResult : list[ModelRouterMatrics] = []
 
 
-for q in questions:
+for i, q in enumerate(questions):
     data : ModelRouterMatrics = None 
+    print(f" Question No : {str(i+1)} -> {q}")
     data= router.single_quesetion_calculate_Inference_Time(q)
     if data :
-        routerEvalResult.append(data)
+       routerEvalResult.append(data)
     
+
+save_to_json("RouterResult.json", routerEvalResult)
+
     
     

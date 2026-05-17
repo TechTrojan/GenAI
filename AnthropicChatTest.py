@@ -11,9 +11,9 @@ load_dotenv()
 
 class AnthropicChatTest:
     
-    def __init__(self):
+    def __init__(self, _modelName :str ):
         self.api_key = os.getenv("ANTHROPIC_API_KEY")        
-        self.model_name = 'claude-sonnet-4-6'        
+        self.model_name = _modelName       
                 
         self.llm =  ChatAnthropic(
                 model_name= self.model_name,
@@ -59,6 +59,34 @@ class AnthropicChatTest:
             data.append(usageData)
              
             
-        return data    
+        return data
+    
+    def single_question_perform_cost_time(self, question:str) -> ModelUsageData :
+        
+        usageData =  ModelUsageData()
+        start_time = time.perf_counter()             
+        response : AIMessage = None
+        
+        response = self.llm.invoke(
+            [
+                HumanMessage(question)
+            ]
+        )
+
+        end_time = time.perf_counter() 
+        latency = end_time - start_time
+        usageData.model_name = self.model_name
+        usageData.question = question
+        usageData.answer =    response.content
+        usageData.prompt_token = int( response.usage_metadata["input_tokens"])
+        usageData.response_token = int(response.usage_metadata["output_tokens"])
+        usageData.total_token = usageData.prompt_token + usageData.response_token
+        usageData.total_response_time = latency
+        
+        return usageData 
+             
+            
+          
+    
 
  

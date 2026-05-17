@@ -1,0 +1,1442 @@
+[
+  {
+    "question": "Write a short thank-you message to a colleague for helping with a project.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Write a short thank-you message to a colleague for helping with a project.",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.98,\n  \"reason\": \"The task involves generating a short, simple message with no requirement for deep reasoning or code.\"\n}",
+      "prompt_token": 704,
+      "response_token": 44,
+      "total_token": 748,
+      "total_response_time": 1.9401333999999224,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Write a short thank-you message to a colleague for helping with a project.",
+      "answer": "Subject: Thank You!\n\nHi [Colleague's Name],\n\nI just wanted to take a moment to thank you for your invaluable support on the project. Your insights and hard work made a significant difference, and I truly appreciate your collaboration. \n\nLooking forward to working together again soon!\n\nBest,  \n[Your Name]",
+      "prompt_token": 22,
+      "response_token": 63,
+      "total_token": 85,
+      "total_response_time": 2.08419240000012,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.98,
+      "reason": "The task involves generating a short, simple message with no requirement for deep reasoning or code."
+    }
+  },
+  {
+    "question": "Design a high-level architecture for a smart model router that selects models based on prompt complexity and response quality.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Design a high-level architecture for a smart model router that selects models based on prompt complexity and response quality.",
+      "answer": "{\n  \"route\": \"Quality\",\n  \"confidence\": 0.95,\n  \"reason\": \"The question asks for a high-level architecture design, which requires deep reasoning, planning, and detailed explanation.\"\n}",
+      "prompt_token": 710,
+      "response_token": 47,
+      "total_token": 757,
+      "total_response_time": 0.8836174000002757,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Design a high-level architecture for a smart model router that selects models based on prompt complexity and response quality.",
+      "answer": "Designing a high-level architecture for a smart model router that selects models based on prompt complexity and response quality involves several components and layers. Below is a conceptual architecture that outlines the key elements and their interactions:\n\n### High-Level Architecture\n\n#### 1. **User Interface Layer**\n   - **Input Interface**: A web or mobile interface where users can input their queries or prompts.\n   - **Output Interface**: Displays the responses from the selected model, along with any additional information (e.g., model used, response time).\n\n#### 2. **Prompt Analysis Layer**\n   - **Complexity Assessment Module**:\n     - **Natural Language Processing (NLP) Tools**: Analyze the input prompt to determine its complexity. This could involve:\n       - Token count\n       - Syntactic structure analysis (e.g., parsing)\n       - Semantic analysis (e.g., intent recognition)\n     - **Complexity Scoring**: Assign a score based on predefined criteria (e.g., simple, moderate, complex).\n\n#### 3. **Model Selection Layer**\n   - **Model Repository**: A collection of various models, each optimized for different types of tasks (e.g., GPT-3 for general queries, specialized models for technical questions).\n   - **Model Metadata**: Each model has associated metadata, including:\n     - Strengths and weaknesses\n     - Performance metrics (e.g., average response time, accuracy, user ratings)\n     - Complexity handling capabilities\n   - **Routing Logic**:\n     - Based on the complexity score and the type of query, the routing logic selects the most appropriate model.\n     - Considerations for response quality, such as historical performance data for similar prompts.\n\n#### 4. **Quality Assessment Layer**\n   - **Response Quality Evaluation**:\n     - **Real-time Feedback Loop**: Collect user feedback on the quality of responses (e.g., thumbs up/down, star ratings).\n     - **Quality Metrics**: Analyze responses based on:\n       - Relevance\n       - Coherence\n       - Completeness\n     - **Performance Monitoring**: Continuously monitor model performance to adjust routing decisions over time.\n\n#### 5. **Execution Layer**\n   - **Model Execution Engine**: Responsible for executing the selected model and generating a response based on the user prompt.\n   - **Asynchronous Processing**: Handle requests asynchronously to improve responsiveness and user experience.\n\n#### 6. **Caching Layer**\n   - **Response Caching**: Store frequently requested prompts and their responses to reduce processing time and improve efficiency.\n   - **Model Output Caching**: Cache outputs from models for similar prompts to enhance response time for repeated queries.\n\n#### 7. **Logging and Analytics Layer**\n   - **Usage Analytics**: Track user interactions, model selections, and feedback to gather insights into usage patterns.\n   - **Performance Analytics**: Analyze model performance over time to identify trends and areas for improvement.\n\n#### 8. **Admin Dashboard**\n   - **Monitoring Tools**: Provide administrators with tools to monitor system performance, model effectiveness, and user satisfaction.\n   - **Model Management**: Allow for the addition, removal, or updating of models in the repository based on performance data and user needs.\n\n### Workflow\n1. **User Input**: User submits a prompt through the User Interface.\n2. **Prompt Analysis**: The Prompt Analysis Layer assesses the complexity of the prompt.\n3. **Model Selection**: The Model Selection Layer chooses the most suitable model based on complexity and historical performance.\n4. **Response Generation**: The Execution Layer runs the selected model and generates a response.\n5. **Quality Assessment**: The Response Quality Evaluation module collects user feedback and updates the model performance metrics.\n6. **Caching**: If applicable, the response is cached for future requests.\n7. **Logging**: All interactions are logged for analytics and monitoring.\n\n### Conclusion\nThis architecture provides a flexible and scalable approach to routing user prompts to the most suitable models based on complexity and response quality. It emphasizes continuous learning and adaptation, ensuring that the system improves over time based on user interactions and feedback.",
+      "prompt_token": 28,
+      "response_token": 832,
+      "total_token": 860,
+      "total_response_time": 14.4527578000002,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Quality",
+      "confidence": 0.95,
+      "reason": "The question asks for a high-level architecture design, which requires deep reasoning, planning, and detailed explanation."
+    }
+  },
+  {
+    "question": "Generate Python code that reads a CSV file and calculates total cost grouped by model name.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Generate Python code that reads a CSV file and calculates total cost grouped by model name.",
+      "answer": "{\n  \"route\": \"Code\",\n  \"confidence\": 0.99,\n  \"reason\": \"The question explicitly asks for Python code generation to process a CSV file and perform calculations.\"\n}",
+      "prompt_token": 706,
+      "response_token": 43,
+      "total_token": 749,
+      "total_response_time": 1.2146965000001728,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o",
+      "question": "Generate Python code that reads a CSV file and calculates total cost grouped by model name.",
+      "answer": "To achieve this task, you can use the `pandas` library in Python, which provides powerful data manipulation and analysis capabilities. Below is a Python script that reads a CSV file and calculates the total cost grouped by model name.\n\nFirst, ensure you have the `pandas` library installed. You can install it using pip if you haven't already:\n\n```bash\npip install pandas\n```\n\nHere's the Python code to read a CSV file and calculate the total cost grouped by model name:\n\n```python\nimport pandas as pd\n\n# Replace 'your_file.csv' with the path to your CSV file\nfile_path = 'your_file.csv'\n\n# Read the CSV file into a DataFrame\ndf = pd.read_csv(file_path)\n\n# Assuming the CSV has columns 'model_name' and 'cost'\n# Group by 'model_name' and calculate the total cost for each model\ntotal_cost_by_model = df.groupby('model_name')['cost'].sum().reset_index()\n\n# Rename the columns for clarity\ntotal_cost_by_model.columns = ['model_name', 'total_cost']\n\n# Print the result\nprint(total_cost_by_model)\n```\n\n### Explanation:\n\n1. **Importing pandas**: The script starts by importing the `pandas` library, which is essential for handling CSV files and performing data manipulation.\n\n2. **Reading the CSV file**: The `pd.read_csv()` function is used to read the CSV file into a DataFrame. Replace `'your_file.csv'` with the actual path to your CSV file.\n\n3. **Grouping and Summing**: The `groupby()` method is used to group the data by the `model_name` column. The `sum()` function then calculates the total cost for each model.\n\n4. **Resetting the Index**: The `reset_index()` method is used to convert the resulting Series back into a DataFrame.\n\n5. **Renaming Columns**: For clarity, the columns are renamed to `model_name` and `total_cost`.\n\n6. **Printing the Result**: Finally, the script prints the resulting DataFrame, which shows the total cost grouped by model name.\n\nMake sure your CSV file contains the appropriate columns (`model_name` and `cost`) for this script to work correctly. Adjust the column names in the script if your CSV file uses different names.",
+      "prompt_token": 24,
+      "response_token": 471,
+      "total_token": 495,
+      "total_response_time": 3.2568959000000177,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Code",
+      "confidence": 0.99,
+      "reason": "The question explicitly asks for Python code generation to process a CSV file and perform calculations."
+    }
+  },
+  {
+    "question": "What factors should I consider when buying a wireless noise-cancelling headphone?",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "What factors should I consider when buying a wireless noise-cancelling headphone?",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.95,\n  \"reason\": \"The question asks for a list of factors to consider, which is a straightforward recommendation without requiring deep technical analysis or code.\"\n}",
+      "prompt_token": 705,
+      "response_token": 50,
+      "total_token": 755,
+      "total_response_time": 0.8809533000003285,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "What factors should I consider when buying a wireless noise-cancelling headphone?",
+      "answer": "When buying wireless noise-cancelling headphones, consider the following factors to ensure you choose the right pair for your needs:\n\n1. **Noise Cancellation Quality**: Look for headphones with effective active noise cancellation (ANC) technology. Read reviews and listen to demonstrations if possible to assess how well they block out ambient noise.\n\n2. **Sound Quality**: Evaluate the audio performance, including clarity, bass response, and overall balance. Look for headphones that offer a rich listening experience across various genres of music.\n\n3. **Comfort and Fit**: Consider the design and materials used. Look for padded ear cups and adjustable headbands. If you plan to wear them for extended periods, comfort is crucial.\n\n4. **Battery Life**: Check the battery life of the headphones, especially with ANC activated. Some models offer quick charging features, which can be beneficial for on-the-go use.\n\n5. **Wireless Connectivity**: Ensure the headphones support the latest Bluetooth standards (like Bluetooth 5.0 or higher) for better range and connectivity. Also, check for features like multipoint pairing, which allows you to connect to multiple devices simultaneously.\n\n6. **Controls and Features**: Look for user-friendly controls, such as touch or physical buttons for play/pause, volume adjustment, and ANC settings. Additional features like voice assistant integration and customizable sound profiles can enhance usability.\n\n7. **Durability and Build Quality**: Consider the materials used and the overall build quality. Look for headphones that can withstand daily wear and tear, especially if you plan to use them while traveling or exercising.\n\n8. **Portability**: If you travel frequently, consider how easily the headphones fold or fit into a carrying case. Lightweight designs can also be more convenient for portability.\n\n9. **Price**: Set a budget and compare options within that range. Remember that higher-priced models often come with better features and sound quality, but there are also good mid-range options available.\n\n10. **Brand Reputation and Warranty**: Research the brand\u2019s reputation for quality and customer service. A good warranty can provide peace of mind in case of defects or issues.\n\n11. **Additional Features**: Some headphones come with features like ambient sound modes, which allow you to hear your surroundings when needed, or app support for firmware updates and sound customization.\n\n12. **User Reviews and Expert Opinions**: Look for reviews from other users and expert opinions to gauge real-world performance and reliability.\n\nBy considering these factors, you can make a more",
+      "prompt_token": 22,
+      "response_token": 500,
+      "total_token": 522,
+      "total_response_time": 11.667467100000067,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.95,
+      "reason": "The question asks for a list of factors to consider, which is a straightforward recommendation without requiring deep technical analysis or code."
+    }
+  },
+  {
+    "question": "Explain the tradeoffs between using a smaller LLM for fast responses and a larger LLM for complex reasoning tasks.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Explain the tradeoffs between using a smaller LLM for fast responses and a larger LLM for complex reasoning tasks.",
+      "answer": "{\n  \"route\": \"Quality\",\n  \"confidence\": 0.98,\n  \"reason\": \"The question asks for a detailed tradeoff analysis between model sizes, which requires deeper reasoning and architectural comparison.\"\n}",
+      "prompt_token": 713,
+      "response_token": 47,
+      "total_token": 760,
+      "total_response_time": 0.7041987000002337,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Explain the tradeoffs between using a smaller LLM for fast responses and a larger LLM for complex reasoning tasks.",
+      "answer": "When choosing between a smaller Large Language Model (LLM) for fast responses and a larger LLM for complex reasoning tasks, several trade-offs come into play. Here are the key considerations:\n\n### 1. **Speed vs. Complexity**\n   - **Smaller LLMs**: Generally, smaller models have fewer parameters, which allows them to generate responses more quickly. This makes them suitable for applications where speed is crucial, such as real-time chatbots or interactive applications.\n   - **Larger LLMs**: Larger models, with more parameters, can handle complex reasoning and generate more nuanced, contextually rich responses. However, they typically require more computational resources and time to process inputs, leading to slower response times.\n\n### 2. **Resource Requirements**\n   - **Smaller LLMs**: They are less demanding in terms of computational power and memory, making them easier to deploy on devices with limited resources. This can lead to lower operational costs and the ability to serve more users simultaneously.\n   - **Larger LLMs**: These models require significant computational resources, including powerful GPUs or TPUs, which can increase costs and limit deployment options. They may also require more sophisticated infrastructure to manage their operational demands.\n\n### 3. **Quality of Output**\n   - **Smaller LLMs**: While they can provide quick responses, the quality and depth of those responses may suffer, especially for complex queries that require in-depth understanding or reasoning. They may struggle with nuanced topics or provide less accurate information.\n   - **Larger LLMs**: These models are generally better at understanding context, generating coherent narratives, and performing complex reasoning tasks. They are more likely to produce high-quality, contextually appropriate responses, making them suitable for tasks that require detailed analysis or creativity.\n\n### 4. **Use Case Suitability**\n   - **Smaller LLMs**: Ideal for applications that prioritize speed and efficiency, such as FAQ bots, simple customer support, or scenarios where quick, straightforward answers are sufficient.\n   - **Larger LLMs**: Better suited for applications requiring deep understanding, such as legal document analysis, scientific research, creative writing, or any task that benefits from advanced reasoning and contextual awareness.\n\n### 5. **Scalability**\n   - **Smaller LLMs**: Easier to scale in terms of deployment across multiple devices or instances, which can be advantageous in high-demand situations.\n   - **Larger LLMs**: While they may provide superior performance, their scalability can be limited by the need for high-end hardware and the complexity of managing large models.\n\n### 6. **User Experience**\n   - **Smaller LLMs**: Users may appreciate the fast responses, but they might become frustrated if the responses lack depth or accuracy.\n   - **Larger LLMs**: Users may experience longer wait times, but they are likely to value the richer, more informative responses, especially in contexts where accuracy and detail are paramount.\n\n### Conclusion\nThe choice between a smaller LLM and a larger LLM ultimately depends on the specific requirements of the application. If speed and efficiency are critical, a smaller model may be more appropriate. Conversely, if the task demands complex reasoning and high-quality output, investing in a larger model may yield better results despite the trade-offs in speed and resource consumption. Balancing these factors is key to optimizing performance for the intended use case.",
+      "prompt_token": 30,
+      "response_token": 699,
+      "total_token": 729,
+      "total_response_time": 11.967240700000275,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Quality",
+      "confidence": 0.98,
+      "reason": "The question asks for a detailed tradeoff analysis between model sizes, which requires deeper reasoning and architectural comparison."
+    }
+  },
+  {
+    "question": "Debug this Python error conceptually: TypeError: Object of type CustomClass is not JSON serializable.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Debug this Python error conceptually: TypeError: Object of type CustomClass is not JSON serializable.",
+      "answer": "{\n  \"route\": \"Code\",\n  \"confidence\": 0.98,\n  \"reason\": \"The question asks for debugging a Python error related to code execution and serialization.\"\n}",
+      "prompt_token": 710,
+      "response_token": 41,
+      "total_token": 751,
+      "total_response_time": 1.0852951000001667,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o",
+      "question": "Debug this Python error conceptually: TypeError: Object of type CustomClass is not JSON serializable.",
+      "answer": "The error message \"TypeError: Object of type CustomClass is not JSON serializable\" indicates that you are trying to serialize an instance of `CustomClass` into a JSON format using Python's `json` module, but the `json` module does not know how to convert your custom object into a JSON-compatible format.\n\nThe `json` module can only serialize basic data types like dictionaries, lists, strings, numbers, booleans, and `None`. Custom objects, like instances of user-defined classes, are not directly serializable because the `json` module doesn't know how to interpret them.\n\nTo resolve this issue, you have a few options:\n\n1. **Define a Custom Serialization Method:**\n   You can define a method in your class that returns a dictionary representation of the object. This dictionary should only contain JSON-serializable types.\n\n   ```python\n   class CustomClass:\n       def __init__(self, attribute1, attribute2):\n           self.attribute1 = attribute1\n           self.attribute2 = attribute2\n\n       def to_dict(self):\n           return {\n               'attribute1': self.attribute1,\n               'attribute2': self.attribute2\n           }\n   ```\n\n   Then, use this method to convert your object to a dictionary before serialization:\n\n   ```python\n   import json\n\n   obj = CustomClass('value1', 'value2')\n   json_str = json.dumps(obj.to_dict())\n   ```\n\n2. **Use a Custom JSON Encoder:**\n   You can create a custom JSON encoder by subclassing `json.JSONEncoder` and overriding the `default` method to handle your custom class.\n\n   ```python\n   import json\n\n   class CustomClassEncoder(json.JSONEncoder):\n       def default(self, obj):\n           if isinstance(obj, CustomClass):\n               return obj.to_dict()\n           return super().default(obj)\n\n   obj = CustomClass('value1', 'value2')\n   json_str = json.dumps(obj, cls=CustomClassEncoder)\n   ```\n\n3. **Implement `__repr__` or `__str__` for Simple Cases:**\n   If your object can be represented as a simple string or number, you might implement `__repr__` or `__str__` methods to return a JSON-serializable representation. However, this is less flexible and generally not recommended for complex objects.\n\nBy using one of these methods, you can convert your custom objects into a format that the `json` module can serialize.",
+      "prompt_token": 28,
+      "response_token": 502,
+      "total_token": 530,
+      "total_response_time": 3.921547400000236,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Code",
+      "confidence": 0.98,
+      "reason": "The question asks for debugging a Python error related to code execution and serialization."
+    }
+  },
+  {
+    "question": "Summarize the benefits of using cloud computing for a small business in simple terms.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Summarize the benefits of using cloud computing for a small business in simple terms.",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.95,\n  \"reason\": \"The question asks for a simple summary of benefits without requiring deep reasoning or code.\"\n}",
+      "prompt_token": 706,
+      "response_token": 42,
+      "total_token": 748,
+      "total_response_time": 0.844071299999996,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Summarize the benefits of using cloud computing for a small business in simple terms.",
+      "answer": "Cloud computing offers several benefits for small businesses:\n\n1. **Cost Savings**: It reduces the need for expensive hardware and software since you can access everything online, often paying only for what you use.\n\n2. **Scalability**: As your business grows, you can easily increase your storage and computing power without major investments.\n\n3. **Accessibility**: You can access your data and applications from anywhere with an internet connection, making remote work easier.\n\n4. **Collaboration**: Team members can work together in real time, sharing documents and projects easily, no matter where they are.\n\n5. **Security**: Cloud providers often offer advanced security measures to protect your data, which can be costly for small businesses to implement on their own.\n\n6. **Automatic Updates**: Software updates and maintenance are handled by the provider, so you always have the latest features without extra work.\n\n7. **Disaster Recovery**: Cloud services often include backup solutions, helping you recover your data quickly in case of an emergency.\n\nOverall, cloud computing helps small businesses operate more efficiently and flexibly while saving money.",
+      "prompt_token": 24,
+      "response_token": 222,
+      "total_token": 246,
+      "total_response_time": 5.399887999999919,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.95,
+      "reason": "The question asks for a simple summary of benefits without requiring deep reasoning or code."
+    }
+  },
+  {
+    "question": "What is the difference between Wi-Fi and Bluetooth?",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "What is the difference between Wi-Fi and Bluetooth?",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.95,\n  \"reason\": \"The question asks for a basic comparison of two technologies, which is a straightforward factual explanation.\"\n}",
+      "prompt_token": 699,
+      "response_token": 44,
+      "total_token": 743,
+      "total_response_time": 1.0010305999999218,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "What is the difference between Wi-Fi and Bluetooth?",
+      "answer": "Wi-Fi and Bluetooth are both wireless communication technologies, but they serve different purposes and have distinct characteristics. Here are the key differences between the two:\n\n### 1. **Purpose and Use Cases:**\n   - **Wi-Fi:** Primarily designed for high-speed internet access and networking. It is commonly used to connect devices to the internet and to each other within a local area network (LAN). Examples include connecting laptops, smartphones, tablets, and smart home devices to a router.\n   - **Bluetooth:** Designed for short-range communication between devices. It is typically used for connecting peripherals like headphones, keyboards, mice, and other devices that require low power and low data transfer rates.\n\n### 2. **Range:**\n   - **Wi-Fi:** Generally has a longer range, typically covering distances of up to 100 meters (328 feet) indoors and even more outdoors, depending on the environment and the specific Wi-Fi standard being used.\n   - **Bluetooth:** Has a shorter range, usually around 10 meters (33 feet) for most devices, though some Bluetooth versions (like Bluetooth 5.0) can extend this range to about 40 meters (131 feet) in open spaces.\n\n### 3. **Data Transfer Speed:**\n   - **Wi-Fi:** Offers significantly higher data transfer rates, often ranging from several megabits per second (Mbps) to gigabits per second (Gbps), depending on the Wi-Fi standard (e.g., Wi-Fi 5, Wi-Fi 6).\n   - **Bluetooth:** Generally provides lower data transfer speeds, typically up to 3 Mbps for Bluetooth 2.0 and up to 24 Mbps for Bluetooth 5.0, but these speeds are still much lower than Wi-Fi.\n\n### 4. **Power Consumption:**\n   - **Wi-Fi:** Typically consumes more power than Bluetooth, making it less suitable for battery-powered devices that need to conserve energy.\n   - **Bluetooth:** Designed for low power consumption, especially with Bluetooth Low Energy (BLE), making it ideal for devices like fitness trackers and smartwatches that operate on small batteries.\n\n### 5. **Connection Method:**\n   - **Wi-Fi:** Often requires a network infrastructure, such as a router, and may involve more complex setup procedures, including entering passwords and configuring settings.\n   - **Bluetooth:** Generally easier to set up, requiring simple pairing between devices, often just a click or confirmation on both devices.\n\n### 6. **Network",
+      "prompt_token": 17,
+      "response_token": 500,
+      "total_token": 517,
+      "total_response_time": 10.420792500000061,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.95,
+      "reason": "The question asks for a basic comparison of two technologies, which is a straightforward factual explanation."
+    }
+  },
+  {
+    "question": "Create a production-ready architecture for an AI chatbot that uses RAG, model routing, observability, and cost tracking.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Create a production-ready architecture for an AI chatbot that uses RAG, model routing, observability, and cost tracking.",
+      "answer": "{\n  \"route\": \"Quality\",\n  \"confidence\": 0.98,\n  \"reason\": \"The question asks for a production-ready architecture design with multiple components (RAG, model routing, observability, cost tracking), which requires deep technical reasoning and detailed planning.\"\n}",
+      "prompt_token": 715,
+      "response_token": 61,
+      "total_token": 776,
+      "total_response_time": 0.9749651000001904,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Create a production-ready architecture for an AI chatbot that uses RAG, model routing, observability, and cost tracking.",
+      "answer": "Creating a production-ready architecture for an AI chatbot that employs Retrieval-Augmented Generation (RAG), model routing, observability, and cost tracking involves several key components. Below is a high-level architecture that outlines the necessary components and their interactions.\n\n### High-Level Architecture Overview\n\n1. **User Interface (UI)**\n   - Web/Mobile App: The front-end application where users interact with the chatbot.\n   - Channels: Integration with messaging platforms (e.g., Slack, WhatsApp, Facebook Messenger).\n\n2. **API Gateway**\n   - Handles incoming requests from the UI.\n   - Routes requests to appropriate services (e.g., RAG, model routing).\n\n3. **User Input Processing**\n   - Preprocessing: Tokenization, normalization, and intent recognition.\n   - User Context Management: Maintain user context across interactions.\n\n4. **Retrieval-Augmented Generation (RAG) Module**\n   - **Document Store**: A vector database (e.g., Pinecone, Weaviate) for storing and retrieving relevant documents.\n   - **Retrieval Component**: Uses embeddings to find relevant documents based on user queries.\n   - **Generation Component**: A language model (e.g., GPT-4, T5) that generates responses using retrieved documents as context.\n\n5. **Model Routing**\n   - **Routing Logic**: Decides which model to use based on the query type, user intent, or context.\n   - **Model Registry**: A centralized repository of available models, their capabilities, and metadata.\n   - **Load Balancer**: Distributes requests across multiple model instances for scalability.\n\n6. **Observability Layer**\n   - **Logging**: Capture logs for user interactions, API calls, and model performance.\n   - **Monitoring**: Real-time dashboards (e.g., Grafana, Kibana) to track key metrics (response time, error rates, user satisfaction).\n   - **Alerting**: Set up alerts for anomalies or performance degradation.\n\n7. **Cost Tracking**\n   - **Cost Monitoring Service**: Track usage of cloud resources (e.g., compute instances, storage) and model invocations.\n   - **Billing Dashboard**: Visualize costs associated with different components (e.g., API calls, model usage).\n\n8. **Data Management**\n   - **User Data Storage**: Secure storage for user data and conversation history (e.g., databases like PostgreSQL, MongoDB).\n   - **Training Data Pipeline**: Collect user interactions for retraining models and improving performance.\n\n9. **Security Layer**\n   - **Authentication**: OAuth2 or JWT for user authentication.\n   - **Authorization**: Role-based access control for different services.\n   - **Data Encryption**: Encrypt sensitive data in transit and at rest.\n\n### Component Interaction Flow\n\n1. **User Interaction**: The user sends a message through the UI.\n2. **API Gateway**: Receives the request and routes it to the User Input Processing service.\n3. **User Input Processing**: Preprocesses the input and retrieves user context.\n4. **Model Routing**: Determines which model to use based on the input.\n5. **RAG Module**:\n   - **Retrieval**: Queries the Document Store for relevant documents.\n   - **Generation**: The selected language model generates a response using the retrieved documents.\n6. **Response Delivery**: The generated response is sent back to the UI via the API Gateway.\n7. **Observability and Cost Tracking**: Logs are recorded, metrics are updated, and costs are tracked throughout the interaction.\n\n### Technology Stack Recommendations\n\n- **Frontend**: React, Vue.js, or Flutter for mobile apps.\n- **Backend**: Node.js, Python (Flask/FastAPI), or Java (Spring Boot).\n- **Database**: PostgreSQL for structured data, MongoDB for unstructured data, and a vector database like Pinecone for RAG.\n- **Model Hosting**: Hugging Face Model Hub, AWS SageMaker, or Google AI Platform.\n- **Monitoring**: Prometheus for metrics collection, Grafana for visualization, and ELK Stack for logging.\n- **Cost Tracking**: AWS Cost Explorer, Google Cloud Billing, or custom-built dashboards using data from cloud providers.\n\n### Conclusion\n\nThis architecture provides a scalable, observable, and cost-effective solution for deploying an AI chatbot with RAG capabilities. It ensures that the chatbot can handle user queries efficiently while maintaining performance metrics and tracking costs effectively. This modular design allows for easy updates and scaling as the user base grows or as new models are integrated.",
+      "prompt_token": 31,
+      "response_token": 931,
+      "total_token": 962,
+      "total_response_time": 10.894213299999592,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Quality",
+      "confidence": 0.98,
+      "reason": "The question asks for a production-ready architecture design with multiple components (RAG, model routing, observability, cost tracking), which requires deep technical reasoning and detailed planning."
+    }
+  },
+  {
+    "question": "Generate Python code that reads a JSON file and converts selected nested fields into a CSV file.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Generate Python code that reads a JSON file and converts selected nested fields into a CSV file.",
+      "answer": "{\n  \"route\": \"Code\",\n  \"confidence\": 0.99,\n  \"reason\": \"The question explicitly asks for Python code generation to perform a file conversion task.\"\n}",
+      "prompt_token": 707,
+      "response_token": 41,
+      "total_token": 748,
+      "total_response_time": 1.389710699999796,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o",
+      "question": "Generate Python code that reads a JSON file and converts selected nested fields into a CSV file.",
+      "answer": "To convert selected nested fields from a JSON file into a CSV file using Python, you can use the `json` module to read the JSON data and the `csv` module to write to a CSV file. Below is an example code that demonstrates how to achieve this:\n\n```python\nimport json\nimport csv\n\ndef json_to_csv(json_file_path, csv_file_path, selected_fields):\n    # Read the JSON file\n    with open(json_file_path, 'r') as json_file:\n        data = json.load(json_file)\n\n    # Open the CSV file for writing\n    with open(csv_file_path, 'w', newline='') as csv_file:\n        csv_writer = csv.writer(csv_file)\n\n        # Write the header to the CSV file\n        csv_writer.writerow(selected_fields)\n\n        # Iterate over each item in the JSON data\n        for item in data:\n            # Extract the selected fields\n            row = []\n            for field in selected_fields:\n                # Handle nested fields using dot notation\n                keys = field.split('.')\n                value = item\n                for key in keys:\n                    value = value.get(key, None)\n                    if value is None:\n                        break\n                row.append(value)\n            \n            # Write the row to the CSV file\n            csv_writer.writerow(row)\n\n# Example usage\njson_file_path = 'data.json'\ncsv_file_path = 'output.csv'\nselected_fields = ['id', 'name.first', 'name.last', 'address.city', 'address.zip']\n\njson_to_csv(json_file_path, csv_file_path, selected_fields)\n```\n\n### Explanation:\n\n1. **Reading JSON Data**: The JSON file is read using `json.load()`, which parses the JSON data into a Python dictionary or list.\n\n2. **Writing CSV Data**: The `csv.writer()` is used to write data to a CSV file. The `newline=''` parameter is used to prevent extra newlines on Windows.\n\n3. **Selecting Nested Fields**: The `selected_fields` list contains the fields you want to extract. Nested fields are specified using dot notation (e.g., `name.first`).\n\n4. **Extracting Values**: For each item in the JSON data, the code iterates over the `selected_fields`, splits each field by dots to handle nested fields, and retrieves the corresponding value.\n\n5. **Writing Rows**: Each extracted row is written to the CSV file.\n\n### Note:\n- Ensure that the JSON file is structured in a way that matches the fields you are selecting.\n- Adjust the `selected_fields` list to match the structure of your JSON data.",
+      "prompt_token": 25,
+      "response_token": 528,
+      "total_token": 553,
+      "total_response_time": 4.416815100000349,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Code",
+      "confidence": 0.99,
+      "reason": "The question explicitly asks for Python code generation to perform a file conversion task."
+    }
+  },
+  {
+    "question": "Write five LinkedIn hashtags for a post about responsible AI.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Write five LinkedIn hashtags for a post about responsible AI.",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.9,\n  \"reason\": \"The task is a short, straightforward request for basic content generation without requiring deep reasoning or code.\"\n}",
+      "prompt_token": 702,
+      "response_token": 44,
+      "total_token": 746,
+      "total_response_time": 0.7264042000001609,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Write five LinkedIn hashtags for a post about responsible AI.",
+      "answer": "Sure! Here are five LinkedIn hashtags you can use for a post about responsible AI:\n\n1. #ResponsibleAI\n2. #EthicalAI\n3. #AIForGood\n4. #AIethics\n5. #SustainableAI\n\nFeel free to mix and match or modify them to better suit your post!",
+      "prompt_token": 19,
+      "response_token": 67,
+      "total_token": 86,
+      "total_response_time": 1.3060448000001088,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.9,
+      "reason": "The task is a short, straightforward request for basic content generation without requiring deep reasoning or code."
+    }
+  },
+  {
+    "question": "Explain the difference between Kubernetes HPA, VPA, and Cluster Autoscaler with examples.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Explain the difference between Kubernetes HPA, VPA, and Cluster Autoscaler with examples.",
+      "answer": "{\n  \"route\": \"Quality\",\n  \"confidence\": 0.95,\n  \"reason\": \"The question asks for a detailed comparison of Kubernetes autoscaling components with examples, requiring deep technical explanation and tradeoff analysis.\"\n}",
+      "prompt_token": 709,
+      "response_token": 50,
+      "total_token": 759,
+      "total_response_time": 0.7552941000003557,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Explain the difference between Kubernetes HPA, VPA, and Cluster Autoscaler with examples.",
+      "answer": "Kubernetes provides several mechanisms to manage resource allocation and scaling for applications running in a cluster. Three important components in this context are the Horizontal Pod Autoscaler (HPA), Vertical Pod Autoscaler (VPA), and Cluster Autoscaler. Each serves a different purpose in managing resources and scaling in Kubernetes. Here\u2019s an explanation of each, along with examples:\n\n### 1. Horizontal Pod Autoscaler (HPA)\n\n**Purpose**: The HPA automatically scales the number of pod replicas in a deployment based on observed CPU utilization (or other select metrics) to ensure that the application can handle varying loads.\n\n**How it Works**: HPA monitors the resource usage of the pods and adjusts the number of replicas based on the defined thresholds. For example, if the CPU usage exceeds a specified percentage, HPA will increase the number of replicas to distribute the load.\n\n**Example**:\nSuppose you have a web application deployed with an initial replica count of 3. You set up an HPA that targets a CPU utilization of 70%. If the CPU usage of the pods goes above 70%, HPA will scale up the number of replicas to handle the increased load. Conversely, if the CPU usage drops below 70%, it may scale down the number of replicas.\n\n```yaml\napiVersion: autoscaling/v2beta2\nkind: HorizontalPodAutoscaler\nmetadata:\n  name: my-app-hpa\nspec:\n  scaleTargetRef:\n    apiVersion: apps/v1\n    kind: Deployment\n    name: my-app\n  minReplicas: 2\n  maxReplicas: 10\n  metrics:\n  - type: Resource\n    resource:\n      name: cpu\n      target:\n        type: Utilization\n        averageUtilization: 70\n```\n\n### 2. Vertical Pod Autoscaler (VPA)\n\n**Purpose**: The VPA automatically adjusts the resource requests and limits (CPU and memory) for containers in pods based on their actual usage over time.\n\n**How it Works**: VPA monitors the resource consumption of the pods and recommends (or directly applies) changes to the resource requests and limits. This is particularly useful for applications with variable workloads that may require more or less resources over time.\n\n**Example**:\nImagine you have a service that initially requests 500m CPU and 256Mi memory. Over time, you notice that the service consistently uses 800m CPU and 512Mi memory. With VPA, you can set it to automatically adjust the resource requests. If VPA determines that the service needs more resources, it can update the deployment to request 800m CPU and 512Mi memory.\n\n```yaml\napiVersion: autoscaling.k8s.io/v1\nkind: VerticalPodAutoscaler\nmetadata:\n  name: my-app-vpa\nspec:\n  targetRef:\n    apiVersion: apps/v1\n    kind: Deployment\n    name: my-app\n  updatePolicy:\n    updateMode: Auto\n```\n\n### 3. Cluster Autoscaler\n\n**Purpose**: The Cluster Autoscaler automatically adjusts the size of the Kubernetes cluster itself by adding or removing nodes based on the resource requests of the pods that cannot be scheduled due to insufficient resources.\n\n**How it Works**: If there are pending pods that cannot be scheduled due to a lack of resources (CPU/memory), the Cluster Autoscaler will add nodes to the cluster. Conversely, if nodes are underutilized and their pods can be moved to other nodes, the Cluster Autoscaler can remove those nodes.\n\n**Example**:\nAssume you have a Kubernetes cluster with 3 nodes, and you deploy a new application that requires more resources than the current nodes can provide. If there are pending pods that cannot be scheduled because of insufficient resources, the Cluster Autoscaler will provision additional nodes to accommodate these pods. If, later on, the load decreases and there are nodes that are underutilized, the Cluster Autoscaler can remove those nodes to save costs.\n\n```yaml\n# This is typically configured as part of the cloud provider's settings and not as a Kubernetes resource.\n# Example command to deploy the Cluster Autoscaler on AWS:\nkubectl apply -f cluster-autoscaler-autodiscover.yaml\n```\n\n### Summary\n\n- **HPA** scales the number of pod replicas based on metrics like CPU utilization.\n- **VPA** adjusts the resource requests/limits for individual pods based on their usage patterns.\n- **Cluster Autoscaler** manages the number of nodes in the cluster based on the scheduling needs of pods.\n\nThese components can work together to ensure that your Kubernetes applications are resilient, cost-effective, and can handle varying loads efficiently.",
+      "prompt_token": 25,
+      "response_token": 949,
+      "total_token": 974,
+      "total_response_time": 10.002564800000073,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Quality",
+      "confidence": 0.95,
+      "reason": "The question asks for a detailed comparison of Kubernetes autoscaling components with examples, requiring deep technical explanation and tradeoff analysis."
+    }
+  },
+  {
+    "question": "What is prompt caching in simple terms?",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "What is prompt caching in simple terms?",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.98,\n  \"reason\": \"The question asks for a simple explanation of a concept without requiring deep reasoning or code.\"\n}",
+      "prompt_token": 697,
+      "response_token": 43,
+      "total_token": 740,
+      "total_response_time": 1.2236823000002914,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "What is prompt caching in simple terms?",
+      "answer": "Prompt caching is a technique used to store and reuse previous inputs (or prompts) and their corresponding outputs when interacting with AI models, like chatbots. Instead of generating a response from scratch every time a similar question is asked, the system checks if it has already processed that prompt before. If it has, it retrieves the stored response, which saves time and computational resources. Essentially, it's like keeping a record of questions and answers so that the system can respond faster and more efficiently when similar queries come up again.",
+      "prompt_token": 15,
+      "response_token": 102,
+      "total_token": 117,
+      "total_response_time": 1.637820599999941,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.98,
+      "reason": "The question asks for a simple explanation of a concept without requiring deep reasoning or code."
+    }
+  },
+  {
+    "question": "Write Python code to call the OpenAI Responses API and print the model response.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Write Python code to call the OpenAI Responses API and print the model response.",
+      "answer": "{\n  \"route\": \"Code\",\n  \"confidence\": 0.99,\n  \"reason\": \"The question explicitly asks for Python code generation to interact with the OpenAI Responses API.\"\n}",
+      "prompt_token": 705,
+      "response_token": 43,
+      "total_token": 748,
+      "total_response_time": 0.8185578000002351,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o",
+      "question": "Write Python code to call the OpenAI Responses API and print the model response.",
+      "answer": "To call the OpenAI API and print the model response, you'll need to use the `openai` Python package. First, ensure you have the package installed:\n\n```bash\npip install openai\n```\n\nThen, you can use the following Python code to call the API and print the model's response. Make sure to replace `'your-api-key'` with your actual OpenAI API key.\n\n```python\nimport openai\n\n# Set your API key\nopenai.api_key = 'your-api-key'\n\ndef get_openai_response(prompt):\n    try:\n        # Call the OpenAI API\n        response = openai.Completion.create(\n            engine=\"text-davinci-003\",  # You can choose a different model if needed\n            prompt=prompt,\n            max_tokens=150,  # Adjust the number of tokens as needed\n            n=1,\n            stop=None,\n            temperature=0.7\n        )\n        \n        # Extract and print the response text\n        model_response = response.choices[0].text.strip()\n        print(\"Model Response:\", model_response)\n    \n    except Exception as e:\n        print(\"An error occurred:\", e)\n\n# Example prompt\nprompt = \"What is the capital of France?\"\nget_openai_response(prompt)\n```\n\n### Key Points:\n- **API Key**: Ensure you securely manage your API key and do not hard-code it in production code.\n- **Engine**: The `engine` parameter specifies which model to use. `text-davinci-003` is a powerful model, but you can choose others like `gpt-3.5-turbo` if available.\n- **Max Tokens**: This controls the length of the response. Adjust it based on your needs.\n- **Temperature**: This parameter controls the randomness of the output. Lower values make the output more deterministic.\n\n### Security Note:\nAlways handle your API keys securely. Avoid hardcoding them in your scripts, especially if you plan to share the code. Consider using environment variables or a secure vault for managing sensitive information.",
+      "prompt_token": 23,
+      "response_token": 420,
+      "total_token": 443,
+      "total_response_time": 2.9655767999997806,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Code",
+      "confidence": 0.99,
+      "reason": "The question explicitly asks for Python code generation to interact with the OpenAI Responses API."
+    }
+  },
+  {
+    "question": "Give me three tips to improve focus while working from home.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Give me three tips to improve focus while working from home.",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.95,\n  \"reason\": \"The question asks for basic tips, which are short and do not require deep reasoning or code.\"\n}",
+      "prompt_token": 701,
+      "response_token": 45,
+      "total_token": 746,
+      "total_response_time": 0.8893502000000808,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Give me three tips to improve focus while working from home.",
+      "answer": "Improving focus while working from home can be challenging, but here are three effective tips to help you stay on track:\n\n1. **Establish a Dedicated Workspace**: Create a specific area in your home that is designated for work. This space should be free from distractions and equipped with everything you need to be productive. Having a dedicated workspace helps signal to your brain that it\u2019s time to work, making it easier to focus.\n\n2. **Set a Structured Schedule**: Develop a daily routine that includes set work hours, breaks, and time for personal activities. Use techniques like the Pomodoro Technique (working for 25 minutes followed by a 5-minute break) to maintain focus and prevent burnout. Stick to your schedule as much as possible to create a sense of normalcy and discipline.\n\n3. **Limit Distractions**: Identify what commonly distracts you (e.g., social media, TV, household chores) and take steps to minimize these interruptions. Consider using website blockers during work hours, turning off non-essential notifications, and communicating your work hours to others in your household to reduce interruptions.\n\nBy implementing these strategies, you can enhance your focus and productivity while working from home.",
+      "prompt_token": 19,
+      "response_token": 238,
+      "total_token": 257,
+      "total_response_time": 4.452311900000041,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.95,
+      "reason": "The question asks for basic tips, which are short and do not require deep reasoning or code."
+    }
+  },
+  {
+    "question": "Compare RAG and fine-tuning for building a domain-specific AI assistant.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Compare RAG and fine-tuning for building a domain-specific AI assistant.",
+      "answer": "{\n  \"route\": \"Quality\",\n  \"confidence\": 0.95,\n  \"reason\": \"The question asks for a detailed comparison and tradeoff analysis between RAG and fine-tuning, which requires deeper reasoning and strategic insights.\"\n}",
+      "prompt_token": 704,
+      "response_token": 53,
+      "total_token": 757,
+      "total_response_time": 0.9081031999999141,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Compare RAG and fine-tuning for building a domain-specific AI assistant.",
+      "answer": "When building a domain-specific AI assistant, two prominent approaches are Retrieval-Augmented Generation (RAG) and fine-tuning. Each method has its strengths and weaknesses, and the choice between them depends on various factors, including the specific use case, available resources, and desired outcomes. Below is a comparison of RAG and fine-tuning:\n\n### Retrieval-Augmented Generation (RAG)\n\n**Overview:**\nRAG combines retrieval-based and generative approaches. It retrieves relevant documents or pieces of information from a knowledge base and then uses a generative model to produce responses based on the retrieved content.\n\n**Advantages:**\n1. **Dynamic Knowledge Access:** RAG can access up-to-date information from a large corpus without needing to retrain the model, making it suitable for domains where knowledge frequently changes.\n2. **Reduced Training Data Requirements:** It can perform well with less labeled data since it relies on retrieval from existing documents rather than requiring extensive fine-tuning on specific datasets.\n3. **Improved Contextual Relevance:** By pulling in relevant documents, RAG can provide more contextually accurate and informative responses.\n4. **Flexibility:** It can adapt to different domains by simply changing the underlying knowledge base without retraining the entire model.\n\n**Disadvantages:**\n1. **Dependency on Quality of Retrieval:** The effectiveness of RAG heavily relies on the quality of the retrieval system. Poor retrieval can lead to irrelevant or incorrect responses.\n2. **Latency:** The retrieval process can introduce latency, making responses slower compared to a purely generative model.\n3. **Complexity:** Implementing a RAG system can be more complex due to the need for both a retrieval component and a generative model.\n\n### Fine-Tuning\n\n**Overview:**\nFine-tuning involves taking a pre-trained language model and training it further on a specific dataset that is representative of the target domain. This process adjusts the model's weights to better fit the specific language and context of the domain.\n\n**Advantages:**\n1. **High Customization:** Fine-tuning allows for a high degree of customization, enabling the model to learn domain-specific language, terminology, and nuances.\n2. **Performance on Specific Tasks:** When trained on a well-curated dataset, fine-tuned models can excel at specific tasks, such as classification or question answering, within the domain.\n3. **Consistency:** Fine-tuned models can provide consistent responses that align with the desired tone and style of the domain.\n\n**Disadvantages:**\n1. **Data Requirements:** Fine-tuning typically requires a substantial amount of domain-specific labeled data, which may not always be available.\n2. **Static Knowledge:** Once fine-tuned, the model's knowledge is fixed to the data it was trained on, making it less adaptable to new information unless retrained.\n3. **Resource Intensive:** The fine-tuning process can be computationally expensive and time-consuming, especially for large models.\n\n### Conclusion\n\nThe choice between RAG and fine-tuning for building a domain-specific AI assistant largely depends on the specific requirements and constraints of the project:\n\n- **Use RAG** if you need a system that can access and utilize up-to-date information dynamically, has limited labeled data, and can handle a variety of queries with contextual relevance.\n  \n- **Use fine-tuning** if you have a well-defined dataset, need high customization for specific tasks, and can afford the resources for training and retraining the model as new data becomes available.\n\nIn some cases, a hybrid approach that combines both methods might also be beneficial, leveraging the strengths of each to create a more robust AI assistant.",
+      "prompt_token": 22,
+      "response_token": 727,
+      "total_token": 749,
+      "total_response_time": 10.259468899999774,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Quality",
+      "confidence": 0.95,
+      "reason": "The question asks for a detailed comparison and tradeoff analysis between RAG and fine-tuning, which requires deeper reasoning and strategic insights."
+    }
+  },
+  {
+    "question": "Explain how to make a Python class JSON serializable using a to_dict method.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Explain how to make a Python class JSON serializable using a to_dict method.",
+      "answer": "{\n  \"route\": \"Code\",\n  \"confidence\": 0.98,\n  \"reason\": \"The question explicitly asks for an explanation related to implementing JSON serialization in Python, which involves code implementation details.\"\n}",
+      "prompt_token": 706,
+      "response_token": 47,
+      "total_token": 753,
+      "total_response_time": 28.549143899999763,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o",
+      "question": "Explain how to make a Python class JSON serializable using a to_dict method.",
+      "answer": "To make a Python class JSON serializable, you can implement a `to_dict` method within the class that converts its instances into a dictionary representation. This dictionary can then be easily serialized into JSON using Python's `json` module. Here's a step-by-step guide on how to achieve this:\n\n1. **Define the Class**: Create your class with the necessary attributes.\n\n2. **Implement the `to_dict` Method**: This method should return a dictionary where the keys are the attribute names and the values are the attribute values. This dictionary will represent the object's data in a format that can be serialized to JSON.\n\n3. **Use the `json` Module**: Use the `json.dumps()` function to convert the dictionary returned by `to_dict` into a JSON string.\n\nHere's an example to illustrate these steps:\n\n```python\nimport json\n\nclass Person:\n    def __init__(self, name, age, email):\n        self.name = name\n        self.age = age\n        self.email = email\n\n    def to_dict(self):\n        # Convert the object attributes to a dictionary\n        return {\n            'name': self.name,\n            'age': self.age,\n            'email': self.email\n        }\n\n# Create an instance of the class\nperson = Person('John Doe', 30, 'john.doe@example.com')\n\n# Convert the object to a dictionary\nperson_dict = person.to_dict()\n\n# Serialize the dictionary to a JSON string\nperson_json = json.dumps(person_dict, indent=4)\n\n# Output the JSON string\nprint(person_json)\n```\n\n### Explanation:\n\n- **Class Definition**: The `Person` class has three attributes: `name`, `age`, and `email`.\n\n- **`to_dict` Method**: This method constructs and returns a dictionary with the object's attributes. This is crucial for JSON serialization because the `json` module can only serialize basic data types like dictionaries, lists, strings, numbers, etc.\n\n- **Serialization**: The `json.dumps()` function is used to serialize the dictionary into a JSON-formatted string. The `indent` parameter is optional and is used here to pretty-print the JSON with an indentation of 4 spaces.\n\nBy following this approach, you ensure that your class instances can be easily converted to JSON, which is useful for data interchange, storage, or configuration purposes.",
+      "prompt_token": 23,
+      "response_token": 478,
+      "total_token": 501,
+      "total_response_time": 4.813433000000259,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Code",
+      "confidence": 0.98,
+      "reason": "The question explicitly asks for an explanation related to implementing JSON serialization in Python, which involves code implementation details."
+    }
+  },
+  {
+    "question": "Write a short LinkedIn post about continuous learning in Artificial Intelligence.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Write a short LinkedIn post about continuous learning in Artificial Intelligence.",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.95,\n  \"reason\": \"The request asks for a short writing task that can be completed quickly without deep reasoning or code.\"\n}",
+      "prompt_token": 702,
+      "response_token": 45,
+      "total_token": 747,
+      "total_response_time": 0.921004200000425,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Write a short LinkedIn post about continuous learning in Artificial Intelligence.",
+      "answer": "\ud83c\udf1f Embracing Continuous Learning in Artificial Intelligence \ud83c\udf1f\n\nIn the rapidly evolving world of Artificial Intelligence, the only constant is change. As professionals in this field, we must commit to continuous learning to stay ahead of the curve. \n\nFrom new algorithms to emerging technologies, the landscape of AI is ever-shifting. Engaging in online courses, attending workshops, and participating in community discussions are just a few ways we can enhance our skills and knowledge. \n\nLet\u2019s leverage platforms like LinkedIn Learning, Coursera, and industry conferences to expand our horizons. Remember, every new insight can spark innovation and drive meaningful impact in our work.\n\nTogether, let\u2019s cultivate a culture of lifelong learning and collaboration in AI! \ud83d\ude80\ud83d\udca1\n\n#ArtificialIntelligence #ContinuousLearning #Innovation #AICommunity",
+      "prompt_token": 20,
+      "response_token": 160,
+      "total_token": 180,
+      "total_response_time": 2.8703169999998863,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.95,
+      "reason": "The request asks for a short writing task that can be completed quickly without deep reasoning or code."
+    }
+  },
+  {
+    "question": "What is the purpose of a README.md file in a GitHub project?",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "What is the purpose of a README.md file in a GitHub project?",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.98,\n  \"reason\": \"The question asks for a basic explanation of a README.md file's purpose, which is a simple factual question.\"\n}",
+      "prompt_token": 704,
+      "response_token": 48,
+      "total_token": 752,
+      "total_response_time": 0.9186844999994719,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "What is the purpose of a README.md file in a GitHub project?",
+      "answer": "A `README.md` file in a GitHub project serves several important purposes:\n\n1. **Project Overview**: It provides a summary of the project, explaining what it does, its purpose, and its goals. This helps potential users and contributors understand the project's significance.\n\n2. **Installation Instructions**: It often includes detailed instructions on how to install and set up the project, making it easier for users to get started.\n\n3. **Usage Guidelines**: The README typically contains examples or guidelines on how to use the project, including code snippets or command-line instructions.\n\n4. **Contribution Guidelines**: For open-source projects, it may outline how others can contribute to the project, including coding standards, branch management, and how to submit pull requests.\n\n5. **Licensing Information**: It often specifies the licensing terms under which the project is distributed, clarifying how the code can be used by others.\n\n6. **Contact Information**: It may provide contact details or links to community forums, issue trackers, or other resources for users to seek help or ask questions.\n\n7. **Documentation Links**: If the project has extensive documentation, the README can include links to it, guiding users to more detailed information.\n\n8. **Badges**: Many README files include badges that provide quick visual indicators of the project\u2019s status, such as build status, test coverage, or versioning.\n\nOverall, a well-crafted `README.md` file enhances the usability and accessibility of a project, making it easier for others to understand, use, and contribute to it.",
+      "prompt_token": 22,
+      "response_token": 314,
+      "total_token": 336,
+      "total_response_time": 3.496272499999577,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.98,
+      "reason": "The question asks for a basic explanation of a README.md file's purpose, which is a simple factual question."
+    }
+  },
+  {
+    "question": "Design an evaluation framework to compare baseline LLM responses against routed model responses using cost, latency, and quality metrics.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Design an evaluation framework to compare baseline LLM responses against routed model responses using cost, latency, and quality metrics.",
+      "answer": "{\n  \"route\": \"Quality\",\n  \"confidence\": 0.95,\n  \"reason\": \"The question asks for designing an evaluation framework with multiple metrics (cost, latency, quality), which requires deep reasoning, architecture thinking, and detailed planning.\"\n}",
+      "prompt_token": 712,
+      "response_token": 56,
+      "total_token": 768,
+      "total_response_time": 0.9068680000000313,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Design an evaluation framework to compare baseline LLM responses against routed model responses using cost, latency, and quality metrics.",
+      "answer": "Designing an evaluation framework to compare baseline Large Language Model (LLM) responses against routed model responses involves establishing a systematic approach that incorporates cost, latency, and quality metrics. Below is a structured framework to facilitate this comparison:\n\n### Evaluation Framework for LLM Responses\n\n#### 1. **Define Objectives**\n   - Identify the primary goals of the evaluation (e.g., improve response quality, reduce costs, minimize latency).\n   - Determine the specific use cases for which the models will be evaluated.\n\n#### 2. **Selection of Models**\n   - **Baseline Model**: The standard LLM that will serve as the control.\n   - **Routed Model**: The variant or ensemble of models that may provide enhanced performance based on specific criteria.\n\n#### 3. **Evaluation Metrics**\n   - **Cost Metrics**\n     - **Operational Cost**: Calculate the cost of running each model, including compute resources, energy consumption, and any associated infrastructure costs.\n     - **Cost per Query**: Determine the average cost incurred for processing a single query for both models.\n  \n   - **Latency Metrics**\n     - **Response Time**: Measure the time taken from when a query is submitted to when a response is received.\n     - **Throughput**: Assess how many queries can be processed per second by each model.\n     - **Latency Variability**: Analyze the consistency of response times across multiple queries.\n\n   - **Quality Metrics**\n     - **Relevance**: Use metrics like Precision, Recall, and F1 Score to evaluate the relevance of the responses.\n     - **Fluency**: Assess the grammatical correctness and coherence of the responses using human evaluations or automated metrics like BLEU or ROUGE.\n     - **User Satisfaction**: Conduct user studies or surveys to gauge user satisfaction with the responses.\n     - **Diversity**: Measure the diversity of responses to ensure the model is not providing repetitive answers.\n\n#### 4. **Data Collection**\n   - **Query Set**: Create a diverse and representative set of queries that cover various topics and complexity levels.\n   - **Response Collection**: Gather responses from both the baseline and routed models for the same set of queries.\n\n#### 5. **Evaluation Process**\n   - **Run Experiments**: Execute the defined queries against both models in a controlled environment to ensure consistency.\n   - **Collect Data**: Record the responses, costs, and latencies for each query processed by both models.\n\n#### 6. **Analysis**\n   - **Cost Analysis**: Compare the operational costs and cost per query for both models.\n   - **Latency Analysis**: Analyze the average response times, throughput, and latency variability.\n   - **Quality Analysis**: Use statistical methods to compare the quality metrics, including relevance, fluency, user satisfaction, and diversity.\n   - **Statistical Significance**: Apply statistical tests (e.g., t-tests, ANOVA) to determine if differences in metrics are statistically significant.\n\n#### 7. **Visualization**\n   - Create visual representations (e.g., bar charts, box plots) to effectively communicate the differences in cost, latency, and quality metrics between the two models.\n\n#### 8. **Reporting**\n   - Compile the findings into a comprehensive report that includes:\n     - Overview of the evaluation objectives and methodology.\n     - Detailed results for cost, latency, and quality metrics.\n     - Visualizations to support findings.\n     - Conclusions and recommendations based on the evaluation.\n\n#### 9. **Iterate and Improve**\n   - Based on the findings, iterate on the models or evaluation criteria as necessary.\n   - Consider additional factors or metrics that may contribute to a more holistic evaluation in future iterations.\n\n### Conclusion\nThis evaluation framework provides a structured approach to compare baseline LLM responses against routed model responses using cost, latency, and quality metrics. By adhering to this framework, stakeholders can make informed decisions about model performance and optimization.",
+      "prompt_token": 30,
+      "response_token": 793,
+      "total_token": 823,
+      "total_response_time": 11.332927500000551,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Quality",
+      "confidence": 0.95,
+      "reason": "The question asks for designing an evaluation framework with multiple metrics (cost, latency, quality), which requires deep reasoning, architecture thinking, and detailed planning."
+    }
+  },
+  {
+    "question": "Generate Python code that measures response time for a function using time.perf_counter.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Generate Python code that measures response time for a function using time.perf_counter.",
+      "answer": "{\n  \"route\": \"Code\",\n  \"confidence\": 0.99,\n  \"reason\": \"The question explicitly asks for Python code generation to measure response time.\"\n}",
+      "prompt_token": 705,
+      "response_token": 39,
+      "total_token": 744,
+      "total_response_time": 0.7030117000003884,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o",
+      "question": "Generate Python code that measures response time for a function using time.perf_counter.",
+      "answer": "Certainly! You can use the `time.perf_counter` function to measure the response time of a function in Python. Here's a simple example of how you can do this:\n\n```python\nimport time\n\ndef measure_response_time(func, *args, **kwargs):\n    \"\"\"\n    Measures the response time of a given function.\n\n    Parameters:\n    - func: The function to measure.\n    - *args: Positional arguments to pass to the function.\n    - **kwargs: Keyword arguments to pass to the function.\n\n    Returns:\n    - result: The result of the function call.\n    - elapsed_time: The time taken to execute the function in seconds.\n    \"\"\"\n    start_time = time.perf_counter()\n    result = func(*args, **kwargs)\n    end_time = time.perf_counter()\n    elapsed_time = end_time - start_time\n    return result, elapsed_time\n\n# Example usage\ndef example_function(x):\n    # Simulate a time-consuming operation\n    time.sleep(x)\n    return f\"Function completed after {x} seconds\"\n\n# Measure the response time of the example_function\nresult, response_time = measure_response_time(example_function, 2)\nprint(result)\nprint(f\"Response time: {response_time:.6f} seconds\")\n```\n\n### Explanation:\n- The `measure_response_time` function takes another function `func` as an argument, along with any positional (`*args`) and keyword arguments (`**kwargs`) that need to be passed to `func`.\n- It records the start time using `time.perf_counter()`, calls the function, and then records the end time.\n- The difference between the end time and start time gives the elapsed time, which is the response time of the function.\n- The function returns both the result of the function call and the elapsed time.\n- In the example usage, `example_function` is a simple function that simulates a delay using `time.sleep`. The response time for this function is measured and printed.",
+      "prompt_token": 23,
+      "response_token": 404,
+      "total_token": 427,
+      "total_response_time": 4.579419400000006,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Code",
+      "confidence": 0.99,
+      "reason": "The question explicitly asks for Python code generation to measure response time."
+    }
+  },
+  {
+    "question": "Explain what an API is using a simple real-world example.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Explain what an API is using a simple real-world example.",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.9,\n  \"reason\": \"The question asks for a simple explanation with a real-world example, which is a basic factual task without requiring deep reasoning or code.\"\n}",
+      "prompt_token": 702,
+      "response_token": 51,
+      "total_token": 753,
+      "total_response_time": 0.7923920000002909,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Explain what an API is using a simple real-world example.",
+      "answer": "An API, or Application Programming Interface, is a set of rules and protocols that allows different software applications to communicate with each other. To understand this concept better, let's use a simple real-world example: a restaurant.\n\nImagine you go to a restaurant to order food. In this scenario:\n\n1. **You (the customer)** represent a user who wants to interact with a service (the restaurant).\n2. **The waiter** acts as the API. When you tell the waiter what you want, he takes your order to the kitchen.\n3. **The kitchen** is the backend service that prepares your food based on your order.\n\nHere's how it works step-by-step:\n\n- You sit at your table and look at the menu (the documentation of the API) to see what you can order.\n- You tell the waiter (the API) what you want \u2014 for example, a cheeseburger and fries.\n- The waiter takes your order to the kitchen (the server) and communicates it in a way that the kitchen understands.\n- The kitchen prepares your food and hands it back to the waiter.\n- The waiter then brings your food to your table.\n\nIn this analogy:\n- The menu represents the API documentation, which tells you what you can request.\n- The waiter is the API itself, facilitating the communication between you and the kitchen.\n- The kitchen is the backend system that processes your request and provides the result (your meal).\n\nIn the world of software, an API allows different applications to request and exchange data or functionality without needing to know the details of each other's internal workings, just like you don't need to know how the kitchen operates to enjoy your meal.",
+      "prompt_token": 19,
+      "response_token": 333,
+      "total_token": 352,
+      "total_response_time": 6.146127999999408,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.9,
+      "reason": "The question asks for a simple explanation with a real-world example, which is a basic factual task without requiring deep reasoning or code."
+    }
+  },
+  {
+    "question": "What are the main benefits of using version control with Git?",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "What are the main benefits of using version control with Git?",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.9,\n  \"reason\": \"The question asks for a basic explanation of benefits, which can be answered with a concise summary without deep technical analysis.\"\n}",
+      "prompt_token": 701,
+      "response_token": 48,
+      "total_token": 749,
+      "total_response_time": 1.224773300000379,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "What are the main benefits of using version control with Git?",
+      "answer": "Using version control with Git offers several significant benefits, including:\n\n1. **Collaboration**: Git allows multiple developers to work on the same project simultaneously without overwriting each other's changes. Branching and merging features facilitate collaborative workflows.\n\n2. **History Tracking**: Git maintains a detailed history of changes made to the codebase, enabling developers to track modifications, understand the evolution of the project, and identify when and why changes were made.\n\n3. **Branching and Merging**: Git's branching model allows developers to create separate lines of development for features, bug fixes, or experiments. This enables parallel development and helps keep the main codebase stable.\n\n4. **Revert Changes**: If a change introduces a bug or issue, Git allows developers to revert to a previous state of the codebase easily. This capability minimizes the risk of losing work and helps maintain project integrity.\n\n5. **Distributed System**: Git is a distributed version control system, meaning every developer has a full copy of the repository, including its history. This allows for offline work and enhances redundancy and backup.\n\n6. **Performance**: Git is designed to handle large projects efficiently. Most operations are performed locally, which speeds up tasks like committing changes, viewing history, and branching.\n\n7. **Integration with CI/CD**: Git integrates well with Continuous Integration and Continuous Deployment (CI/CD) tools, facilitating automated testing, building, and deployment processes.\n\n8. **Staging Area**: Git provides a staging area (index) where changes can be reviewed before committing. This allows developers to craft meaningful commits and manage changes more effectively.\n\n9. **Conflict Resolution**: When multiple changes conflict, Git provides tools to help resolve these conflicts, ensuring that developers can integrate their work smoothly.\n\n10. **Open Source and Community Support**: Git is open-source and widely used, which means there is a large community of users and a wealth of resources, tutorials, and tools available to help developers.\n\n11. **Integration with Other Tools**: Git can be integrated with various development tools, project management systems, and platforms (like GitHub, GitLab, Bitbucket), enhancing the overall development workflow.\n\n12. **Security**: Git uses cryptographic hashing to ensure the integrity of the repository, making it difficult to alter the history without detection.\n\nOverall, Git provides a robust framework for managing code changes, enhancing collaboration, and improving project management, making it an essential tool for modern software development.",
+      "prompt_token": 19,
+      "response_token": 497,
+      "total_token": 516,
+      "total_response_time": 10.345033099999455,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.9,
+      "reason": "The question asks for a basic explanation of benefits, which can be answered with a concise summary without deep technical analysis."
+    }
+  },
+  {
+    "question": "Compare rule-based routing and LLM-based routing for selecting the best model in an AI platform.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Compare rule-based routing and LLM-based routing for selecting the best model in an AI platform.",
+      "answer": "{\n  \"route\": \"Quality\",\n  \"confidence\": 0.95,\n  \"reason\": \"The question asks for a detailed comparison and tradeoff analysis between two routing approaches, which requires deeper reasoning and architectural thinking.\"\n}",
+      "prompt_token": 708,
+      "response_token": 50,
+      "total_token": 758,
+      "total_response_time": 1.842263899999125,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Compare rule-based routing and LLM-based routing for selecting the best model in an AI platform.",
+      "answer": "When selecting the best model in an AI platform, two common approaches are rule-based routing and LLM-based (Large Language Model-based) routing. Each method has its strengths and weaknesses, and the choice between them can depend on the specific use case, the complexity of the models, and the operational environment. Here\u2019s a comparison of the two approaches:\n\n### Rule-Based Routing\n\n**Definition**: Rule-based routing involves using predefined rules and heuristics to determine which model to use for a given input or task. These rules are typically based on specific criteria such as input characteristics, performance metrics, or business logic.\n\n**Advantages**:\n1. **Simplicity**: Rule-based systems are generally easier to understand and implement. They rely on clear, logical rules that can be easily documented and modified.\n2. **Predictability**: The behavior of rule-based systems is predictable since they follow predefined rules, making it easier to debug and maintain.\n3. **Performance**: For well-defined tasks with clear criteria, rule-based routing can be very efficient, as it can quickly match inputs to models without needing complex computations.\n4. **Low Latency**: Since rules are straightforward, the routing decision can be made quickly, resulting in lower latency in model selection.\n\n**Disadvantages**:\n1. **Scalability**: As the number of models and complexity of tasks increase, managing and updating rules can become cumbersome and error-prone.\n2. **Flexibility**: Rule-based systems may struggle with ambiguous or novel inputs that do not fit neatly into predefined categories.\n3. **Maintenance**: Updating rules to accommodate new models or changing requirements can require significant effort and expertise.\n\n### LLM-Based Routing\n\n**Definition**: LLM-based routing leverages large language models to analyze input data and make decisions about which model to use. This approach can involve natural language processing, contextual understanding, and more complex decision-making.\n\n**Advantages**:\n1. **Contextual Understanding**: LLMs can understand and interpret inputs in a nuanced way, allowing for more intelligent routing decisions based on context rather than rigid rules.\n2. **Adaptability**: LLMs can learn from new data and adapt their routing strategies over time, making them more flexible in dynamic environments.\n3. **Handling Complexity**: LLMs can manage complex scenarios and ambiguous inputs better than rule-based systems, as they can draw on a vast amount of training data to inform their decisions.\n4. **Integration**: LLMs can integrate multiple factors and handle multi-modal inputs (text, images, etc.) more effectively than traditional rule-based systems.\n\n**Disadvantages**:\n1. **Complexity**: LLM-based systems can be more complex to implement and maintain, requiring specialized knowledge in machine learning and natural language processing.\n2. **Latency**: The inference time for LLMs can be higher than for rule-based systems, potentially leading to increased latency in decision-making.\n3. **Resource Intensive**: LLMs typically require more computational resources, which can increase operational costs and complexity.\n4. **Unpredictability**: The decision-making process of LLMs can be less transparent, making it harder to understand why a particular model was chosen.\n\n### Conclusion\n\nThe choice between rule-based routing and LLM-based routing depends on the specific requirements of the AI platform:\n\n- **Rule-Based Routing** is suitable for well-defined tasks with clear criteria and where predictability and low latency are critical.\n- **LLM-Based Routing** is advantageous in scenarios requiring contextual understanding, adaptability, and the ability to handle complex or ambiguous inputs.\n\nIn many cases, a hybrid approach that combines both methods may offer the best of both worlds, leveraging the strengths of each to create a more robust and flexible model selection process.",
+      "prompt_token": 26,
+      "response_token": 763,
+      "total_token": 789,
+      "total_response_time": 15.77737309999975,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Quality",
+      "confidence": 0.95,
+      "reason": "The question asks for a detailed comparison and tradeoff analysis between two routing approaches, which requires deeper reasoning and architectural thinking."
+    }
+  },
+  {
+    "question": "Write Python code that validates whether a string contains valid JSON and returns a Python dictionary.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Write Python code that validates whether a string contains valid JSON and returns a Python dictionary.",
+      "answer": "{\n  \"route\": \"Code\",\n  \"confidence\": 0.99,\n  \"reason\": \"The question explicitly asks for Python code generation to validate JSON and return a dictionary.\"\n}",
+      "prompt_token": 706,
+      "response_token": 42,
+      "total_token": 748,
+      "total_response_time": 1.2200534000003245,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o",
+      "question": "Write Python code that validates whether a string contains valid JSON and returns a Python dictionary.",
+      "answer": "To validate whether a string contains valid JSON and convert it into a Python dictionary, you can use the `json` module in Python. The `json.loads()` function can be used to parse a JSON string. If the string is not valid JSON, it will raise a `json.JSONDecodeError`. Here's how you can implement this:\n\n```python\nimport json\n\ndef validate_and_parse_json(json_string):\n    \"\"\"\n    Validates whether a string contains valid JSON and returns a Python dictionary.\n    \n    Parameters:\n    json_string (str): The JSON string to validate and parse.\n    \n    Returns:\n    dict: The parsed JSON as a Python dictionary if valid, otherwise None.\n    \"\"\"\n    try:\n        # Attempt to parse the JSON string\n        parsed_json = json.loads(json_string)\n        \n        # Check if the parsed object is a dictionary\n        if isinstance(parsed_json, dict):\n            return parsed_json\n        else:\n            print(\"The JSON is valid but does not represent a dictionary.\")\n            return None\n    except json.JSONDecodeError as e:\n        # Handle the case where the string is not valid JSON\n        print(f\"Invalid JSON: {e}\")\n        return None\n\n# Example usage\njson_string = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'\nresult = validate_and_parse_json(json_string)\n\nif result is not None:\n    print(\"Valid JSON. Parsed dictionary:\", result)\nelse:\n    print(\"Invalid JSON or not a dictionary.\")\n```\n\n### Explanation:\n- **`json.loads()`**: This function attempts to parse a JSON string. If successful, it returns the corresponding Python object (usually a dictionary for JSON objects).\n- **Exception Handling**: If the string is not valid JSON, a `json.JSONDecodeError` is raised. We catch this exception to handle invalid JSON strings gracefully.\n- **Type Checking**: After parsing, we check if the result is a dictionary. JSON objects map to Python dictionaries, so this ensures that the JSON string represents an object rather than an array or other JSON data type.",
+      "prompt_token": 24,
+      "response_token": 425,
+      "total_token": 449,
+      "total_response_time": 3.483393500000602,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Code",
+      "confidence": 0.99,
+      "reason": "The question explicitly asks for Python code generation to validate JSON and return a dictionary."
+    }
+  },
+  {
+    "question": "Summarize the concept of tokenization in large language models for a beginner.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Summarize the concept of tokenization in large language models for a beginner.",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.9,\n  \"reason\": \"The question asks for a simple explanation suitable for a beginner, which is a basic factual summary.\"\n}",
+      "prompt_token": 705,
+      "response_token": 44,
+      "total_token": 749,
+      "total_response_time": 0.8526105000000825,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Summarize the concept of tokenization in large language models for a beginner.",
+      "answer": "Tokenization is the process of breaking down text into smaller units called tokens, which can be words, characters, or subwords. In the context of large language models (LLMs), tokenization is essential because it allows the model to understand and process text efficiently.\n\nHere's a simple breakdown of the concept:\n\n1. **Text Breakdown**: When you input a sentence, tokenization splits it into manageable pieces. For example, the sentence \"I love cats\" might be tokenized into [\"I\", \"love\", \"cats\"].\n\n2. **Handling Variability**: Different languages and writing styles can vary significantly. Tokenization helps standardize these variations, making it easier for the model to learn patterns in the data.\n\n3. **Subword Units**: Some tokenization methods, like Byte Pair Encoding (BPE), break words into smaller parts (subwords). This is useful for handling rare words or new terms. For instance, \"unhappiness\" might be split into [\"un\", \"happiness\"].\n\n4. **Numerical Representation**: Each token is then converted into a numerical format (like an index in a vocabulary list) that the model can work with. This is crucial because machine learning models operate on numbers, not text.\n\n5. **Model Training**: By using tokens, LLMs can learn the relationships and patterns in language, which helps them generate coherent and contextually appropriate responses.\n\nIn summary, tokenization is a foundational step in preparing text for processing by large language models, enabling them to understand and generate human language effectively.",
+      "prompt_token": 23,
+      "response_token": 316,
+      "total_token": 339,
+      "total_response_time": 6.317512999999963,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.9,
+      "reason": "The question asks for a simple explanation suitable for a beginner, which is a basic factual summary."
+    }
+  },
+  {
+    "question": "What are three common use cases of generative AI in business?",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "What are three common use cases of generative AI in business?",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.95,\n  \"reason\": \"The question asks for a short list of common use cases, which is a basic factual response.\"\n}",
+      "prompt_token": 702,
+      "response_token": 45,
+      "total_token": 747,
+      "total_response_time": 1.12145640000017,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "What are three common use cases of generative AI in business?",
+      "answer": "Generative AI has a wide range of applications in business. Here are three common use cases:\n\n1. **Content Creation**: Generative AI can automate the creation of written content, such as blog posts, marketing copy, product descriptions, and social media posts. This helps businesses scale their content marketing efforts, maintain a consistent brand voice, and reduce the time and resources spent on content generation.\n\n2. **Product Design and Prototyping**: In industries like fashion, automotive, and consumer electronics, generative AI can assist in designing new products by generating innovative design concepts based on specified parameters. This can streamline the design process, enhance creativity, and lead to the development of unique products that meet consumer needs.\n\n3. **Personalization and Customer Engagement**: Generative AI can analyze customer data to create personalized experiences, such as tailored recommendations, customized marketing messages, and interactive chatbots. This enhances customer engagement, improves satisfaction, and drives sales by providing users with relevant and timely information.\n\nThese use cases illustrate how generative AI can enhance efficiency, creativity, and customer satisfaction across various business functions.",
+      "prompt_token": 20,
+      "response_token": 222,
+      "total_token": 242,
+      "total_response_time": 2.633458399999654,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.95,
+      "reason": "The question asks for a short list of common use cases, which is a basic factual response."
+    }
+  },
+  {
+    "question": "Create a detailed system design for an enterprise AI assistant that supports multiple models, prompt logging, fallback handling, and user feedback.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Create a detailed system design for an enterprise AI assistant that supports multiple models, prompt logging, fallback handling, and user feedback.",
+      "answer": "{\n  \"route\": \"Quality\",\n  \"confidence\": 0.98,\n  \"reason\": \"The question requests a detailed system design, which involves architecture planning, tradeoff analysis, and high-level technical decisions requiring deeper reasoning.\"\n}",
+      "prompt_token": 714,
+      "response_token": 52,
+      "total_token": 766,
+      "total_response_time": 1.0883953000002293,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Create a detailed system design for an enterprise AI assistant that supports multiple models, prompt logging, fallback handling, and user feedback.",
+      "answer": "Designing an enterprise AI assistant involves multiple components and considerations to ensure it meets the needs of users while maintaining flexibility, scalability, and robustness. Below is a detailed system design outline for an enterprise AI assistant that supports multiple models, prompt logging, fallback handling, and user feedback.\n\n### 1. System Overview\n\nThe enterprise AI assistant will serve as an intelligent interface for users to interact with various AI models, providing responses to queries, automating tasks, and facilitating decision-making processes. The system will be modular, allowing for easy integration of new models and features over time.\n\n### 2. Architecture\n\n#### 2.1. High-Level Architecture\n\n- **User Interface (UI)**\n  - Web Application\n  - Mobile Application\n  - Chatbot Interface (Slack, Teams, etc.)\n\n- **API Layer**\n  - RESTful API for communication between UI and backend services\n  - WebSocket for real-time interactions\n\n- **Core Services**\n  - Model Management Service\n  - Prompt Logging Service\n  - Fallback Handling Service\n  - User Feedback Service\n  - Authentication and Authorization Service\n\n- **Data Storage**\n  - Relational Database (e.g., PostgreSQL) for user data, feedback, and logs\n  - NoSQL Database (e.g., MongoDB) for storing model configurations and prompt logs\n  - Object Storage (e.g., AWS S3) for storing large datasets and model files\n\n- **AI Models**\n  - Multiple AI models (e.g., GPT, BERT, custom models) managed through a Model Management Service\n\n- **Monitoring and Analytics**\n  - Logging and Monitoring Service\n  - Analytics Dashboard for usage statistics and performance metrics\n\n#### 2.2. Component Interaction\n\n1. **User Interaction**: Users interact with the AI assistant through the UI.\n2. **API Requests**: The UI sends requests to the API layer, which routes them to the appropriate core service.\n3. **Model Selection**: The Model Management Service selects the appropriate AI model based on the request type and context.\n4. **Prompt Logging**: All prompts and responses are logged by the Prompt Logging Service for auditing and analysis.\n5. **Fallback Handling**: If the primary model fails to provide a satisfactory response, the Fallback Handling Service invokes alternative models or predefined responses.\n6. **User Feedback**: Users can provide feedback on responses, which is collected by the User Feedback Service for continuous improvement.\n\n### 3. Core Services\n\n#### 3.1. Model Management Service\n\n- **Responsibilities**:\n  - Manage multiple AI models (loading, unloading, versioning).\n  - Provide an interface for selecting models based on user queries.\n  - Handle model-specific configurations and parameters.\n\n- **Implementation**:\n  - Use a microservices architecture to allow independent scaling and updates.\n  - Implement a model registry to keep track of available models and their metadata.\n\n#### 3.2. Prompt Logging Service\n\n- **Responsibilities**:\n  - Log all user prompts and AI responses for auditing and analysis.\n  - Store logs in a structured format for easy querying.\n\n- **Implementation**:\n  - Use a NoSQL database for flexibility in storing different types of logs.\n  - Implement a data retention policy to manage log storage.\n\n#### 3.3. Fallback Handling Service\n\n- **Responsibilities**:\n  - Monitor model responses for quality and relevance.\n  - Implement a strategy for fallback responses (e.g., alternative models, predefined FAQs).\n\n- **Implementation**:\n  - Use heuristics or machine learning to determine when to trigger a fallback.\n  - Maintain a library of fallback responses for common queries.\n\n#### 3.4. User Feedback Service\n\n- **Responsibilities**:\n  - Collect and analyze user feedback on responses.\n  - Use feedback to improve model performance and response quality.\n\n- **Implementation**:\n  - Provide a feedback mechanism in the UI (e.g., thumbs up/down, comments).\n  - Analyze feedback data to identify trends and areas for improvement.\n\n### 4. Data Storage\n\n- **Relational Database**: Store user profiles, feedback, and logs.\n- **NoSQL Database**: Store model configurations and prompt logs for flexibility.\n- **Object Storage**: Store large model files and datasets.\n\n### 5. Security and Compliance\n\n- **Authentication**: Implement OAuth2 for secure user authentication.\n- **Authorization**: Role-based access control (RBAC) to manage user permissions.\n- **Data Encryption**: Encrypt sensitive data both at rest and in transit.\n- **Compliance**: Ensure compliance with data protection regulations (e.g., GDPR, CCPA).\n\n### 6. Monitoring and Analytics\n\n- **Logging**: Use a centralized logging solution (e.g., ELK stack) to aggregate logs from all services.\n- **Monitoring**: Implement monitoring tools (e.g., Prometheus, Grafana) to track system performance and health.\n",
+      "prompt_token": 32,
+      "response_token": 1000,
+      "total_token": 1032,
+      "total_response_time": 16.76347810000061,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Quality",
+      "confidence": 0.98,
+      "reason": "The question requests a detailed system design, which involves architecture planning, tradeoff analysis, and high-level technical decisions requiring deeper reasoning."
+    }
+  },
+  {
+    "question": "Generate Python code that uses pandas to calculate average latency, total tokens, and total cost from an experiment result CSV.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Generate Python code that uses pandas to calculate average latency, total tokens, and total cost from an experiment result CSV.",
+      "answer": "{\n  \"route\": \"Code\",\n  \"confidence\": 0.99,\n  \"reason\": \"The question explicitly asks for Python code generation using pandas for data processing.\"\n}",
+      "prompt_token": 712,
+      "response_token": 40,
+      "total_token": 752,
+      "total_response_time": 1.2467634000004182,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o",
+      "question": "Generate Python code that uses pandas to calculate average latency, total tokens, and total cost from an experiment result CSV.",
+      "answer": "To achieve this task, you can use the `pandas` library in Python to read the CSV file and perform the necessary calculations. Below is an example of how you might write the Python code to calculate the average latency, total tokens, and total cost from an experiment result CSV file:\n\n```python\nimport pandas as pd\n\ndef calculate_experiment_metrics(csv_file_path):\n    # Read the CSV file into a DataFrame\n    df = pd.read_csv(csv_file_path)\n    \n    # Ensure the necessary columns are present\n    required_columns = ['latency', 'tokens', 'cost']\n    if not all(column in df.columns for column in required_columns):\n        raise ValueError(f\"The CSV file must contain the following columns: {', '.join(required_columns)}\")\n    \n    # Calculate average latency\n    average_latency = df['latency'].mean()\n    \n    # Calculate total tokens\n    total_tokens = df['tokens'].sum()\n    \n    # Calculate total cost\n    total_cost = df['cost'].sum()\n    \n    return average_latency, total_tokens, total_cost\n\n# Example usage\ncsv_file_path = 'experiment_results.csv'  # Replace with your CSV file path\naverage_latency, total_tokens, total_cost = calculate_experiment_metrics(csv_file_path)\n\nprint(f\"Average Latency: {average_latency}\")\nprint(f\"Total Tokens: {total_tokens}\")\nprint(f\"Total Cost: {total_cost}\")\n```\n\n### Explanation:\n\n1. **Import pandas**: The `pandas` library is imported to handle data manipulation and analysis.\n\n2. **Read CSV**: The `pd.read_csv()` function reads the CSV file into a DataFrame.\n\n3. **Check Columns**: The code checks if the required columns (`latency`, `tokens`, `cost`) are present in the DataFrame. If any are missing, it raises a `ValueError`.\n\n4. **Calculate Metrics**:\n   - **Average Latency**: Calculated using the `mean()` function on the `latency` column.\n   - **Total Tokens**: Calculated using the `sum()` function on the `tokens` column.\n   - **Total Cost**: Calculated using the `sum()` function on the `cost` column.\n\n5. **Return Results**: The function returns the calculated metrics.\n\n6. **Example Usage**: The code demonstrates how to use the function with a sample CSV file path.\n\nMake sure to replace `'experiment_results.csv'` with the actual path to your CSV file. Also, ensure that the CSV file has the required columns (`latency`, `tokens`, `cost`) for the calculations to work correctly.",
+      "prompt_token": 30,
+      "response_token": 541,
+      "total_token": 571,
+      "total_response_time": 5.413616499999989,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Code",
+      "confidence": 0.99,
+      "reason": "The question explicitly asks for Python code generation using pandas for data processing."
+    }
+  },
+  {
+    "question": "Explain the difference between input tokens and output tokens.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Explain the difference between input tokens and output tokens.",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.9,\n  \"reason\": \"The question asks for a basic explanation of a concept without requiring deep reasoning or code.\"\n}",
+      "prompt_token": 700,
+      "response_token": 42,
+      "total_token": 742,
+      "total_response_time": 1.2182074000002103,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Explain the difference between input tokens and output tokens.",
+      "answer": "In the context of natural language processing (NLP) and models like GPT (Generative Pre-trained Transformer), tokens are the basic units of text that the model processes. Here\u2019s a breakdown of the difference between input tokens and output tokens:\n\n### Input Tokens\n- **Definition**: Input tokens are the segments of text that are fed into the model for processing. They can be words, subwords, or characters, depending on the tokenization method used.\n- **Purpose**: The model uses input tokens to understand the context, meaning, and structure of the text. This is the information the model analyzes to generate a response or perform a task.\n- **Examples**: If the input text is \"Hello, how are you?\", the input tokens might be [\"Hello\", \",\", \"how\", \"are\", \"you\", \"?\"] or a subword tokenization might break it down further.\n\n### Output Tokens\n- **Definition**: Output tokens are the segments of text that the model generates as a response or result after processing the input tokens. These are the tokens that form the model's output.\n- **Purpose**: The model generates output tokens based on the patterns and information it learned during training, aiming to provide a coherent and contextually relevant response to the input.\n- **Examples**: If the model is asked \"What is your name?\", the output tokens could be [\"I\", \"am\", \"ChatGPT\", \".\"].\n\n### Summary\n- **Input Tokens**: Text segments provided to the model for understanding and processing.\n- **Output Tokens**: Text segments generated by the model as a response or result based on the input.\n\nIn practice, the number of input and output tokens can affect the model's performance and the context it can handle, especially in models with token limits.",
+      "prompt_token": 17,
+      "response_token": 364,
+      "total_token": 381,
+      "total_response_time": 4.307311100000334,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.9,
+      "reason": "The question asks for a basic explanation of a concept without requiring deep reasoning or code."
+    }
+  },
+  {
+    "question": "Write a simple professional email asking for a project status update.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Write a simple professional email asking for a project status update.",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.95,\n  \"reason\": \"The request is for a short, basic professional email draft, which is a simple writing task.\"\n}",
+      "prompt_token": 701,
+      "response_token": 45,
+      "total_token": 746,
+      "total_response_time": 0.812829999999849,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Write a simple professional email asking for a project status update.",
+      "answer": "Subject: Request for Project Status Update\n\nDear [Recipient's Name],\n\nI hope this message finds you well. I am writing to kindly request an update on the status of [Project Name]. As we approach the next phase, it would be helpful to understand where we currently stand and any potential challenges you may be facing.\n\nThank you for your attention to this matter. I look forward to your response.\n\nBest regards,\n\n[Your Name]  \n[Your Position]  \n[Your Company]  \n[Your Contact Information]  ",
+      "prompt_token": 19,
+      "response_token": 104,
+      "total_token": 123,
+      "total_response_time": 2.0470441999996183,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.95,
+      "reason": "The request is for a short, basic professional email draft, which is a simple writing task."
+    }
+  },
+  {
+    "question": "Analyze the cost, latency, and quality tradeoffs of routing simple prompts to gpt-4o-mini and complex prompts to gpt-4o.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Analyze the cost, latency, and quality tradeoffs of routing simple prompts to gpt-4o-mini and complex prompts to gpt-4o.",
+      "answer": "{\n  \"route\": \"Quality\",\n  \"confidence\": 0.95,\n  \"reason\": \"The question asks for a detailed analysis of tradeoffs (cost, latency, quality) between different routing strategies, which requires deep reasoning and strategic comparison.\"\n}",
+      "prompt_token": 722,
+      "response_token": 56,
+      "total_token": 778,
+      "total_response_time": 7.987287400000241,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Analyze the cost, latency, and quality tradeoffs of routing simple prompts to gpt-4o-mini and complex prompts to gpt-4o.",
+      "answer": "When considering the trade-offs of routing simple prompts to a smaller model like GPT-4o-mini and complex prompts to a larger model like GPT-4o, several factors come into play: cost, latency, and quality. Let\u2019s break down each aspect.\n\n### 1. Cost\n\n**GPT-4o-mini:**\n- **Lower Cost per Token:** Smaller models typically have a lower cost per token processed. This is advantageous for simple prompts that may not require the full capabilities of a larger model.\n- **Scaling:** If you have a high volume of simple prompts, routing them to GPT-4o-mini can lead to significant cost savings over time.\n\n**GPT-4o:**\n- **Higher Cost per Token:** Larger models generally have a higher cost per token, which can become a concern if many complex prompts are processed.\n- **Resource Utilization:** While the cost is higher, the quality and depth of responses may justify the expense for complex prompts, especially in applications where accuracy and detail are critical.\n\n### 2. Latency\n\n**GPT-4o-mini:**\n- **Faster Response Times:** Smaller models usually have lower latency, meaning they can process requests and return responses more quickly. This is beneficial for applications requiring rapid interactions, such as chatbots or real-time systems.\n- **Scalability:** The ability to handle numerous requests simultaneously without significant delays can improve user experience.\n\n**GPT-4o:**\n- **Increased Latency:** Larger models may have higher latency due to their complexity and the computational resources required to generate responses. This can be a drawback in applications where speed is essential.\n- **Batch Processing:** If complex prompts can be batched or processed in a way that mitigates latency concerns, this can help balance the trade-off.\n\n### 3. Quality\n\n**GPT-4o-mini:**\n- **Basic Understanding:** While GPT-4o-mini can handle simple prompts effectively, it may lack the depth and nuance required for more complex inquiries. Responses may be satisfactory but not necessarily insightful or detailed.\n- **Limited Context Handling:** Smaller models may struggle with maintaining context over longer interactions, which can impact the quality of multi-turn conversations.\n\n**GPT-4o:**\n- **High Quality Responses:** The larger model is designed to handle complex prompts with greater depth, providing more detailed, nuanced, and contextually aware responses.\n- **Better Context Management:** GPT-4o can maintain context over longer interactions and is better suited for tasks requiring in-depth understanding or creativity.\n\n### Conclusion\n\nRouting simple prompts to GPT-4o-mini and complex prompts to GPT-4o can be an effective strategy that leverages the strengths of each model. \n\n- **Cost Efficiency:** This approach can lead to significant cost savings by minimizing expenses on simple queries while ensuring high-quality responses for complex ones.\n- **Latency Management:** By using a faster model for simpler tasks, you can enhance user experience, while still addressing more demanding queries with the larger model, albeit with some latency trade-offs.\n- **Quality Assurance:** This strategy allows for maintaining high-quality outputs where necessary, ensuring that the responses meet user expectations based on the complexity of the prompts.\n\nIn summary, the decision to route prompts based on complexity should weigh these factors carefully, aligning with the specific needs and constraints of the application in question.",
+      "prompt_token": 38,
+      "response_token": 671,
+      "total_token": 709,
+      "total_response_time": 12.903736000000208,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Quality",
+      "confidence": 0.95,
+      "reason": "The question asks for a detailed analysis of tradeoffs (cost, latency, quality) between different routing strategies, which requires deep reasoning and strategic comparison."
+    }
+  },
+  {
+    "question": "Fix this Python issue conceptually: json.dumps fails when the object contains datetime values.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Fix this Python issue conceptually: json.dumps fails when the object contains datetime values.",
+      "answer": "{\n  \"route\": \"Code\",\n  \"confidence\": 0.98,\n  \"reason\": \"The question explicitly asks for a conceptual fix to a Python issue involving code (json.dumps and datetime), which requires code-related troubleshooting.\"\n}",
+      "prompt_token": 706,
+      "response_token": 53,
+      "total_token": 759,
+      "total_response_time": 1.1253208999996787,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o",
+      "question": "Fix this Python issue conceptually: json.dumps fails when the object contains datetime values.",
+      "answer": "The `json.dumps` function in Python's `json` module does not natively support serializing `datetime` objects. When you try to serialize an object that contains `datetime` values, you'll encounter a `TypeError` because `datetime` objects are not JSON serializable by default.\n\nTo fix this issue conceptually, you can provide a custom serialization function to handle `datetime` objects. This is done by using the `default` parameter of `json.dumps`, which allows you to specify a function that will be called for objects that are not serializable by default.\n\nHere's a conceptual solution:\n\n1. **Define a custom serialization function**: This function should take an object as input and return a JSON-serializable representation of it. For `datetime` objects, you can convert them to strings using a standard format like ISO 8601.\n\n2. **Use the custom function with `json.dumps`**: Pass the custom serialization function to the `default` parameter of `json.dumps`.\n\nHere's an example implementation:\n\n```python\nimport json\nfrom datetime import datetime\n\n# Custom serialization function\ndef custom_serializer(obj):\n    if isinstance(obj, datetime):\n        # Convert datetime to a string in ISO 8601 format\n        return obj.isoformat()\n    # Add more custom serialization logic here if needed\n    raise TypeError(f\"Type {type(obj)} not serializable\")\n\n# Example object containing a datetime\ndata = {\n    'name': 'John Doe',\n    'timestamp': datetime.now()\n}\n\n# Serialize using json.dumps with the custom serializer\njson_data = json.dumps(data, default=custom_serializer)\n\nprint(json_data)\n```\n\nIn this example, the `custom_serializer` function checks if the object is an instance of `datetime`. If it is, it converts it to an ISO 8601 formatted string using the `isoformat` method. If the object is not serializable, it raises a `TypeError`.\n\nThis approach allows you to handle `datetime` objects (and potentially other non-serializable types) when converting Python objects to JSON.",
+      "prompt_token": 24,
+      "response_token": 421,
+      "total_token": 445,
+      "total_response_time": 3.6884736000001794,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Code",
+      "confidence": 0.98,
+      "reason": "The question explicitly asks for a conceptual fix to a Python issue involving code (json.dumps and datetime), which requires code-related troubleshooting."
+    }
+  },
+  {
+    "question": "What is latency in an LLM application?",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "What is latency in an LLM application?",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.95,\n  \"reason\": \"The question asks for a basic definition of latency in an LLM context, which is a straightforward explanation.\"\n}",
+      "prompt_token": 698,
+      "response_token": 47,
+      "total_token": 745,
+      "total_response_time": 0.6140605000000505,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "What is latency in an LLM application?",
+      "answer": "Latency in the context of a Large Language Model (LLM) application refers to the time delay between a user's input (such as a query or prompt) and the model's output (the generated response). It is a critical performance metric for applications that rely on LLMs, as it directly affects the user experience.\n\nSeveral factors can contribute to latency in LLM applications:\n\n1. **Model Size**: Larger models typically require more computational resources to process inputs and generate outputs, leading to increased latency.\n\n2. **Inference Time**: The time taken by the model to perform inference (i.e., to generate a response based on the input) can vary depending on the complexity of the input and the architecture of the model.\n\n3. **Hardware**: The type of hardware used (CPUs, GPUs, TPUs) can significantly impact latency. Specialized hardware like GPUs or TPUs can accelerate the inference process.\n\n4. **Batch Processing**: If multiple requests are processed in a batch, it can reduce the average latency per request, but it may also introduce some delay for individual requests until the batch is ready.\n\n5. **Network Latency**: In cloud-based applications, the time taken for data to travel between the user\u2019s device and the server hosting the model can add to overall latency.\n\n6. **Preprocessing and Postprocessing**: Time spent on preparing the input (like tokenization) and formatting the output (like detokenization) can also contribute to latency.\n\n7. **Load and Scalability**: The number of concurrent users and the system's ability to scale can affect how quickly individual requests are handled, impacting latency.\n\nMinimizing latency is essential for creating responsive and user-friendly applications, especially in real-time scenarios like chatbots, virtual assistants, or interactive content generation.",
+      "prompt_token": 16,
+      "response_token": 363,
+      "total_token": 379,
+      "total_response_time": 6.522947500000555,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.95,
+      "reason": "The question asks for a basic definition of latency in an LLM context, which is a straightforward explanation."
+    }
+  },
+  {
+    "question": "Give me a simple explanation of cloud storage.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Give me a simple explanation of cloud storage.",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.98,\n  \"reason\": \"The question asks for a simple explanation of a basic concept, which does not require deep reasoning or code.\"\n}",
+      "prompt_token": 698,
+      "response_token": 47,
+      "total_token": 745,
+      "total_response_time": 0.8277155999994648,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Give me a simple explanation of cloud storage.",
+      "answer": "Cloud storage is a way to save and access your data (like documents, photos, and videos) over the internet instead of on your computer's hard drive. Instead of storing files on a physical device, you upload them to a remote server managed by a cloud service provider. This allows you to access your files from any device with an internet connection, share them easily with others, and keep them safe from local hardware failures. Examples of cloud storage services include Google Drive, Dropbox, and Microsoft OneDrive.",
+      "prompt_token": 16,
+      "response_token": 101,
+      "total_token": 117,
+      "total_response_time": 2.0377100000005157,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.98,
+      "reason": "The question asks for a simple explanation of a basic concept, which does not require deep reasoning or code."
+    }
+  },
+  {
+    "question": "Design a cost-aware model routing policy that decides between fast, quality, and code routes for different user prompt types.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Design a cost-aware model routing policy that decides between fast, quality, and code routes for different user prompt types.",
+      "answer": "{\n  \"route\": \"Quality\",\n  \"confidence\": 0.95,\n  \"reason\": \"The question asks for a design of a cost-aware routing policy, which involves architecture thinking, tradeoff analysis, and strategic planning.\"\n}",
+      "prompt_token": 713,
+      "response_token": 53,
+      "total_token": 766,
+      "total_response_time": 0.6376775999997335,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Design a cost-aware model routing policy that decides between fast, quality, and code routes for different user prompt types.",
+      "answer": "Designing a cost-aware model routing policy involves creating a framework that intelligently decides which route to take based on the characteristics of the user prompts and the associated costs and benefits of each route. Here\u2019s a structured approach to developing such a model:\n\n### 1. Define the Routes\n\n**Route Types:**\n- **Fast Route:** Prioritizes speed over quality. Suitable for prompts that require quick responses.\n- **Quality Route:** Focuses on delivering high-quality, well-thought-out responses. Ideal for complex or nuanced prompts.\n- **Code Route:** Specifically designed for programming-related queries, providing accurate coding solutions or debugging assistance.\n\n### 2. User Prompt Classification\n\nTo effectively route user prompts, they need to be classified based on their characteristics. Here are some potential classifications:\n\n- **Complexity:** Simple, Moderate, Complex\n- **Urgency:** Low, Medium, High\n- **Type:** Informational, Conversational, Technical, Creative\n- **Context Sensitivity:** Low, Medium, High (how much context is needed for an accurate response)\n\n### 3. Cost Assessment\n\nEach route has associated costs that can be defined as:\n\n- **Time Cost:** The average time taken to generate a response.\n- **Resource Cost:** Computational resources required (CPU/GPU usage).\n- **Quality Cost:** The expected quality of the response (can be measured through user feedback or historical data).\n- **Success Rate:** The likelihood of the route providing a satisfactory response.\n\n### 4. Routing Decision Algorithm\n\nThe routing decision can be made using a scoring system based on the prompt classification and costs. Here\u2019s a simple algorithm:\n\n1. **Input:** User prompt and its classification.\n2. **Determine Cost Factors:**\n   - Assign weights to the costs based on the user\u2019s needs (e.g., urgency, quality).\n   - Calculate a composite score for each route using the formula:\n\n   \\[\n   \\text{Score} = w_1 \\cdot \\text{Time Cost} + w_2 \\cdot \\text{Resource Cost} + w_3 \\cdot (1 - \\text{Quality Score}) + w_4 \\cdot (1 - \\text{Success Rate})\n   \\]\n\n   Where \\(w_1, w_2, w_3, w_4\\) are weights that can be adjusted based on user preferences.\n\n3. **Select Route:** Choose the route with the lowest score.\n\n### 5. Implementation Example\n\nHere\u2019s a simplified example of how the routing policy could work:\n\n- **User Prompt:** \"How do I fix a bug in my Python code?\"\n- **Classification:** \n  - Complexity: Moderate\n  - Urgency: High\n  - Type: Technical\n  - Context Sensitivity: High\n\n- **Cost Assessment:**\n  - Fast Route: Time Cost = 2, Resource Cost = 1, Quality Score = 0.6, Success Rate = 0.5\n  - Quality Route: Time Cost = 5, Resource Cost = 3, Quality Score = 0.9, Success Rate = 0.8\n  - Code Route: Time Cost = 3, Resource Cost = 2, Quality Score = 0.85, Success Rate = 0.9\n\n- **Weight Assignment:**\n  - \\(w_1 = 0.4\\), \\(w_2 = 0.2\\), \\(w_3 = 0.3\\), \\(w_4 = 0.1\\)\n\n- **Score Calculation:**\n  - Fast Route: \\(0.4 \\cdot 2 + 0.2 \\cdot 1 + 0.3 \\cdot (1 - 0.6) + 0.1 \\cdot (1 - 0.5) = 0.8 + 0.2 + 0.12 + 0.05 = 1.19\\)\n  - Quality Route: \\(0.4 \\cdot 5 + 0.2 \\cdot 3 + 0.3 \\cdot (1 - 0.9) + 0.1 \\cdot (1 - 0.8) = 2 + 0.6 + 0.03 + 0.02 = 2.65\\)\n  - Code Route: \\(0.4 \\cdot 3 + 0.2 \\cdot 2 + 0.3 \\cdot (1 - 0.85) + 0.1 \\cdot (1 - 0.9) = 1.2 + 0.4 + 0.045 + 0.01 = 1.655\\)\n\n- **Selected Route:** Fast Route (Lowest Score: 1.19)\n\n### 6. Continuous Improvement\n\n-",
+      "prompt_token": 30,
+      "response_token": 1000,
+      "total_token": 1030,
+      "total_response_time": 13.071943499999179,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Quality",
+      "confidence": 0.95,
+      "reason": "The question asks for a design of a cost-aware routing policy, which involves architecture thinking, tradeoff analysis, and strategic planning."
+    }
+  },
+  {
+    "question": "Write Python code that appends experiment results to a CSV file without overwriting existing rows.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Write Python code that appends experiment results to a CSV file without overwriting existing rows.",
+      "answer": "{\n  \"route\": \"Code\",\n  \"confidence\": 0.99,\n  \"reason\": \"The question explicitly asks for Python code generation to perform a file operation task.\"\n}",
+      "prompt_token": 707,
+      "response_token": 41,
+      "total_token": 748,
+      "total_response_time": 0.6640361999998277,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o",
+      "question": "Write Python code that appends experiment results to a CSV file without overwriting existing rows.",
+      "answer": "To append experiment results to a CSV file without overwriting existing rows, you can use Python's built-in `csv` module. This module provides functionality to read from and write to CSV files. When appending data, you should open the file in append mode (`'a'`). Here's a step-by-step guide and example code to achieve this:\n\n1. **Prepare your data**: Ensure your experiment results are organized in a list or any iterable format that can be written to a CSV file.\n\n2. **Open the CSV file in append mode**: Use the `'a'` mode to open the file, which allows you to add new data to the end of the file without deleting existing data.\n\n3. **Write the data**: Use `csv.writer` to write your data to the file.\n\nHere's an example Python code that demonstrates how to append data to a CSV file:\n\n```python\nimport csv\n\ndef append_experiment_results(file_path, data):\n    \"\"\"\n    Appends experiment results to a CSV file.\n\n    :param file_path: str, path to the CSV file\n    :param data: list of lists, each inner list represents a row of experiment results\n    \"\"\"\n    # Open the file in append mode\n    with open(file_path, mode='a', newline='') as file:\n        writer = csv.writer(file)\n        \n        # Write each row of data to the CSV file\n        for row in data:\n            writer.writerow(row)\n\n# Example usage\nexperiment_results = [\n    ['Experiment 1', '2023-10-01', 0.95, 'Success'],\n    ['Experiment 2', '2023-10-02', 0.89, 'Failure'],\n    # Add more rows as needed\n]\n\n# Path to your CSV file\ncsv_file_path = 'experiment_results.csv'\n\n# Append the experiment results to the CSV file\nappend_experiment_results(csv_file_path, experiment_results)\n```\n\n### Key Points:\n- **File Mode**: The file is opened in `'a'` mode to append data.\n- **newline=''**: This parameter is used to prevent extra blank lines when writing to the CSV file on some platforms, especially Windows.\n- **Data Structure**: The `data` parameter is a list of lists, where each inner list represents a row to be added to the CSV file.\n\nThis code will append the specified experiment results to the `experiment_results.csv` file without overwriting any existing data. Make sure the file path is correct and that you have write permissions for the file.",
+      "prompt_token": 25,
+      "response_token": 522,
+      "total_token": 547,
+      "total_response_time": 4.112005500000123,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Code",
+      "confidence": 0.99,
+      "reason": "The question explicitly asks for Python code generation to perform a file operation task."
+    }
+  },
+  {
+    "question": "List five advantages of using Docker for application deployment.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "List five advantages of using Docker for application deployment.",
+      "answer": "{\n  \"route\": \"Simple\",\n  \"confidence\": 0.95,\n  \"reason\": \"The question asks for a short list of advantages, which is a basic factual request without requiring deep reasoning or code.\"\n}",
+      "prompt_token": 699,
+      "response_token": 49,
+      "total_token": 748,
+      "total_response_time": 0.7416271000001871,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "List five advantages of using Docker for application deployment.",
+      "answer": "Docker offers several advantages for application deployment, including:\n\n1. **Consistency Across Environments**: Docker containers encapsulate all dependencies and configurations needed to run an application, ensuring that it behaves the same way in development, testing, and production environments. This reduces the \"it works on my machine\" problem.\n\n2. **Isolation and Resource Efficiency**: Each Docker container runs in its own isolated environment, which helps prevent conflicts between applications and allows multiple applications to run on the same host without interference. Containers are lightweight and share the host OS kernel, making them more resource-efficient compared to traditional virtual machines.\n\n3. **Scalability and Flexibility**: Docker makes it easy to scale applications up or down by adding or removing containers as needed. This flexibility allows organizations to respond quickly to changing demands and optimize resource usage.\n\n4. **Simplified Deployment and Rollback**: Docker simplifies the deployment process by allowing developers to package applications and their dependencies into a single container image. This makes it easy to deploy applications consistently and quickly. Additionally, rolling back to a previous version of an application can be done easily by redeploying an earlier image.\n\n5. **Integration with CI/CD Pipelines**: Docker integrates well with continuous integration and continuous deployment (CI/CD) tools, enabling automated testing and deployment workflows. This streamlines the development process and helps teams deliver updates and new features more rapidly and reliably.\n\nThese advantages make Docker a popular choice for modern application deployment strategies.",
+      "prompt_token": 17,
+      "response_token": 294,
+      "total_token": 311,
+      "total_response_time": 5.377141799999663,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Simple",
+      "confidence": 0.95,
+      "reason": "The question asks for a short list of advantages, which is a basic factual request without requiring deep reasoning or code."
+    }
+  },
+  {
+    "question": "Explain why model routing can sometimes increase cost instead of reducing it.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Explain why model routing can sometimes increase cost instead of reducing it.",
+      "answer": "{\n  \"route\": \"Quality\",\n  \"confidence\": 0.9,\n  \"reason\": \"The question asks for an explanation of tradeoffs in model routing, which involves deeper reasoning and analysis beyond simple facts.\"\n}",
+      "prompt_token": 703,
+      "response_token": 48,
+      "total_token": 751,
+      "total_response_time": 1.123571300000549,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o-mini",
+      "question": "Explain why model routing can sometimes increase cost instead of reducing it.",
+      "answer": "Model routing, which involves directing requests or data to specific models or services based on certain criteria, is often implemented to optimize performance and resource utilization. However, there are scenarios where model routing can inadvertently increase costs instead of reducing them. Here are several reasons why this can happen:\n\n1. **Overhead of Routing Logic**: Implementing a routing mechanism introduces additional complexity and overhead. Maintaining and managing the routing logic, including the infrastructure to support it, can lead to increased operational costs. If the routing logic is not efficient, it may also slow down processing times, leading to higher resource consumption.\n\n2. **Underutilization of Resources**: If the routing is not designed effectively, some models may be underutilized while others are overloaded. This can lead to a situation where resources allocated to certain models are not fully utilized, resulting in wasted capacity and increased costs for maintaining idle resources.\n\n3. **Increased Latency and Resource Consumption**: Depending on how the routing is implemented, it may introduce additional latency in processing requests. This can lead to longer processing times and potentially require more compute resources to handle the same workload, driving up costs.\n\n4. **Complexity in Scaling**: If different models have varying resource requirements and scaling characteristics, managing them through a routing system can complicate scaling efforts. This can lead to inefficient scaling strategies, where some resources are over-provisioned while others are under-provisioned, increasing costs.\n\n5. **Multiple Models for Similar Tasks**: If routing leads to the deployment of multiple models that perform similar tasks, this can result in redundancy. Maintaining multiple models can increase costs related to storage, compute, and maintenance, especially if they don't provide significant performance improvements.\n\n6. **Increased Monitoring and Maintenance Costs**: With model routing, there may be a need for more extensive monitoring and maintenance strategies to ensure that the routing logic is functioning correctly. This can lead to higher costs associated with monitoring tools, personnel, and troubleshooting efforts.\n\n7. **Training and Updating Costs**: If the routing involves multiple models that need to be trained or updated regularly, the costs associated with data collection, training, and deployment can add up. This is especially true if the models require significant computational resources for retraining.\n\n8. **Inefficient Use of Specialized Models**: If certain models are specialized for specific tasks but are not routed correctly, there may be scenarios where a less efficient model is used for a task it is not optimized for, leading to higher costs in terms of performance and resource usage.\n\nIn summary, while model routing has the potential to optimize resource usage and improve performance, it can also lead to increased costs if not implemented carefully. Factors such as increased complexity, underutilization of resources, and inefficiencies in scaling can all contribute to higher operational expenses. Proper design, monitoring, and optimization of the routing strategy are essential to mitigate these risks.",
+      "prompt_token": 20,
+      "response_token": 581,
+      "total_token": 601,
+      "total_response_time": 6.2549581000002945,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Quality",
+      "confidence": 0.9,
+      "reason": "The question asks for an explanation of tradeoffs in model routing, which involves deeper reasoning and analysis beyond simple facts."
+    }
+  },
+  {
+    "question": "Generate Python code that maps route names like Simple, Quality, and Code to model names using a dictionary.",
+    "routerMatrix": {
+      "model_name": "mistral-small-latest",
+      "question": "Generate Python code that maps route names like Simple, Quality, and Code to model names using a dictionary.",
+      "answer": "{\n  \"route\": \"Code\",\n  \"confidence\": 0.99,\n  \"reason\": \"The question explicitly asks for Python code generation.\"\n}",
+      "prompt_token": 710,
+      "response_token": 35,
+      "total_token": 745,
+      "total_response_time": 1.146109900000738,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "llmResponse": {
+      "model_name": "gpt-4o",
+      "question": "Generate Python code that maps route names like Simple, Quality, and Code to model names using a dictionary.",
+      "answer": "Certainly! You can create a Python dictionary to map route names like \"Simple\", \"Quality\", and \"Code\" to their corresponding model names. Here's an example of how you can do this:\n\n```python\n# Define a dictionary to map route names to model names\nroute_to_model_map = {\n    \"Simple\": \"SimpleModel\",\n    \"Quality\": \"QualityModel\",\n    \"Code\": \"CodeModel\"\n}\n\n# Function to get model name from route name\ndef get_model_name(route_name):\n    return route_to_model_map.get(route_name, \"UnknownModel\")\n\n# Example usage\nroute_name = \"Quality\"\nmodel_name = get_model_name(route_name)\nprint(f\"The model name for route '{route_name}' is '{model_name}'.\")\n```\n\nIn this code:\n- We define a dictionary `route_to_model_map` where the keys are the route names and the values are the corresponding model names.\n- The function `get_model_name` takes a route name as input and returns the corresponding model name using the dictionary. If the route name is not found, it returns \"UnknownModel\".\n- We demonstrate how to use this function with an example route name \"Quality\".",
+      "prompt_token": 28,
+      "response_token": 239,
+      "total_token": 267,
+      "total_response_time": 2.1743391999998494,
+      "relevance": 0,
+      "clarity": 0,
+      "completeness": 0,
+      "usefulness": 0,
+      "overall_score": 0
+    },
+    "routerResponse": {
+      "route": "Code",
+      "confidence": 0.99,
+      "reason": "The question explicitly asks for Python code generation."
+    }
+  }
+]

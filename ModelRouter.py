@@ -22,7 +22,7 @@ class ModelRouter:
     
     #models 
     _small_task_Model:OpenAITest = None 
-    _medium_task_Model:AnthropicChatTest = None 
+    _medium_task_Model:OpenAITest = None 
     _reason_code_task__Model:OpenAITest = None 
     
     _qc :ResponseQuality = None 
@@ -44,7 +44,7 @@ class ModelRouter:
     def __initiate_router_trafic_matrix(self):
         self._modelRouteList = dict()
         self._modelRouteList['Simple']= 'gpt-4o-mini'
-        self._modelRouteList['Quality']= 'claude-sonnet-4-6'
+        self._modelRouteList['Quality']= 'gpt-4o-mini'
         self._modelRouteList['Code']= 'gpt-4o'
         
     def __init__default_Model(self):
@@ -53,23 +53,17 @@ class ModelRouter:
     def __load_RotuerModels(self):
         self._router_Model = MistralAiChat()
         self._small_task_Model = OpenAITest(self._modelRouteList['Simple'],500,0.4)
-        self._medium_task_Model = AnthropicChatTest( self._modelRouteList['Quality'])
-        self._reason_code_task__Model = OpenAITest( self._modelRouteList['Code'],2000,0.2)
+        self._medium_task_Model = OpenAITest( self._modelRouteList['Quality'], 1000, 0.4)
+        self._reason_code_task__Model = OpenAITest( self._modelRouteList['Code'],1500,0.2)
         
         
     
-    def Calculate_Inference_Time(self, questions:list[str])->list[Any]:
+    def Calculate_Inference_Time(self, questions:list[str])->list[ModelUsageData]:
         data : list[Any] 
+        miData: list[ModelUsageData]= []  
         if ( not self._enableRouter):
-            miData: list[ModelUsageData]= []     
             miData = self._default_Model.perform_cost_time(questions)
-            
-            data  = self._qc.GetResponseQuality(miData)
-        
-            
-
-        
-        return data
+        return miData
     
     def __RouteTraffic__(self, routeType:str ) -> str :
         selectedModel : str = 'gpt-4o-mini' 
@@ -81,13 +75,13 @@ class ModelRouter:
 
 
         
-    def __GetLLMResult__(self, model_to_route:str, question:str )-> ModelRouterMatrics:
+    def __GetLLMResult__(self, routeType:str, question:str )-> ModelRouterMatrics:
         data : ModelRouterMatrics = None 
         
-        if model_to_route == 'gpt-4o-mini' :
+        if routeType == 'Simple' :
             data = self._small_task_Model.single_quesetion_perform_cost_time(question)
-        elif model_to_route == 'claude-sonnet-4-6' :
-            data = self._medium_task_Model.single_question_perform_cost_time(question)
+        elif routeType == 'Quality' :
+            data = self._medium_task_Model.single_quesetion_perform_cost_time(question)
         else:
             data = self._reason_code_task__Model.single_quesetion_perform_cost_time(question)
 
@@ -113,7 +107,7 @@ class ModelRouter:
             result.routerResponse= None 
             modelToRoute='gpt-4o-mini'
 
-        result.llmResponse = self.__GetLLMResult__(modelToRoute, question)        
+        result.llmResponse = self.__GetLLMResult__(result.routerResponse.route, question)        
 
              
 

@@ -1,4 +1,0 @@
-Model,Total Tokens,Latency,Cost ($),Response Quality
-mistral-small-latest,872,6.31,0.0025475,4.77
-gpt-4o-mini,574,9.77,0.0025475,5
-claude-sonnet-4-6,640,13.2,0.00371295,4.72

@@ -1,353 +1,254 @@
-# Smart Model Router: Cost-Aware LLM Routing Experiment
+# Smart LLM Routing: Comparing Default, Router LLM, and Keyword-Based Selection
 
 ## Overview
 
-This experiment explores a practical question in AI application design:
+This experiment evaluates three approaches for selecting LLMs and measures the tradeoff between routing intelligence, cost optimization, and response latency.
 
-> Can a lightweight router model reduce overall LLM cost by sending simpler questions to cheaper models while keeping more complex/code-related questions on stronger models?
+Compared approaches:
 
-Instead of sending every user question to the same baseline model, this experiment introduces a **Smart Model Router**. The router first analyzes the user question, classifies it into a route, and then selects the final LLM based on that route.
+1. Default Model (No Router)
+2. Router Model (Small LLM performs routing)
+3. Keyword Router (Rule-based routing)
 
-The experiment compares:
+Objective:
 
-* **Baseline approach:** all questions go directly to `gpt-4o`
-* **Router approach:** questions first go to a router model, then to the selected final model
+Reduce cost while maintaining acceptable response quality.
 
-The goal is not only to compare cost and response time, but also to understand whether the router makes correct routing decisions.
+> Can routing intelligence reduce cost without reducing response quality?
 
 ---
 
 ## Experiment Design
 
-The experiment uses a mixed workload of **40 questions** covering three types of tasks:
-
-* Simple explanation / short writing tasks
-* Quality-focused architecture, comparison, and reasoning tasks
-* Code generation and debugging tasks
-
-The router model returns a structured JSON response with:
-
-```json
-{
-  "route": "Simple | Quality | Code",
-  "confidence": 0.95,
-  "reason": "Reason for selecting this route"
-}
-```
+| Component | Value |
+|---|---|
+| Framework | Python + LangChain |
+| Routing Strategies | Default / Router / Keyword |
+| Evaluation Dataset | Shared question set |
+| Metrics | Cost, Latency, Tokens, Confidence |
+| Evaluation Type | Comparative Experiment |
 
 ---
 
 ## Architecture Diagram
 
-
 <p align="center">
   <img src="./assets/images/architecture.png" alt="Architecture Diagram" width="900"/>
 </p>
+
 ---
 
-## How the Model Router Works
+## How It Works
 
-The main routing logic is implemented in `ModelRouter.py`.
-
-### Route-to-model mapping
-
-```python
-Simple  -> gpt-4o-mini
-Quality -> gpt-4o-mini
-Code    -> gpt-4o
-```
-
-### Why this mapping matters
-
-The baseline sends all 40 questions to `gpt-4o`.
-
-The router approach sends:
-
-* Simple questions to `gpt-4o-mini`
-* Quality questions to `gpt-4o-mini`
-* Code questions to `gpt-4o`
-
-This means **29 out of 40 questions** are routed to the lower-cost model, while only code-heavy questions stay on `gpt-4o`.
+1. Load evaluation dataset
+2. Execute baseline model
+3. Execute Router LLM flow
+4. Execute Keyword Router flow
+5. Capture metrics
+6. Compare outputs
+7. Generate experiment insights
 
 ---
 
 ## Evaluation Flow
 
-1. Prepare the same set of 40 questions.
-2. Run all questions through the baseline model: `gpt-4o`.
-3. Run the same questions through the model router.
-4. Router model classifies each question into one route.
-5. Final LLM is selected based on route.
-6. Capture metrics for both router model and final LLM.
-7. Compare baseline vs router approach.
+Question Dataset  
+↓  
+Default Model Execution  
+↓  
+Router Model Execution  
+↓  
+Keyword Router Execution  
+↓  
+Metrics Aggregation  
+↓  
+Comparison Results  
 
 ---
 
 ## Metrics Captured
 
-### Cost metrics
-
-* Router model input cost
-* Router model output cost
-* Router model total cost
-* Final LLM input cost
-* Final LLM output cost
-* Final LLM total cost
-* Total cost per question
-* Total experiment cost
-
-### Latency metrics
-
-* Router response time
-* Final LLM response time
-* Total response time per question
-* Total experiment response time
-
-### Router quality metrics
-
-* Route accuracy
-* Route distribution
-* Router confidence
-* Model selection correctness
-* Router reason for each decision
+| Category | Metrics |
+|---|---|
+| Cost | Total Cost |
+| Latency | Total Response Time |
+| Tokens | Total Tokens |
+| Routing | Router Confidence |
+| Selection | Model Selection Correctness |
 
 ---
 
-## Result Summary
+# Results Summary
 
-### Route distribution
+## Performance Comparison
 
-| Route     | Question Count |
-| --------- | -------------: |
-| Simple    |             18 |
-| Quality   |             11 |
-| Code      |             11 |
-| **Total** |         **40** |
-
-### Router evaluation metrics
-
-| Metric                      | Result |
-| --------------------------- | -----: |
-| Route Accuracy              |   100% |
-| Average Router Confidence   |  95.8% |
-| Model Selection Correctness |   100% |
-
-### Cost comparison
-
-| Approach                            | Total Cost |
-| ----------------------------------- | ---------: |
-| Baseline: all questions to `gpt-4o` |   $0.18107 |
-| Router model cost                   |   $0.00535 |
-| Final LLM cost after routing        |   $0.05852 |
-| Router experiment total cost        |   $0.06388 |
-
-### Cost savings
-
-```text
-Cost savings = Baseline cost - Router experiment cost
-             = $0.18107 - $0.06388
-             = $0.11719 saved
-```
-
-The router approach reduced total cost by approximately:
-
-```text
-64.7% lower cost compared to baseline
-```
+| Metric | Default | Router Model | Keyword Router |
+|---|---:|---:|---:|
+| Total Cost | $0.35149 | $0.14962 | $0.17824 |
+| Total Response Time | 186.31 sec | 389.09 sec | 287.49 sec |
+| Total Tokens | 18,059 | 52,309 | 18,856 |
+| Routing Confidence | N/A | 97.27% | ~96% |
 
 ---
 
-## Response Time Comparison
+## Cost Comparison
 
-| Approach                            | Total Response Time |
-| ----------------------------------- | ------------------: |
-| Baseline: all questions to `gpt-4o` |          160.03 sec |
-| Router approach                     |          340.10 sec |
-
-### Latency impact
-
-The router approach was slower by:
-
-```text
-+180.07 sec
-+112.5% slower than baseline
-```
-
-This happened because every request first passes through the router model before calling the final selected LLM.
+| Approach | Cost Reduction |
+|---|---:|
+| Router Model | 57.4% |
+| Keyword Router | 49.3% |
 
 ---
 
-## Key Findings
+## Latency Comparison
 
-### 1. The router reduced cost significantly
-
-The router saved cost because most questions did not need the expensive baseline model.
-
-In this experiment:
-
-* 29 questions were served by `gpt-4o-mini`
-* 11 code-related questions were served by `gpt-4o`
-
-This routing strategy reduced total cost by **64.7%** compared to sending all questions directly to `gpt-4o`.
+| Approach | Increase vs Default |
+|---|---:|
+| Router Model | +108.8% |
+| Keyword Router | +54.3% |
 
 ---
 
-### 2. Router overhead was small in cost
+## Token Comparison
 
-The router model added extra cost, but the router cost was small compared to the savings from using `gpt-4o-mini` for Simple and Quality routes.
-
-```text
-Router total cost: $0.00535
-Final LLM total cost: $0.05852
-Total routed cost: $0.06388
-```
-
-The router cost did not eliminate the savings.
+| Approach | Token Change |
+|---|---:|
+| Router Model | +189.7% |
+| Keyword Router | +4.4% |
 
 ---
 
-### 3. Router overhead increased latency
+# Key Findings
 
-The main tradeoff was response time.
+## 1. Router Model achieved the strongest cost reduction
 
-The routed approach requires two model calls:
+The Router Model delivered the lowest overall cost.
 
-1. Router model call
-2. Final LLM call
+Why:
+- Questions were dynamically routed to more appropriate models.
+- Expensive model usage was reduced.
 
-That extra step increased total response time from **160.03 sec** to **340.10 sec**.
+Business impact:
+- Lower infrastructure spend
 
-So the router design is cost-efficient, but not latency-efficient in the current version.
-
----
-
-### 4. Route accuracy and model selection were strong
-
-The router selected the expected route for all 40 questions.
-
-```text
-Route Accuracy: 100%
-Model Selection Correctness: 100%
-Average Router Confidence: 95.8%
-```
-
-This shows that the routing logic worked well for the test dataset.
+Technical impact:
+- Additional inference overhead
 
 ---
 
-## Important Tradeoff
+## 2. Keyword Router delivered the strongest balance
 
-This experiment shows a common production AI tradeoff:
+Keyword routing reduced cost substantially while keeping routing confidence close to the Router Model.
 
-| Goal                         | Result         |
-| ---------------------------- | -------------- |
-| Reduce cost                  | Successful     |
-| Preserve routing correctness | Successful     |
-| Improve latency              | Not successful |
+Why:
+- Routing decisions were deterministic.
+- No additional router model execution.
 
-The router is useful when cost optimization is more important than lowest possible latency.
+Business impact:
+- Lower operational complexity
 
-For real-time chat experiences, latency needs additional optimization.
-
----
-
-## What I Would Improve Next
-
-### 1. Reduce router latency
-
-Possible improvements:
-
-* Use a smaller/faster classifier model
-* Use rule-based routing for obvious cases
-* Cache router decisions for repeated prompts
-* Run router with very low max tokens
-* Use prompt caching for repeated router instructions
+Technical impact:
+- Predictable routing behavior
 
 ---
 
-### 2. Add fallback logic
+## 3. Default execution remained fastest
 
-Example:
+Direct execution removed routing overhead and produced the lowest latency.
+
+Business impact:
+- Better responsiveness
+
+Technical impact:
+- Higher overall cost
+
+---
+
+# Tradeoffs
+
+| Goal | Default | Router | Keyword |
+|---|---|---|---|
+| Cost | Weak | Best | Strong |
+| Latency | Best | Weak | Moderate |
+| Complexity | Best | High | Moderate |
+| Predictability | Moderate | Moderate | Best |
+| Scalability | Moderate | Strong | Strong |
+
+---
+
+# What I Would Improve Next
+
+## 1. Hybrid Routing
+Keyword → Router → Final LLM
+
+---
+
+## 2. Confidence-Based Fallback
 
 ```python
-if router_confidence < 0.85:
-    selected_model = "gpt-4o"
+if confidence < 0.85:
+    selected_model = stronger_model
 ```
 
-This protects quality when the router is unsure.
+---
+
+## 3. Dynamic Cost-Aware Routing
+
+Select model using:
+
+- Estimated cost
+- Latency threshold
+- Quality requirements
 
 ---
 
-### 3. Add quality scoring
+## 4. Add Automated Quality Evaluation
 
-Cost savings are useful only if response quality stays acceptable.
+Future dimensions:
 
-Future evaluation should include:
-
-* Relevance
-* Clarity
-* Completeness
-* Usefulness
-* Technical correctness
-* Overall quality score
+- Relevance
+- Clarity
+- Completeness
+- Usefulness
 
 ---
 
-### 4. Compare multiple routing strategies
-
-Useful future comparison:
-
-| Strategy            | Mapping                                                       |
-| ------------------- | ------------------------------------------------------------- |
-| Baseline            | All questions -> `gpt-4o`                                     |
-| Cost-aware Router   | Simple/Quality -> `gpt-4o-mini`, Code -> `gpt-4o`             |
-| Conservative Router | Simple -> `gpt-4o-mini`, Quality/Code -> `gpt-4o`             |
-| Aggressive Router   | Simple/Quality/Code -> cheaper model unless confidence is low |
-
----
-
-## How to Run
-
-1. Clone the repository.
-2. Switch to the `Model_Router` branch.
-3. Configure API keys for OpenAI and Mistral.
-4. Run the baseline experiment.
-5. Run the router experiment.
-6. Compare generated CSV files.
+# How to Run
 
 ```bash
 git clone https://github.com/TechTrojan/GenAI.git
-cd GenAI
-git checkout Model_Router
+
+cd Keyword_Router
+
+python main.py
 ```
 
 ---
 
-## Output Files
+# Output Files
 
-The experiment generates result files such as:
-
-* `Baseline_model_version2_with_cost.csv`
-* `model_router_question_costs.csv`
-* `RouterResult_gpt4o_mini_quality.json.json`
-
-These files are used to compare:
-
-* Cost per question
-* Response time per question
-* Router route
-* Router confidence
-* Router reasoning
-* Final selected model
+| File | Purpose |
+|---|---|
+| Baseline Results | Baseline execution |
+| Router Results | Router evaluation |
+| Keyword Results | Keyword evaluation |
+| Comparison Report | Final metrics |
 
 ---
 
-## Final Takeaway
+# Final Takeaway
 
-The Smart Model Router successfully reduced cost by routing most questions to a cheaper model while keeping code-related questions on a stronger model.
+This experiment shows that routing is not simply about choosing the strongest model.
 
-The main learning is:
+The more practical challenge is selecting the right model for the right question while balancing:
 
-> Model routing can reduce cost, but it introduces routing overhead. A good production design should optimize both cost and latency, not just one metric.
+- Cost
+- Latency
+- Routing confidence
+- Operational simplicity
 
-This experiment is a practical starting point for building cost-aware AI systems where different prompt types are handled by different models based on complexity, confidence, and expected quality.
+The Router Model achieved the lowest cost.
+
+The Keyword Router delivered the strongest balance between efficiency and predictability.
+
+The Default approach remained the fastest execution path.

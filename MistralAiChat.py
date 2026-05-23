@@ -69,12 +69,31 @@ Classification Rules:
   Priority order:
   Code > Quality > Simple
 
-Output Rules:
+Output Rules (STRICT):
 
-Return only valid JSON.
-Do not include markdown.
-Do not include explanations outside the JSON.
-Do not answer the user's actual question.
+Return EXACTLY one JSON object.
+
+DO NOT:
+- Wrap JSON inside markdown
+- Use ```json
+- Use ```
+- Add explanations before JSON
+- Add explanations after JSON
+- Add labels such as "Output:"
+- Add comments
+- Add additional keys
+
+Your entire response MUST start with '{'
+Your entire response MUST end with '}'
+
+The response MUST be parseable directly by Pydantic model's method model_validate_json(response)
+
+Invalid examples:
+
+```json
+{
+  ...
+}
 
 The JSON must follow this exact structure:
 
@@ -91,7 +110,7 @@ Examples:
 User question:
 "What is cloud computing?"
 
-Output:
+Strict JSON Output in below format ONLY :
 {
   "route": "Simple",
   "confidence": 0.95,
@@ -128,7 +147,7 @@ class MistralAiChat:
                 api_key=MISTRAL_API_KEY
                 )
 
-        self.model_name = "mistral-small-latest"
+        self.model_name = "mistral-medium-latest"
         self.ROUTER_SYSTEM_PROMPT= SYSTEM_PROMPT
          
     

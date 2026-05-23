@@ -16,7 +16,6 @@ logging.basicConfig(
 
  
 
-
 questions = [
     "Write a short thank-you message to a colleague for helping with a project.",
     "Design a high-level architecture for a smart model router that selects models based on prompt complexity and response quality.",
@@ -60,30 +59,30 @@ questions = [
     "Generate Python code that maps route names like Simple, Quality, and Code to model names using a dictionary."
 ]
 
- 
+
 
 from ModelRouter import ModelRouter
 
 
-router = ModelRouter(False)
+router = ModelRouter(True)
 
-data = router.Calculate_Inference_Time(questions=questions)
+# data = router.Calculate_Inference_Time(questions=questions)
 
-write_usage_to_csv("Baseline_model_version2.csv",data )
-
-
-# routerEvalResult : list[ModelRouterMatrics] = []
+# write_usage_to_csv("Baseline_model_version2_with_cost.csv",data )
 
 
-# for i, q in enumerate(questions):
-#     data : ModelRouterMatrics = None 
-#     print(f" Question No : {str(i+1)} -> {q}")
-#     data= router.single_quesetion_calculate_Inference_Time(q)
-#     if data :
-#        routerEvalResult.append(data)
+routerEvalResult : list[ModelRouterMatrics] = []
+
+
+for i, q in enumerate(questions):
+    data : ModelRouterMatrics = None 
+    print(f" Question No : {str(i+1)} -> {q}")
+    data= router.single_quesetion_calculate_Inference_Time(q)
+    if data :
+       routerEvalResult.append(data)
     
 
-# save_to_json("RouterResult.json", routerEvalResult)
+save_to_json("RouterResult.json", routerEvalResult)
 logging.info("Experiment completed")
 
 

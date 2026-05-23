@@ -1,8 +1,10 @@
 
 from ModelUsageData import ModelUsageData
-from ModelRouterResponse import ModelRouterMatrics , RouterResponse
 import logging
 from UtilityFunctions import  write_usage_to_csv, save_to_json, write_dict_list_to_csv 
+from ModelRouter import ModelRouter
+from ModelRouterResponse import ModelRouterMatrics
+
 
 logging.basicConfig(
     level=logging.INFO,
@@ -60,30 +62,35 @@ questions = [
     "Generate Python code that maps route names like Simple, Quality, and Code to model names using a dictionary."
 ]
 
+# questions:list[str] =[
+#     "Write a short thank-you message to a colleague for helping with a project.",
+#     "Design a high-level architecture for a smart model router that selects models based on prompt complexity and response quality.",
+#     "Generate Python code that reads a CSV file and calculates total cost grouped by model name."
+    
+# ]
  
 
-from ModelRouter import ModelRouter
 
 
-router = ModelRouter(False)
 
-data = router.Calculate_Inference_Time(questions=questions)
-
-write_usage_to_csv("Baseline_model_version2.csv",data )
+router = ModelRouter(True)
 
 
-# routerEvalResult : list[ModelRouterMatrics] = []
+routerEvalResult : list[ModelRouterMatrics] = []
 
 
-# for i, q in enumerate(questions):
-#     data : ModelRouterMatrics = None 
-#     print(f" Question No : {str(i+1)} -> {q}")
-#     data= router.single_quesetion_calculate_Inference_Time(q)
-#     if data :
-#        routerEvalResult.append(data)
+for i, q in enumerate(questions):
+    data : ModelRouterMatrics = None 
+    
+    logging.info(f" Question No : {str(i+1)} -> {q}")
+    
+    data= router.single_quesetion_calculate_Inference_Time(q)
+    if data :
+       routerEvalResult.append(data)
     
 
-# save_to_json("RouterResult.json", routerEvalResult)
+save_to_json("Keyword_Model_RouterResult.json", routerEvalResult)
+
 logging.info("Experiment completed")
 
 

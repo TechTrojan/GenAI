@@ -1,16 +1,11 @@
-from pydantic import BaseModel
 from ModelUsageData import ModelUsageData 
-
-    
-from pydantic import BaseModel
-
-class RouterResponse(BaseModel):
-    route: str = ""
-    confidence: float = 0.0
-    reason: str = ""
-
+ 
 
 from pydantic import BaseModel, Field
+from RouterResponse import RouterResponse
+
+
+
 
 class ModelRouterMatrics(BaseModel):
     question: str = ""

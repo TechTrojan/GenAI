@@ -1,6 +1,5 @@
 from typing import Optional 
 from OpenAITest import OpenAITest
-from MistralAiChat import MistralAiChat
 from AnthropicChatTest import AnthropicChatTest 
 from ModelUsageData import ModelUsageData
 from ResponseQuality import ResponseQuality
@@ -16,11 +15,11 @@ logging.basicConfig(
 )
 
 
-class ModelRouter:
+class RouterManager:
     
     _enableRouter:bool = False 
     _default_Model :OpenAITest = None 
-    _router_Model: KeywordRouter = None 
+    _router_Model:  KeywordRouter= None 
     
     #models 
     _small_task_Model:OpenAITest = None 
@@ -97,15 +96,28 @@ class ModelRouter:
         result.question = question
         
         data : ModelUsageData
-        start_time = time.perf_counter() 
         
         result.routerResponse  = self._router_Model.single_question(question)
-        end_time = time.perf_counter() 
-        latency= end_time -start_time
+
         
-        result.routerMatrix = ModelUsageData( question=question, total_response_time= latency )
-        #select model based on type of question 
-        modelToRoute = self.__RouteTraffic__(result.routerResponse.route)        
+        modelToRoute:str
+        
+        try:
+            result.routerResponse = RouterResponse.model_validate_json(result.routerMatrix.answer)            
+            start_time = time.time() 
+            modelToRoute = self.__RouteTraffic__(result.routerResponse.route)
+            
+            result.routerMatrix = ModelUsageData ( model_name= modelToRoute, 
+                                                   question= question,
+                                                   answer="",
+                                                   
+                                                  )
+            
+        
+        except Exception as e:
+            logging.error(str(e))
+            result.routerResponse= None 
+            modelToRoute='gpt-4o-mini'
 
         result.llmResponse = self.__GetLLMResult__(result.routerResponse.route, question)        
 
